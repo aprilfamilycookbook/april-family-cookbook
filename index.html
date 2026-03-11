@@ -350,18 +350,7 @@
       overflow: hidden;
     }
 
-    .featured-image-side::after {
-      content: 'Sample Recipe';
-      position: absolute;
-      bottom: 1rem;
-      left: 1rem;
-      font-family: 'Caveat', cursive;
-      font-size: 1rem;
-      color: rgba(255,255,255,0.7);
-      background: rgba(0,0,0,0.3);
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-    }
+
 
     .featured-content {
       padding: 2.5rem;
@@ -662,65 +651,45 @@
   <p class="section-label">Browse by Category</p>
   <h2 class="section-title">What are you cooking tonight?</h2>
   <div class="categories-grid">
-    <a href="recipes.html?cat=beef" class="category-card">
-      <span class="category-emoji">🥩</span>
-      <span class="category-name">Beef</span>
-      <span class="category-count">Coming soon</span>
+    <a href="recipes.html#Main Dishes" class="category-card" onclick="sessionStorage.setItem('filterCat','Main Dishes')">
+      <span class="category-emoji">🍲</span>
+      <span class="category-name">Main Dishes</span>
+      <span class="category-count">35 recipes</span>
     </a>
-    <a href="recipes.html?cat=chicken" class="category-card">
-      <span class="category-emoji">🍗</span>
-      <span class="category-name">Chicken</span>
-      <span class="category-count">Coming soon</span>
-    </a>
-    <a href="recipes.html?cat=pork" class="category-card">
-      <span class="category-emoji">🥓</span>
-      <span class="category-name">Pork</span>
-      <span class="category-count">Coming soon</span>
-    </a>
-    <a href="recipes.html?cat=seafood" class="category-card">
-      <span class="category-emoji">🦞</span>
-      <span class="category-name">Seafood</span>
-      <span class="category-count">Coming soon</span>
-    </a>
-    <a href="recipes.html?cat=turkey" class="category-card">
-      <span class="category-emoji">🦃</span>
-      <span class="category-name">Turkey</span>
-      <span class="category-count">Coming soon</span>
-    </a>
-    <a href="recipes.html?cat=vegetarian" class="category-card">
-      <span class="category-emoji">🥦</span>
-      <span class="category-name">Vegetarian</span>
-      <span class="category-count">Coming soon</span>
-    </a>
-    <a href="recipes.html?cat=lamb" class="category-card">
-      <span class="category-emoji">🍖</span>
-      <span class="category-name">Lamb</span>
-      <span class="category-count">Coming soon</span>
-    </a>
-    <a href="recipes.html?cat=desserts" class="category-card">
+    <a href="recipes.html#Desserts & Candy" class="category-card" onclick="sessionStorage.setItem('filterCat','Desserts & Candy')">
       <span class="category-emoji">🍰</span>
-      <span class="category-name">Desserts</span>
-      <span class="category-count">Coming soon</span>
+      <span class="category-name">Desserts & Candy</span>
+      <span class="category-count">20 recipes</span>
     </a>
-    <a href="recipes.html?cat=sides" class="category-card">
+    <a href="recipes.html#Salads & Breads" class="category-card" onclick="sessionStorage.setItem('filterCat','Salads & Breads')">
+      <span class="category-emoji">🍞</span>
+      <span class="category-name">Salads & Breads</span>
+      <span class="category-count">14 recipes</span>
+    </a>
+    <a href="recipes.html#Sides" class="category-card" onclick="sessionStorage.setItem('filterCat','Sides')">
       <span class="category-emoji">🥗</span>
       <span class="category-name">Sides</span>
-      <span class="category-count">Coming soon</span>
+      <span class="category-count">9 recipes</span>
     </a>
-    <a href="recipes.html?cat=soups" class="category-card">
-      <span class="category-emoji">🍲</span>
+    <a href="recipes.html#Appetizers" class="category-card" onclick="sessionStorage.setItem('filterCat','Appetizers')">
+      <span class="category-emoji">🧀</span>
+      <span class="category-name">Appetizers</span>
+      <span class="category-count">8 recipes</span>
+    </a>
+    <a href="recipes.html#Soups & Stews" class="category-card" onclick="sessionStorage.setItem('filterCat','Soups & Stews')">
+      <span class="category-emoji">🥣</span>
       <span class="category-name">Soups & Stews</span>
-      <span class="category-count">Coming soon</span>
+      <span class="category-count">6 recipes</span>
     </a>
-    <a href="recipes.html?cat=breads" class="category-card">
-      <span class="category-emoji">🍞</span>
-      <span class="category-name">Breads</span>
-      <span class="category-count">Coming soon</span>
-    </a>
-    <a href="recipes.html?cat=breakfast" class="category-card">
+    <a href="recipes.html#Breakfast" class="category-card" onclick="sessionStorage.setItem('filterCat','Breakfast')">
       <span class="category-emoji">🥞</span>
       <span class="category-name">Breakfast</span>
-      <span class="category-count">Coming soon</span>
+      <span class="category-count">6 recipes</span>
+    </a>
+    <a href="recipes.html#Miscellaneous" class="category-card" onclick="sessionStorage.setItem('filterCat','Miscellaneous')">
+      <span class="category-emoji">🫙</span>
+      <span class="category-name">Miscellaneous</span>
+      <span class="category-count">5 recipes</span>
     </a>
   </div>
 </section>
@@ -731,7 +700,7 @@
     <p class="section-label">Featured Recipe</p>
     <h2 class="section-title">A taste of what's inside</h2>
     <div class="featured-card">
-      <div class="featured-image-side">🍲</div>
+      <div class="featured-image-side" style="font-size:5rem;">🍲</div>
       <div class="featured-content">
         <p class="recipe-origin">📍 Patty Hykes</p>
         <h3>Forget It Pot Roast</h3>

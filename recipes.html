@@ -649,6 +649,19 @@
 const allCards = Array.from(document.querySelectorAll('.recipe-card'));
 let activeCategory = 'All';
 
+// Check if arriving from homepage category click
+const savedCat = sessionStorage.getItem('filterCat');
+if (savedCat) {
+  activeCategory = savedCat;
+  sessionStorage.removeItem('filterCat');
+  const btn = document.querySelector(`.filter-btn[data-cat="${savedCat}"]`);
+  if (btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  updateGrid();
+}
+
 function updateGrid() {
   const query = document.getElementById('searchInput').value.toLowerCase();
   let shown = 0;
