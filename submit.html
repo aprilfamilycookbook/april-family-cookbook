@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit a Recipe – April Family Cookbook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #fdf6ec;
+      --warm-white: #fffaf3;
+      --brown: #5c3d1e;
+      --dark-brown: #3a2410;
+      --rust: #b5451b;
+      --amber: #d4831a;
+      --tan: #c9a96e;
+      --light-tan: #e8d5b0;
+      --text: #3a2410;
+      --muted: #8a7060;
+      --sage: #7a8c6e;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background-color: var(--cream);
+      color: var(--text);
+    }
+
+    /* ── HEADER ── */
+    header {
+      background-color: var(--dark-brown);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      border-bottom: 3px solid var(--tan);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      gap: 1rem;
+    }
+
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-text { display: flex; flex-direction: column; }
+
+    .logo-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--light-tan);
+      line-height: 1.1;
+    }
+
+    .logo-tagline {
+      font-family: 'Caveat', cursive;
+      font-size: 0.9rem;
+      color: var(--tan);
+    }
+
+    nav { display: flex; align-items: center; gap: 0.25rem; flex-wrap: wrap; }
+
+    nav a {
+      font-family: 'Lora', serif;
+      font-size: 0.8rem;
+      color: var(--light-tan);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 3px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover { background: rgba(201,169,110,0.2); color: var(--tan); }
+    nav a.active { color: var(--tan); border-bottom: 2px solid var(--tan); }
+    .nav-submit { background: var(--rust) !important; color: white !important; font-weight: 600; margin-left: 0.5rem; }
+
+    /* ── HERO ── */
+    .submit-hero {
+      background: linear-gradient(160deg, var(--dark-brown) 0%, var(--brown) 60%, #7a4f2a 100%);
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .submit-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(212,131,26,0.12) 0%, transparent 60%);
+    }
+
+    .hero-eyebrow {
+      font-family: 'Caveat', cursive;
+      font-size: 1.2rem;
+      color: var(--tan);
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+
+    .submit-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--light-tan);
+      line-height: 1.15;
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .submit-hero h1 em { font-style: italic; color: var(--tan); }
+
+    .hero-intro {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(232,213,176,0.85);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    /* ── FORM WRAPPER ── */
+    .form-wrapper {
+      max-width: 720px;
+      margin: 3rem auto 5rem;
+      padding: 0 2rem;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how-it-works {
+      background: var(--warm-white);
+      border: 1.5px solid var(--light-tan);
+      border-left: 4px solid var(--amber);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .how-it-works .label {
+      font-family: 'Caveat', cursive;
+      font-size: 1.1rem;
+      color: var(--amber);
+      margin-bottom: 0.4rem;
+    }
+
+    .how-it-works p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── FORM ── */
+    .recipe-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .form-section {
+      background: var(--warm-white);
+      border: 1.5px solid var(--light-tan);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .form-section-header {
+      background: var(--dark-brown);
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .form-section-header span {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--light-tan);
+    }
+
+    .form-section-header .section-icon { font-size: 1.1rem; }
+
+    .form-section-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .field.full { grid-column: 1 / -1; }
+
+    label {
+      font-family: 'Lora', serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--brown);
+      letter-spacing: 0.03em;
+    }
+
+    label .required {
+      color: var(--rust);
+      margin-left: 2px;
+    }
+
+    label .optional {
+      font-weight: 400;
+      color: var(--muted);
+      font-style: italic;
+      margin-left: 4px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 0.92rem;
+      color: var(--text);
+      background: var(--cream);
+      border: 1.5px solid var(--light-tan);
+      border-radius: 5px;
+      padding: 0.65rem 0.9rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      width: 100%;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--amber);
+      box-shadow: 0 0 0 3px rgba(212,131,26,0.15);
+    }
+
+    input::placeholder,
+    textarea::placeholder { color: #b8a090; }
+
+    textarea { resize: vertical; min-height: 120px; line-height: 1.6; }
+
+    textarea.tall { min-height: 180px; }
+
+    select { cursor: pointer; }
+
+    .char-hint {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: -0.2rem;
+    }
+
+    /* ── INGREDIENTS BUILDER ── */
+    .ingredients-builder {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .ingredient-row {
+      display: grid;
+      grid-template-columns: 90px 80px 1fr 32px;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .ingredient-row input { margin: 0; }
+
+    .remove-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 1.1rem;
+      padding: 0.2rem;
+      border-radius: 3px;
+      transition: color 0.2s;
+      line-height: 1;
+    }
+    .remove-btn:hover { color: var(--rust); }
+
+    .add-ingredient-btn {
+      align-self: flex-start;
+      background: transparent;
+      border: 1.5px dashed var(--tan);
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      font-family: 'Lora', serif;
+      font-size: 0.82rem;
+      color: var(--brown);
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 0.25rem;
+    }
+    .add-ingredient-btn:hover {
+      background: var(--light-tan);
+      border-color: var(--amber);
+    }
+
+    .ingredient-labels {
+      display: grid;
+      grid-template-columns: 90px 80px 1fr 32px;
+      gap: 0.5rem;
+    }
+
+    .ingredient-labels span {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ── SUBMIT BUTTON ── */
+    .submit-btn {
+      background: var(--rust);
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      align-self: center;
+      letter-spacing: 0.02em;
+    }
+
+    .submit-btn:hover {
+      background: #c84f20;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(181,69,27,0.3);
+    }
+
+    .submit-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: -0.75rem;
+    }
+
+    /* ── SUCCESS STATE ── */
+    .success-message {
+      display: none;
+      background: var(--warm-white);
+      border: 1.5px solid var(--sage);
+      border-left: 4px solid var(--sage);
+      border-radius: 0 10px 10px 0;
+      padding: 2rem 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .success-message .success-icon { font-size: 3rem; margin-bottom: 0.75rem; }
+
+    .success-message h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--dark-brown);
+      margin-bottom: 0.5rem;
+    }
+
+    .success-message p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark-brown);
+      color: var(--muted);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      border-top: 3px solid var(--brown);
+    }
+
+    footer .footer-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--light-tan);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer .footer-tagline {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem;
+      color: var(--tan);
+      margin-bottom: 1rem;
+    }
+
+    footer a { color: var(--tan); text-decoration: none; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; gap: 0.75rem; }
+      nav { justify-content: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .ingredient-row { grid-template-columns: 80px 70px 1fr 28px; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .submit-hero > * { animation: fadeUp 0.6s ease both; }
+    .submit-hero .hero-eyebrow { animation-delay: 0.1s; }
+    .submit-hero h1 { animation-delay: 0.2s; }
+    .submit-hero .hero-intro { animation-delay: 0.35s; }
+
+    /* ── PRINT ── */
+    @media print {
+      body * { display: none !important; }
+      body::after {
+        display: block !important;
+        content: 'Please visit aprilfamilycookbook.com to submit a recipe.';
+        font-family: Georgia, serif;
+        font-size: 14pt;
+        color: #333;
+        text-align: center;
+        margin-top: 3in;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span style="font-size:1.5rem">📖</span>
+      <span class="logo-text">
+        <span class="logo-title">April Family Cookbook</span>
+        <span class="logo-tagline">Family Recipes Through the Generations</span>
+      </span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipes.html">All Recipes</a>
+      <a href="about.html">Our Story</a>
+      <a href="submit.html" class="active nav-submit">+ Submit a Recipe</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="submit-hero">
+  <p class="hero-eyebrow">Family Members Only</p>
+  <h1>Share a <em>Recipe</em> with the Family</h1>
+  <p class="hero-intro">Every dish in this cookbook has a story. Tell us yours — the recipe, where it came from, and who made it special.</p>
+</section>
+
+<!-- FORM -->
+<div class="form-wrapper">
+
+  <div class="how-it-works">
+    <div class="label">📬 How this works</div>
+    <p>Fill out the form below and hit Submit. Your recipe will be sent directly to the cookbook editor for review. Once approved and formatted, it will be added to the site with full credit to you. Fields marked <span style="color:var(--rust)">*</span> are required.</p>
+    <p style="margin-top: 0.75rem;">📎 <strong>Have a PDF or Word document?</strong> Skip the form and email it directly to <a href="/cdn-cgi/l/email-protection#472637352e2b21262a2e2b3e2428282c2528282c07202a262e2b6924282a" style="color:var(--rust);"><span class="__cf_email__" data-cfemail="5f3e2f2d3633393e323633263c3030343d3030341f38323e3633713c3032">[email&#160;protected]</span></a> — just include your name and any story behind the recipe.</p>
+  </div>
+
+  <!-- The action below points to Formspree — replace YOUR_FORM_ID with the ID from your free Formspree account -->
+  <form
+    class="recipe-form"
+    id="recipeForm"
+    action="https://formspree.io/f/YOUR_FORM_ID"
+    method="POST"
+  >
+
+    <!-- ABOUT YOU -->
+    <div class="form-section">
+      <div class="form-section-header">
+        <span class="section-icon">👤</span>
+        <span>About You</span>
+      </div>
+      <div class="form-section-body">
+        <div class="field">
+          <label for="name">Your Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+      </div>
+    </div>
+
+    <!-- THE RECIPE -->
+    <div class="form-section">
+      <div class="form-section-header">
+        <span class="section-icon">📋</span>
+        <span>The Recipe</span>
+      </div>
+      <div class="form-section-body">
+
+        <div class="form-row">
+          <div class="field">
+            <label for="recipe_name">Recipe Name <span class="required">*</span></label>
+            <input type="text" id="recipe_name" name="recipe_name" placeholder="e.g. Grandma's Potato Soup" required />
+          </div>
+          <div class="field">
+            <label for="category">Category <span class="required">*</span></label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>Select a category…</option>
+              <option>Beef</option>
+              <option>Chicken</option>
+              <option>Pork</option>
+              <option>Seafood</option>
+              <option>Turkey</option>
+              <option>Lamb</option>
+              <option>Vegetarian</option>
+              <option>Soups &amp; Stews</option>
+              <option>Sides</option>
+              <option>Breads</option>
+              <option>Breakfast</option>
+              <option>Desserts</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="prep_time">Prep Time <span class="optional">(optional)</span></label>
+            <input type="text" id="prep_time" name="prep_time" placeholder="e.g. 20 minutes" />
+          </div>
+          <div class="field">
+            <label for="cook_time">Cook Time <span class="optional">(optional)</span></label>
+            <input type="text" id="cook_time" name="cook_time" placeholder="e.g. 1.5 hours" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="servings">Serves <span class="optional">(optional)</span></label>
+            <input type="text" id="servings" name="servings" placeholder="e.g. 8 people" />
+          </div>
+          <div class="field">
+            <label for="difficulty">Difficulty <span class="optional">(optional)</span></label>
+            <select id="difficulty" name="difficulty">
+              <option value="" disabled selected>Select…</option>
+              <option>Easy</option>
+              <option>Medium</option>
+              <option>Involved</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- INGREDIENTS -->
+    <div class="form-section">
+      <div class="form-section-header">
+        <span class="section-icon">🛒</span>
+        <span>Ingredients</span>
+      </div>
+      <div class="form-section-body">
+        <p style="font-size:0.82rem; color:var(--muted); font-style:italic; margin-top:-0.5rem;">Add each ingredient one row at a time, or paste the full list into the box below — whichever is easier.</p>
+
+        <div class="field full">
+          <label for="ingredients_text">Ingredients List <span class="required">*</span></label>
+          <textarea id="ingredients_text" name="ingredients" class="tall" placeholder="e.g.&#10;3-4 lbs chuck roast&#10;2 tbsp olive oil&#10;1 large onion, quartered&#10;4 cloves garlic, smashed&#10;2 cups beef broth&#10;..." required></textarea>
+          <span class="char-hint">List each ingredient on its own line — amount, unit, and item name.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- INSTRUCTIONS -->
+    <div class="form-section">
+      <div class="form-section-header">
+        <span class="section-icon">👩‍🍳</span>
+        <span>Instructions</span>
+      </div>
+      <div class="form-section-body">
+        <div class="field">
+          <label for="instructions">Step-by-Step Instructions <span class="required">*</span></label>
+          <textarea id="instructions" name="instructions" class="tall" placeholder="e.g.&#10;1. Season the roast with salt and pepper.&#10;2. Heat oil in a Dutch oven over medium-high heat.&#10;3. Sear the roast on all sides until golden brown.&#10;..." required></textarea>
+          <span class="char-hint">Number each step if you can — but don't worry if it's rough, we'll format it for you.</span>
+        </div>
+
+        <div class="field">
+          <label for="tips">Tips or Notes <span class="optional">(optional)</span></label>
+          <textarea id="tips" name="tips" placeholder="Any tricks, substitutions, or things to watch out for…"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE STORY -->
+    <div class="form-section">
+      <div class="form-section-header">
+        <span class="section-icon">📖</span>
+        <span>The Story Behind It</span>
+      </div>
+      <div class="form-section-body">
+        <p style="font-size:0.82rem; color:var(--muted); font-style:italic; margin-top:-0.5rem;">This is what makes the cookbook special. Tell us anything you know — who made it, when, what it meant to the family.</p>
+
+        <div class="field">
+          <label for="origin">Who did this recipe come from? <span class="required">*</span></label>
+          <input type="text" id="origin" name="origin" placeholder="e.g. Grandma Mary April, or my mother's side of the family" required />
+        </div>
+
+        <div class="field">
+          <label for="story">The Story <span class="optional">(optional but encouraged)</span></label>
+          <textarea id="story" name="story" class="tall" placeholder="e.g. This was the soup that showed up every winter without fail. Grandma would start it in the morning and by the time we got home from school the whole house smelled like…"></textarea>
+          <span class="char-hint">No need to be formal — write it the way you'd tell it to someone at the dinner table.</span>
+        </div>
+
+        <div class="field">
+          <label for="occasion">What occasion or season is it associated with? <span class="optional">(optional)</span></label>
+          <input type="text" id="occasion" name="occasion" placeholder="e.g. Christmas Eve, Sunday dinners, summer cookouts…" />
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <button type="submit" class="submit-btn">Submit My Recipe →</button>
+    <p class="submit-note">Your recipe will be reviewed before being added to the site. We'll format it and give you full credit.</p>
+
+  </form>
+
+  <!-- SUCCESS MESSAGE (shown after submit) -->
+  <div class="success-message" id="successMessage">
+    <div class="success-icon">🎉</div>
+    <h3>Thank you — recipe received!</h3>
+    <p>Your submission has been sent to the cookbook editor for review. Once it's formatted and approved, it will be added to the collection with credit to you. We're so glad you're part of this.</p>
+    <p style="margin-top:1rem;"><a href="index.html" style="color:var(--rust); font-weight:600;">← Back to the Cookbook</a></p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-title">April Family Cookbook</div>
+  <div class="footer-tagline">Family Recipes Through the Generations</div>
+  <p>A private collection for the April family. &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="about.html">Our Story</a></p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const form = document.getElementById('recipeForm');
+  const success = document.getElementById('successMessage');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+        window.scrollTo({ top: 0, behavio
