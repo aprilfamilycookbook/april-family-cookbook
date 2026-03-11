@@ -699,20 +699,8 @@
   <div class="featured-inner">
     <p class="section-label">Featured Recipe</p>
     <h2 class="section-title">A taste of what's inside</h2>
-    <div class="featured-card">
-      <div class="featured-image-side" style="font-size:5rem;">🍲</div>
-      <div class="featured-content">
-        <p class="recipe-origin">📍 Patty Hykes</p>
-        <h3>Forget It Pot Roast</h3>
-        <p>Chuck roast slow-cooked all day with potatoes, carrots, and onion soup — the kind of Sunday dinner that fills the whole house with a smell that pulls everyone to the table. Put it on in the morning and forget about it until supper.</p>
-        <div class="recipe-meta">
-          <span class="meta-item">⏱ <strong>Prep:</strong> 15 min</span>
-          <span class="meta-item">🔥 <strong>Cook:</strong> 8–9 hrs</span>
-          <span class="meta-item">🍽 <strong>Serves:</strong> 6</span>
-        </div>
-        <a href="recipe-forget-it-pot-roast.html" class="btn btn-primary">View Recipe</a>
-        <a href="recipe-forget-it-pot-roast.html" class="btn btn-outline" onclick="sessionStorage.setItem('autoPrint','1')">🖨 Print</a>
-      </div>
+    <div class="featured-card" id="featured-card">
+      <!-- Populated by JS on page load -->
     </div>
   </div>
 </section>
@@ -749,6 +737,26 @@
   const resultsSection = document.getElementById('search-results');
   const resultsGrid = document.getElementById('results-grid');
   const resultsLabel = document.getElementById('results-label');
+
+  // Category emoji map
+  const catEmoji = {
+    'Main Dishes': '🍲', 'Desserts & Candy': '🍰', 'Salads & Breads': '🍞',
+    'Sides': '🥗', 'Appetizers': '🧀', 'Soups & Stews': '🥣',
+    'Breakfast': '🥞', 'Miscellaneous': '🫙'
+  };
+
+  // Pick a random recipe and render the featured card
+  const featured = recipes[Math.floor(Math.random() * recipes.length)];
+  const emoji = catEmoji[featured.category] || '🍽';
+  document.getElementById('featured-card').innerHTML = `
+    <div class="featured-image-side" style="font-size:5rem;">${emoji}</div>
+    <div class="featured-content">
+      <p class="recipe-origin">📍 ${featured.contributor}</p>
+      <h3>${featured.title}</h3>
+      <p style="color:var(--muted);font-size:0.85rem;margin-bottom:1rem;">${featured.category}</p>
+      <a href="recipe-${featured.id}.html" class="btn btn-primary">View Recipe</a>
+    </div>
+  `;
 
   input.addEventListener('input', () => {
     const q = input.value.trim().toLowerCase();
