@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>April Family Cookbook – Family Recipes Through the Generations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #fdf6ec;
+      --warm-white: #fffaf3;
+      --brown: #5c3d1e;
+      --dark-brown: #3a2410;
+      --rust: #b5451b;
+      --amber: #d4831a;
+      --sage: #7a8c6e;
+      --tan: #c9a96e;
+      --light-tan: #e8d5b0;
+      --text: #3a2410;
+      --muted: #8a7060;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background-color: var(--cream);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── TEXTURE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background-color: var(--dark-brown);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.4' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      border-bottom: 3px solid var(--tan);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      gap: 1rem;
+    }
+
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--light-tan);
+      line-height: 1.1;
+    }
+
+    .logo-tagline {
+      font-family: 'Caveat', cursive;
+      font-size: 0.9rem;
+      color: var(--tan);
+      line-height: 1.2;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-family: 'Lora', serif;
+      font-size: 0.8rem;
+      color: var(--light-tan);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 3px;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.03em;
+    }
+
+    nav a:hover { background: rgba(201,169,110,0.2); color: var(--tan); }
+
+    .nav-submit {
+      background: var(--rust) !important;
+      color: var(--cream) !important;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
+    .nav-submit:hover { background: #c84f20 !important; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      background: linear-gradient(160deg, var(--dark-brown) 0%, var(--brown) 50%, #7a4f2a 100%);
+      color: var(--cream);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(212,131,26,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 20%, rgba(181,69,27,0.1) 0%, transparent 50%);
+    }
+
+    .hero-decoration {
+      font-family: 'Caveat', cursive;
+      font-size: 1.1rem;
+      color: var(--tan);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .hero-decoration::before,
+    .hero-decoration::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 60px;
+      background: var(--tan);
+      opacity: 0.6;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--tan);
+    }
+
+    .hero-sub {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      color: var(--light-tan);
+      margin: 1.25rem auto 2.5rem;
+      max-width: 520px;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    /* ── SEARCH ── */
+    .search-wrap {
+      position: relative;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 1rem 1.25rem 1rem 3rem;
+      border: 2px solid var(--tan);
+      border-radius: 50px;
+      background: rgba(253,246,236,0.95);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      color: var(--dark-brown);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    #search-input:focus {
+      border-color: var(--amber);
+      box-shadow: 0 0 0 3px rgba(212,131,26,0.2);
+    }
+
+    #search-input::placeholder { color: var(--muted); }
+
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 1.1rem;
+      pointer-events: none;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      text-align: center;
+      padding: 0.5rem 0;
+      color: var(--tan);
+      font-size: 1.5rem;
+      letter-spacing: 0.5rem;
+      position: relative;
+    }
+
+    .section-label {
+      font-family: 'Caveat', cursive;
+      font-size: 1.3rem;
+      color: var(--rust);
+      text-align: center;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      text-align: center;
+      color: var(--dark-brown);
+      margin-bottom: 2.5rem;
+      line-height: 1.2;
+    }
+
+    /* ── CATEGORIES ── */
+    .categories-section {
+      padding: 4rem 2rem;
+      background: var(--warm-white);
+      position: relative;
+    }
+
+    .categories-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .category-card {
+      background: var(--cream);
+      border: 1.5px solid var(--light-tan);
+      border-radius: 8px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--dark-brown);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .category-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--rust);
+      transform: scaleX(0);
+      transition: transform 0.25s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(92,61,30,0.15);
+      border-color: var(--tan);
+    }
+
+    .category-card:hover::before { transform: scaleX(1); }
+
+    .category-emoji { font-size: 2.2rem; margin-bottom: 0.6rem; display: block; }
+
+    .category-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      display: block;
+    }
+
+    .category-count {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-family: 'Lora', serif;
+      margin-top: 0.25rem;
+      display: block;
+    }
+
+    /* ── FEATURED RECIPE ── */
+    .featured-section {
+      padding: 4rem 2rem;
+      background: var(--cream);
+    }
+
+    .featured-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .featured-card {
+      background: var(--warm-white);
+      border: 1.5px solid var(--light-tan);
+      border-radius: 12px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      box-shadow: 0 4px 20px rgba(92,61,30,0.1);
+    }
+
+    .featured-image-side {
+      background: linear-gradient(135deg, #c9a96e 0%, #8a6a3a 50%, #5c3d1e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 320px;
+      font-size: 8rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-image-side::after {
+      content: 'Sample Recipe';
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      font-family: 'Caveat', cursive;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      background: rgba(0,0,0,0.3);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+    }
+
+    .featured-content {
+      padding: 2.5rem;
+    }
+
+    .recipe-origin {
+      font-family: 'Caveat', cursive;
+      font-size: 1.1rem;
+      color: var(--rust);
+      margin-bottom: 0.5rem;
+    }
+
+    .featured-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--dark-brown);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .featured-content p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .recipe-meta {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .meta-item strong { color: var(--brown); }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.75rem;
+      border-radius: 4px;
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--rust);
+      color: white;
+    }
+    .btn-primary:hover { background: #c84f20; transform: translateY(-1px); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--brown);
+      border: 1.5px solid var(--tan);
+      margin-left: 0.75rem;
+    }
+    .btn-outline:hover { background: var(--light-tan); }
+
+    /* ── ABOUT STRIP ── */
+    .about-section {
+      background: var(--dark-brown);
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-section::before {
+      content: '"';
+      position: absolute;
+      top: -1rem;
+      left: 2rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 12rem;
+      color: rgba(201,169,110,0.08);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .about-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .about-section .section-label { color: var(--tan); }
+    .about-section .section-title { color: var(--light-tan); }
+
+    .about-text {
+      color: rgba(232,213,176,0.8);
+      line-height: 1.85;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    /* ── SUBMIT BANNER ── */
+    .submit-section {
+      background: var(--rust);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+      padding: 3.5rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .submit-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .submit-section p {
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 1.75rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--rust);
+      font-weight: 700;
+    }
+    .btn-white:hover { background: var(--cream); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+    /* ── SEARCH RESULTS ── */
+    #search-results {
+      background: var(--warm-white);
+      padding: 3rem 2rem;
+      display: none;
+    }
+
+    #search-results.active { display: block; }
+
+    .results-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .result-card {
+      background: var(--cream);
+      border: 1.5px solid var(--light-tan);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: var(--dark-brown);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: block;
+    }
+
+    .result-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(92,61,30,0.12);
+    }
+
+    .result-card .recipe-origin { font-size: 0.9rem; }
+    .result-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+    .result-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark-brown);
+      color: var(--muted);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      border-top: 3px solid var(--brown);
+    }
+
+    footer a { color: var(--tan); text-decoration: none; }
+    footer .footer-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--light-tan);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer .footer-tagline {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem;
+      color: var(--tan);
+      margin-bottom: 1rem;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 700px) {
+      .header-inner { flex-direction: column; gap: 0.75rem; }
+      nav { justify-content: center; }
+      .featured-card { grid-template-columns: 1fr; }
+      .featured-image-side { min-height: 200px; font-size: 5rem; }
+    }
+
+    /* ── PRINT: homepage should never be printed directly ── */
+    @media print {
+      body * { display: none !important; }
+      body::after {
+        display: block !important;
+        content: 'To print a recipe, please open it from the recipe page and use the Print Recipe button there.';
+        font-family: Georgia, serif;
+        font-size: 14pt;
+        color: #333;
+        text-align: center;
+        margin-top: 3in;
+        padding: 0 1in;
+        line-height: 1.6;
+      }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero > * { animation: fadeUp 0.7s ease both; }
+    .hero .hero-decoration { animation-delay: 0.1s; }
+    .hero h1 { animation-delay: 0.2s; }
+    .hero .hero-sub { animation-delay: 0.35s; }
+    .hero .search-wrap { animation-delay: 0.5s; }
+
+    /* ── PRINT ── */
+    @media print {
+      header, footer, .submit-section, .categories-section, .about-section, .hero { display: none; }
+      .recipe-print-page { display: block !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span class="logo-icon">📖</span>
+      <span class="logo-text">
+        <span class="logo-title">April Family Cookbook</span>
+        <span class="logo-tagline">Family Recipes Through the Generations</span>
+      </span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipes.html">All Recipes</a>
+      <a href="about.html">Our Story</a>
+      <a href="submit.html" class="nav-submit">+ Submit a Recipe</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-decoration">✦ est. 2025 ✦</div>
+  <h1>Recipes Made with <em>Love</em>,<br>Passed Down with Pride</h1>
+  <p class="hero-sub">A living collection of the April family's most treasured dishes — from Sunday dinners to holiday traditions, each recipe tells a story.</p>
+
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" placeholder="Search by recipe name, ingredient, or family member…" autocomplete="off"/>
+  </div>
+</section>
+
+<!-- SEARCH RESULTS (hidden until typing) -->
+<div id="search-results">
+  <div class="results-inner">
+    <p class="section-label" id="results-label"></p>
+    <div class="results-grid" id="results-grid"></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="categories-section">
+  <p class="section-label">Browse by Category</p>
+  <h2 class="section-title">What are you cooking tonight?</h2>
+  <div class="categories-grid">
+    <a href="recipes.html?cat=beef" class="category-card">
+      <span class="category-emoji">🥩</span>
+      <span class="category-name">Beef</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+    <a href="recipes.html?cat=chicken" class="category-card">
+      <span class="category-emoji">🍗</span>
+      <span class="category-name">Chicken</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+    <a href="recipes.html?cat=pork" class="category-card">
+      <span class="category-emoji">🥓</span>
+      <span class="category-name">Pork</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+    <a href="recipes.html?cat=seafood" class="category-card">
+      <span class="category-emoji">🦞</span>
+      <span class="category-name">Seafood</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+    <a href="recipes.html?cat=turkey" class="category-card">
+      <span class="category-emoji">🦃</span>
+      <span class="category-name">Turkey</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+    <a href="recipes.html?cat=vegetarian" class="category-card">
+      <span class="category-emoji">🥦</span>
+      <span class="category-name">Vegetarian</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+    <a href="recipes.html?cat=lamb" class="category-card">
+      <span class="category-emoji">🍖</span>
+      <span class="category-name">Lamb</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+    <a href="recipes.html?cat=desserts" class="category-card">
+      <span class="category-emoji">🍰</span>
+      <span class="category-name">Desserts</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+    <a href="recipes.html?cat=sides" class="category-card">
+      <span class="category-emoji">🥗</span>
+      <span class="category-name">Sides</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+    <a href="recipes.html?cat=soups" class="category-card">
+      <span class="category-emoji">🍲</span>
+      <span class="category-name">Soups & Stews</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+    <a href="recipes.html?cat=breads" class="category-card">
+      <span class="category-emoji">🍞</span>
+      <span class="category-name">Breads</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+    <a href="recipes.html?cat=breakfast" class="category-card">
+      <span class="category-emoji">🥞</span>
+      <span class="category-name">Breakfast</span>
+      <span class="category-count">Coming soon</span>
+    </a>
+  </div>
+</section>
+
+<!-- FEATURED RECIPE -->
+<section class="featured-section">
+  <div class="featured-inner">
+    <p class="section-label">Featured Recipe</p>
+    <h2 class="section-title">A taste of what's inside</h2>
+    <div class="featured-card">
+      <div class="featured-image-side">🍲</div>
+      <div class="featured-content">
+        <p class="recipe-origin">📍 Patty Hykes</p>
+        <h3>Forget It Pot Roast</h3>
+        <p>Chuck roast slow-cooked all day with potatoes, carrots, and onion soup — the kind of Sunday dinner that fills the whole house with a smell that pulls everyone to the table. Put it on in the morning and forget about it until supper.</p>
+        <div class="recipe-meta">
+          <span class="meta-item">⏱ <strong>Prep:</strong> 15 min</span>
+          <span class="meta-item">🔥 <strong>Cook:</strong> 8–9 hrs</span>
+          <span class="meta-item">🍽 <strong>Serves:</strong> 6</span>
+        </div>
+        <a href="recipe-forget-it-pot-roast.html" class="btn btn-primary">View Recipe</a>
+        <a href="recipe-forget-it-pot-roast.html" class="btn btn-outline" onclick="sessionStorage.setItem('autoPrint','1')">🖨 Print</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<section class="about-section">
+  <div class="about-inner">
+    <p class="section-label">Our Story</p>
+    <h2 class="section-title">More than recipes — it's our history</h2>
+    <p class="about-text">Every dish in this cookbook carries a memory. A holiday table. A summer cookout. A kitchen that always smelled like something wonderful. This site exists so those flavors — and the people who made them — are never forgotten.</p>
+    <a href="about.html" class="btn btn-outline" style="border-color: var(--tan); color: var(--light-tan);">Read Our Story</a>
+  </div>
+</section>
+
+<!-- SUBMIT BANNER -->
+<section class="submit-section">
+  <h2>Have a Family Recipe to Share?</h2>
+  <p>Family members are welcome to submit their recipes. We'll review them and add them to the cookbook — with full credit to you.</p>
+  <a href="submit.html" class="btn btn-white">Submit a Recipe →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-title">April Family Cookbook</div>
+  <div class="footer-tagline">Family Recipes Through the Generations</div>
+  <p>A private collection for the April family. &nbsp;|&nbsp; <a href="about.html">About</a> &nbsp;|&nbsp; <a href="submit.html">Submit a Recipe</a></p>
+</footer>
+
+<script>
+  // Simple search against a recipe list (you'll expand this as recipes are added)
+  const recipes = [{"id": "chip-beef-cheese-balls", "title": "Chipped Beef Cheese Balls", "category": "Appetizers", "contributor": "Mary Ringlein"}, {"id": "vegetable-pizza", "title": "Vegetable Pizza", "category": "Appetizers", "contributor": "Mary Ringlein"}, {"id": "crunchy-parmesan-popcorn-mix", "title": "Crunchy Parmesan Popcorn Mix", "category": "Appetizers", "contributor": "Mary Ringlein"}, {"id": "popcorn-crunch", "title": "Popcorn Crunch", "category": "Appetizers", "contributor": "Mary Ringlein"}, {"id": "chex-party-mix", "title": "Chex Party Mix", "category": "Appetizers", "contributor": "Mary Ringlein"}, {"id": "taco-dip", "title": "Taco Dip", "category": "Appetizers", "contributor": "Terri Board"}, {"id": "sauerkraut-balls", "title": "Sauerkraut Balls", "category": "Appetizers", "contributor": "Terri Board"}, {"id": "tortilla-wraps", "title": "Tortilla Wraps", "category": "Appetizers", "contributor": "Terri Board"}, {"id": "baked-french-toast", "title": "Baked French Toast", "category": "Breakfast", "contributor": "Mom (Mary April)"}, {"id": "breakfast-casserole", "title": "Breakfast Casserole", "category": "Breakfast", "contributor": "Terri Board"}, {"id": "ham-cheese-puff", "title": "Ham & Cheese Puff", "category": "Breakfast", "contributor": "Mary Ringlein"}, {"id": "hash-brown-casserole", "title": "Hash Brown Casserole", "category": "Breakfast", "contributor": "Terri Board"}, {"id": "hot-orange-coffee-cake", "title": "Hot Orange Coffee Cake", "category": "Breakfast", "contributor": "Terri Board"}, {"id": "fried-bread", "title": "Fried Bread", "category": "Breakfast", "contributor": "April Family"}, {"id": "absent-cook-stew", "title": "Absent Cook Stew", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "navy-bean-soup", "title": "Navy Bean Soup", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "pot-roast", "title": "Pot Roast", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "baked-spaghetti-chicken", "title": "Baked Spaghetti with Chicken", "category": "Main Dishes", "contributor": "Brandy Worsham"}, {"id": "chicken-casserole", "title": "Chicken Casserole", "category": "Main Dishes", "contributor": "Brandy Worsham"}, {"id": "barbecued-ribs", "title": "Barbecued Ribs", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "classic-lasagna", "title": "Classic Lasagna", "category": "Main Dishes", "contributor": "John & Terri April"}, {"id": "crock-pot-stroganoff", "title": "Crock Pot Stroganoff", "category": "Main Dishes", "contributor": "John & Terri April"}, {"id": "creamy-cooker-chicken", "title": "Creamy Cooker Chicken", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "super-easy-chicken", "title": "Super Easy Chicken", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "easy-chicken", "title": "Easy Chicken", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "hill-country-casserole", "title": "Hill Country Casserole", "category": "Main Dishes", "contributor": "John & Terri April"}, {"id": "italian-chops", "title": "Italian Chops", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "pork-chops-gravy", "title": "Pork Chops and Gravy", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "ham-cabbage-supper", "title": "Ham and Cabbage Supper", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "linguine-lobster", "title": "Linguine and Lobster", "category": "Main Dishes", "contributor": "John & Terri April"}, {"id": "bbq-meat-sandwich", "title": "BBQ Meat Sandwich", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "marvelous-meatloaf", "title": "Marvelous Meatloaf", "category": "Main Dishes", "contributor": "Diane April"}, {"id": "ground-beef-oriental", "title": "Ground Beef Oriental", "category": "Main Dishes", "contributor": "Diane April"}, {"id": "one-dish-chicken-supper", "title": "One Dish Chicken Supper", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "mulligan", "title": "Mulligan (Onion & Corned Beef)", "category": "Main Dishes", "contributor": "Mom (Mary April)"}, {"id": "quesadillas", "title": "Quesadillas", "category": "Main Dishes", "contributor": "April Family"}, {"id": "enchiladas", "title": "Enchiladas", "category": "Main Dishes", "contributor": "April Family"}, {"id": "roast-beef-sandwich-spread", "title": "Roast Beef Sandwich Spread", "category": "Main Dishes", "contributor": "Terri Board"}, {"id": "shredded-roast-beef", "title": "Shredded Roast Beef", "category": "Main Dishes", "contributor": "Terri Board"}, {"id": "mock-salisbury-steak", "title": "Mock Salisbury Steak", "category": "Main Dishes", "contributor": "Terri Board"}, {"id": "delicious-chuck-roast", "title": "Delicious Chuck Roast", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "roast-chicken", "title": "Roast Chicken", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "chicken-mushroom-gravy", "title": "Chicken in Mushroom Gravy", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "scrumptious-beef", "title": "Scrumptious Beef", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "easy-dinner-surprise", "title": "Easy Dinner Surprise", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "stuffed-peppers", "title": "Stuffed Peppers", "category": "Main Dishes", "contributor": "Mom (Mary April)"}, {"id": "cabbage-rolls", "title": "Cabbage Rolls", "category": "Main Dishes", "contributor": "Mom (Mary April)"}, {"id": "swiss-steak", "title": "Swiss Steak", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "forget-it-pot-roast", "title": "Forget It Pot Roast", "category": "Main Dishes", "contributor": "Patty Hykes"}, {"id": "creamy-winter-squash-soup", "title": "Creamy Winter Squash Soup", "category": "Soups & Stews", "contributor": "Mary Ringlein"}, {"id": "ham-bean-soup", "title": "Ham and Bean Soup", "category": "Soups & Stews", "contributor": "Mom (Mary April)"}, {"id": "vegetable-beef-soup", "title": "Vegetable Beef Soup", "category": "Soups & Stews", "contributor": "Patty Hykes"}, {"id": "potato-leek-soup", "title": "Potato Leek Soup", "category": "Soups & Stews", "contributor": "Terri Board"}, {"id": "knoephla-soup", "title": "Knoephla Soup", "category": "Soups & Stews", "contributor": "Bob April"}, {"id": "chicken-tortilla-soup", "title": "Chicken Tortilla Soup", "category": "Soups & Stews", "contributor": "Katrina Boleware"}, {"id": "5-bean-hot-dish", "title": "5 Bean Hot Dish", "category": "Sides", "contributor": "April Family"}, {"id": "wilted-lettuce", "title": "Wilted Lettuce", "category": "Sides", "contributor": "Mom (Mary April)"}, {"id": "aprils-broccoli-casserole", "title": "April's Broccoli Casserole", "category": "Sides", "contributor": "April Kelly"}, {"id": "broccoli-rice-casserole", "title": "Broccoli-Rice Casserole", "category": "Sides", "contributor": "Mary Ringlein"}, {"id": "calico-beans", "title": "Calico Beans", "category": "Sides", "contributor": "Patty Hykes"}, {"id": "glorified-rice", "title": "Glorified Rice", "category": "Sides", "contributor": "Terri Board"}, {"id": "sweet-potato-casserole", "title": "Sweet Potato Casserole", "category": "Sides", "contributor": "Terri Board"}, {"id": "quick-scalloped-potatoes", "title": "Quick Scalloped Potatoes", "category": "Sides", "contributor": "Diane April"}, {"id": "spanish-rice", "title": "Spanish Rice", "category": "Sides", "contributor": "April Family"}, {"id": "bean-salad", "title": "Bean Salad", "category": "Salads & Breads", "contributor": "Mom (Mary April)"}, {"id": "acini-di-pepe-fruit-salad", "title": "Acini Di Pepe Fruit Salad", "category": "Salads & Breads", "contributor": "Mom (Mary April)"}, {"id": "fruit-salad", "title": "Fruit Salad", "category": "Salads & Breads", "contributor": "Mary Ringlein"}, {"id": "cinnamon-fruit-salad", "title": "Cinnamon Fruit Salad", "category": "Salads & Breads", "contributor": "Mary Ringlein"}, {"id": "grampas-zucchini-bread", "title": "Grampa's Zucchini Bread", "category": "Salads & Breads", "contributor": "Grampa Frank April"}, {"id": "banana-bread", "title": "Banana Bread", "category": "Salads & Breads", "contributor": "Mary Ringlein"}, {"id": "ice-box-potica", "title": "Ice Box Potica (Nut Roll)", "category": "Salads & Breads", "contributor": "Mary Ringlein"}, {"id": "oatmeal-bread", "title": "Oatmeal Bread", "category": "Salads & Breads", "contributor": "Mom (Mary April)"}, {"id": "bisquick-banana-bread", "title": "Bisquick One-Pan Banana Bread", "category": "Salads & Breads", "contributor": "Mom (Mary April)"}, {"id": "spaghetti-salad", "title": "Spaghetti Salad", "category": "Salads & Breads", "contributor": "Terri Board"}, {"id": "mac-cheese-salad", "title": "Mac and Cheese Salad", "category": "Salads & Breads", "contributor": "Terri Board"}, {"id": "cauliflower-broccoli-salad", "title": "Cauliflower and Broccoli Salad", "category": "Salads & Breads", "contributor": "Mom (Mary April)"}, {"id": "zucchini-bread", "title": "Zucchini Bread", "category": "Salads & Breads", "contributor": "Mary Ringlein"}, {"id": "succulent-zucchini-bread", "title": "Succulent Zucchini Bread", "category": "Salads & Breads", "contributor": "Mary Ringlein"}, {"id": "apple-pizza", "title": "Apple Pizza", "category": "Desserts & Candy", "contributor": "Mary Ringlein"}, {"id": "pecan-pie-bars", "title": "Pecan Pie Bars", "category": "Desserts & Candy", "contributor": "Terri Board"}, {"id": "yoplait-pie", "title": "Yoplait Pie", "category": "Desserts & Candy", "contributor": "Peggy April"}, {"id": "applesauce-cake", "title": "Applesauce Cake", "category": "Desserts & Candy", "contributor": "Mom (Mary April)"}, {"id": "blueberry-pie", "title": "Blueberry Pie", "category": "Desserts & Candy", "contributor": "Mom (Mary April)"}, {"id": "pumpkin-roll", "title": "Pumpkin Roll", "category": "Desserts & Candy", "contributor": "Mary Ringlein"}, {"id": "caramel-crunch-brrwich", "title": "Caramel Crunch Brrrwich", "category": "Desserts & Candy", "contributor": "Sarah Hykes"}, {"id": "ooey-gooey-rocky-road", "title": "Ooey Gooey Rocky Road", "category": "Desserts & Candy", "contributor": "Sarah Hykes"}, {"id": "chocolate-covered-pb-ritz", "title": "Chocolate Covered Peanut Butter Ritz", "category": "Desserts & Candy", "contributor": "Brandy Worsham"}, {"id": "peanut-delights", "title": "Peanut Delights", "category": "Desserts & Candy", "contributor": "Mary Ringlein"}, {"id": "peanut-butter-pie", "title": "Peanut Butter Pie", "category": "Desserts & Candy", "contributor": "John & Terri April"}, {"id": "chocolate-pecan-pie", "title": "Chocolate Pecan Pie", "category": "Desserts & Candy", "contributor": "Patty Hykes"}, {"id": "foolproof-fudge", "title": "Foolproof Fudge", "category": "Desserts & Candy", "contributor": "Terri Board"}, {"id": "crinkled-ginger-cookies", "title": "Crinkled Ginger Cookies", "category": "Desserts & Candy", "contributor": "Mom (Mary April)"}, {"id": "ginger-cookies", "title": "Ginger Cookies", "category": "Desserts & Candy", "contributor": "Mom (Mary April)"}, {"id": "buckeyes", "title": "Buckeyes", "category": "Desserts & Candy", "contributor": "Mom (Mary April)"}, {"id": "hard-candy", "title": "Hard Candy", "category": "Desserts & Candy", "contributor": "Mary Ringlein"}, {"id": "peach-streusel-coffee-cake", "title": "Peach Streusel Coffee Cake", "category": "Desserts & Candy", "contributor": "Terri Board"}, {"id": "lemon-bars", "title": "Lemon Bars", "category": "Desserts & Candy", "contributor": "Mary Ringlein"}, {"id": "old-fashioned-cherry-pie", "title": "Old Fashioned Cherry Pie", "category": "Desserts & Candy", "contributor": "Mary Ringlein"}, {"id": "grammas-bread-butter-pickles", "title": "Gramma's Bread and Butter Pickles", "category": "Miscellaneous", "contributor": "Gramma Louise April"}, {"id": "noodles", "title": "Homemade Noodles", "category": "Miscellaneous", "contributor": "Mary April"}, {"id": "cranberry-orange-relish", "title": "Cranberry Orange Relish", "category": "Miscellaneous", "contributor": "Mary April"}, {"id": "raisin-sauce", "title": "Raisin Sauce", "category": "Miscellaneous", "contributor": "Mary April"}, {"id": "homemade-salami", "title": "Homemade Salami", "category": "Miscellaneous", "contributor": "Marie Richter"}];
+
+  const input = document.getElementById('search-input');
+  const resultsSection = document.getElementById('search-results');
+  const resultsGrid = document.getElementById('results-grid');
+  const resultsLabel = document.getElementById('results-label');
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    if (!q) {
+      resultsSection.classList.remove('active');
+      return;
+    }
+
+    const matches = recipes.filter(r =>
+      r.title.toLowerCase().includes(q) ||
+      r.category.toLowerCase().includes(q) ||
+      r.contributor.toLowerCase().includes(q)
+    ).slice(0, 8);
+
+    resultsSection.classList.add('active');
+    resultsLabel.textContent = matches.length
+      ? `${matches.length} result${matches.length > 1 ? 's' : ''} for "${input.value.trim()}"`
+      : `No recipes found for "${input.value.trim()}"`;
+
+    resultsGrid.innerHTML = matches.map(r => `
+      <a href="recipe-${r.id}.html" class="result-card">
+        <p class="recipe-origin">📍 ${r.contributor}</p>
+        <h4>${r.title}</h4>
+        <p>${r.category}</p>
+      </a>
+    `).join('');
+  });
+</script>
+
+</body>
+</html>

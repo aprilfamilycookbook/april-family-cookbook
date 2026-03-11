@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story – April Family Cookbook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #fdf6ec;
+      --warm-white: #fffaf3;
+      --brown: #5c3d1e;
+      --dark-brown: #3a2410;
+      --rust: #b5451b;
+      --amber: #d4831a;
+      --tan: #c9a96e;
+      --light-tan: #e8d5b0;
+      --text: #3a2410;
+      --muted: #8a7060;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background-color: var(--cream);
+      color: var(--text);
+    }
+
+    /* ── HEADER ── */
+    header {
+      background-color: var(--dark-brown);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      border-bottom: 3px solid var(--tan);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      gap: 1rem;
+    }
+
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-icon { font-size: 1.5rem; line-height: 1; }
+
+    .logo-text { display: flex; flex-direction: column; }
+
+    .logo-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--light-tan);
+      line-height: 1.1;
+    }
+
+    .logo-tagline {
+      font-family: 'Caveat', cursive;
+      font-size: 0.9rem;
+      color: var(--tan);
+    }
+
+    nav { display: flex; align-items: center; gap: 0.25rem; flex-wrap: wrap; }
+
+    nav a {
+      font-family: 'Lora', serif;
+      font-size: 0.8rem;
+      color: var(--light-tan);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 3px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover { background: rgba(201,169,110,0.2); color: var(--tan); }
+    nav a.active { color: var(--tan); border-bottom: 2px solid var(--tan); }
+    .nav-submit { background: var(--rust) !important; color: white !important; font-weight: 600; margin-left: 0.5rem; }
+    .nav-submit:hover { background: #c84f20 !important; }
+
+    /* ── HERO ── */
+    .about-hero {
+      background: linear-gradient(160deg, var(--dark-brown) 0%, var(--brown) 60%, #7a4f2a 100%);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(212,131,26,0.12) 0%, transparent 60%);
+    }
+
+    /* Decorative wheat/grain SVG pattern */
+    .about-hero::after {
+      content: '✦ ✦ ✦';
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(201,169,110,0.3);
+      font-size: 1rem;
+      letter-spacing: 1rem;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Caveat', cursive;
+      font-size: 1.2rem;
+      color: var(--tan);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+
+    .about-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      color: var(--light-tan);
+      line-height: 1.15;
+      position: relative;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-hero h1 em { font-style: italic; color: var(--tan); }
+
+    .hero-intro {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: rgba(232,213,176,0.85);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    /* ── FAMILY NAMES BANNER ── */
+    .family-names-banner {
+      background: var(--rust);
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    .family-names-banner p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: white;
+      letter-spacing: 0.15em;
+    }
+
+    .family-names-banner span {
+      font-style: italic;
+      opacity: 0.8;
+      font-size: 0.9rem;
+      margin: 0 0.5rem;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .about-content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    /* ── STORY SECTIONS ── */
+    .story-section {
+      margin-bottom: 4rem;
+    }
+
+    .section-eyebrow {
+      font-family: 'Caveat', cursive;
+      font-size: 1.2rem;
+      color: var(--rust);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-eyebrow::after {
+      content: '';
+      display: block;
+      height: 1px;
+      flex: 1;
+      background: var(--light-tan);
+    }
+
+    .story-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--dark-brown);
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .story-section p {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #4a3020;
+      margin-bottom: 1.1rem;
+    }
+
+    .story-section p:last-child { margin-bottom: 0; }
+
+    /* ── PULL QUOTE ── */
+    .pull-quote {
+      border-left: 4px solid var(--tan);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      background: var(--warm-white);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--brown);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .pull-quote cite {
+      display: block;
+      font-family: 'Caveat', cursive;
+      font-size: 1rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      font-style: normal;
+    }
+
+    /* ── FAMILY NAME CARDS ── */
+    .family-names-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+
+    .name-card {
+      background: var(--warm-white);
+      border: 1.5px solid var(--light-tan);
+      border-radius: 8px;
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .name-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--rust);
+    }
+
+    .name-card .family-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark-brown);
+      margin-bottom: 0.35rem;
+    }
+
+    .name-card .name-origin {
+      font-family: 'Caveat', cursive;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .name-card .name-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    /* ── LOCATION HIGHLIGHT ── */
+    .location-block {
+      background: var(--dark-brown);
+      border-radius: 10px;
+      padding: 2rem 2.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .location-icon {
+      font-size: 2.5rem;
+      flex-shrink: 0;
+      line-height: 1;
+      margin-top: 0.2rem;
+    }
+
+    .location-block h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--light-tan);
+      margin-bottom: 0.5rem;
+    }
+
+    .location-block p {
+      font-size: 0.92rem;
+      color: rgba(232,213,176,0.8);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .location-block p strong { color: var(--tan); }
+
+    /* ── RECIPE ORIGINS PLACEHOLDER ── */
+    .coming-soon-block {
+      background: var(--warm-white);
+      border: 2px dashed var(--light-tan);
+      border-radius: 10px;
+      padding: 2.5rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .coming-soon-block .cs-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+
+    .coming-soon-block h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--dark-brown);
+      margin-bottom: 0.5rem;
+    }
+
+    .coming-soon-block p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    /* ── SUBMIT CTA ── */
+    .about-cta {
+      background: var(--rust);
+      border-radius: 10px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .about-cta h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 0.6rem;
+    }
+
+    .about-cta p {
+      color: rgba(255,255,255,0.88);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.75rem;
+      border-radius: 4px;
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-white { background: white; color: var(--rust); }
+    .btn-white:hover { background: var(--cream); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark-brown);
+      color: var(--muted);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      border-top: 3px solid var(--brown);
+    }
+
+    footer .footer-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--light-tan);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer .footer-tagline {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem;
+      color: var(--tan);
+      margin-bottom: 1rem;
+    }
+
+    footer a { color: var(--tan); text-decoration: none; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 680px) {
+      .header-inner { flex-direction: column; gap: 0.75rem; }
+      nav { justify-content: center; }
+      .location-block { flex-direction: column; gap: 0.75rem; }
+      .family-names-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .about-hero > * { animation: fadeUp 0.7s ease both; }
+    .about-hero .hero-eyebrow { animation-delay: 0.1s; }
+    .about-hero h1              { animation-delay: 0.25s; }
+    .about-hero .hero-intro     { animation-delay: 0.4s; }
+
+    /* ── PRINT ── */
+    @media print {
+      body * { display: none !important; }
+      body::after {
+        display: block !important;
+        content: 'Please print individual recipes from their recipe pages.';
+        font-family: Georgia, serif;
+        font-size: 14pt;
+        color: #333;
+        text-align: center;
+        margin-top: 3in;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span class="logo-icon">📖</span>
+      <span class="logo-text">
+        <span class="logo-title">April Family Cookbook</span>
+        <span class="logo-tagline">Family Recipes Through the Generations</span>
+      </span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipes.html">All Recipes</a>
+      <a href="about.html" class="active">Our Story</a>
+      <a href="submit.html" class="nav-submit">+ Submit a Recipe</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+  <p class="hero-eyebrow">Est. in Ohio · Rooted in Alsace</p>
+  <h1>The <em>April</em> Family Story</h1>
+  <p class="hero-intro">From a village beneath the forests of Alsace to the farmlands of northeast Ohio — a family, a faith, and a table that always had room for one more.</p>
+</section>
+
+<!-- FAMILY NAMES BANNER -->
+<div class="family-names-banner">
+  <p>April <span>·</span> Neff <span>·</span> Schaeffer <span>·</span> Ross <span>·</span> Sheron <span>·</span> and the families who married in</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="about-content">
+
+  <!-- WHERE WE COME FROM -->
+  <div class="story-section">
+    <p class="section-eyebrow">Where We Come From</p>
+    <h2>Alsace, Bavaria, and the Fields of Ohio</h2>
+    <p>
+      This family's roots stretch back to the border country of Europe — to <strong>Alsace</strong>, that narrow strip of land between France and Germany that has always been more German than French in its culture, its language, and its cooking. Generations ago, this family's ancestors made the long journey from villages like <strong>Soultz-sous-Forêts</strong> across the Atlantic, eventually settling in the farmland of northeast Ohio. They brought their faith, their work ethic, and their recipes with them — and those things took root right alongside them.
+    </p>
+    <p>
+      On Mary April's side, the story winds through the coalfields of southeastern Ohio first. The Ross and Sheron families put down roots in <strong>Nelsonville</strong> — once one of Ohio's great coal boomtowns — before eventually making their way north to Medina County. Two very different roads, the same destination, and one family table.
+    </p>
+
+    <div class="pull-quote">
+      <p>"They left the forests of Alsace and the fields of Bavaria and built something new in Ohio — but the kitchen stayed the same."</p>
+      <cite>— The April Family</cite>
+    </div>
+  </div>
+
+  <!-- FIVE SURNAMES -->
+  <div class="story-section">
+    <p class="section-eyebrow">The Family Names</p>
+    <h2>Five Surnames, One Table</h2>
+    <p>
+      When you see the names <strong>April</strong>, <strong>Neff</strong>, <strong>Schaeffer</strong>, <strong>Ross</strong>, and <strong>Sheron</strong> attached to recipes in this collection, you're looking at different branches of the same family. The Aprils, Neffs, and Schaeffers came out of the German and Alsatian immigrant communities that settled in Medina County. The Rosses and Sherons came up from the coal country of southeastern Ohio. They married into each other's lives, and their kitchens merged just as naturally.
+    </p>
+
+    <div class="family-names-grid">
+      <div class="name-card">
+        <div class="family-name">April</div>
+        <div class="name-origin">Alsatian / German</div>
+        <p class="name-note">The name that carries this cookbook. Settled in northeast Ohio generations ago.</p>
+      </div>
+      <div class="name-card">
+        <div class="family-name">Neff</div>
+        <div class="name-origin">German / Swiss</div>
+        <p class="name-note">One of the oldest names in this family's Ohio story, woven into the April line from the beginning.</p>
+      </div>
+      <div class="name-card">
+        <div class="family-name">Schaeffer</div>
+        <div class="name-origin">German</div>
+        <p class="name-note">From the German for "shepherd." Married into the family and became a cornerstone of it.</p>
+      </div>
+      <div class="name-card">
+        <div class="family-name">Ross</div>
+        <div class="name-origin">Scottish / Germanic</div>
+        <p class="name-note">Mary April's maiden name. The Ross family came north from Nelsonville to Medina County.</p>
+      </div>
+      <div class="name-card">
+        <div class="family-name">Sheron</div>
+        <div class="name-origin">Irish</div>
+        <p class="name-note">A rare name with Irish roots, connected to the Ross family through the Nelsonville community.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ELWIN & MARY -->
+  <div class="story-section">
+    <p class="section-eyebrow">The Heart of the Kitchen</p>
+    <h2>Elwin &amp; Mary April</h2>
+    <p>
+      Elwin and Mary April are the reason this cookbook exists. Their recipes were the ones that defined what family food meant — the dishes that filled the house with a smell that pulled everyone to the table, the things that showed up every holiday without fail, the food that meant home.
+    </p>
+    <p>
+      At some point, the family made a decision that many families wish they had made sooner: they sat down and captured those recipes before time and memory could carry them away. The result was a printed family cookbook — gathering not just Elwin and Mary's recipes, but those of the generations before them and the generation that followed: their children, the aunts and uncles and mothers, and the spouses who married in and brought their own traditions to the table.
+    </p>
+    <p>
+      This website is the next chapter of that effort. What started as a printed booklet is now a living collection — searchable, printable, and open to every branch of this family.
+    </p>
+
+    <div class="pull-quote">
+      <p>"Every generation left something at this table. This cookbook is how we make sure it stays there."</p>
+      <cite>— The April Family Cookbook</cite>
+    </div>
+  </div>
+
+  <!-- ST. MARTIN OF TOURS -->
+  <div class="story-section">
+    <p class="section-eyebrow">Where the Family Rests</p>
+    <h2>Resting Places</h2>
+    <p>
+      A large portion of the April, Neff, and Schaeffer families are buried at <strong>St. Martin of Tours Church</strong> in Valley City, Ohio — a parish founded in 1840 by German Catholic immigrant families, the same community this family was part of. There is even a <strong>Neff Road</strong> near the church, a quiet reminder of how deeply rooted these families became in that corner of Ohio. Elwin and Mary April, along with other great-grandparents and grandparents of this family, are buried at <strong>St. Mary's Cemetery in Norwalk, Ohio</strong>.
+    </p>
+
+    <p style="margin-top:1rem;">
+      <a href="https://www.stmartinvc.org" target="_blank" style="font-family:'Lora',serif; color:var(--rust); font-size:0.9rem;">Visit the St. Martin of Tours Parish Website →</a>
+    </p>
+  </div>
+
+  <!-- RECIPE ORIGINS PLACEHOLDER -->
+  <div class="story-section">
+    <p class="section-eyebrow">The Food That Tells the Story</p>
+    <h2>Where the Recipes Come From</h2>
+    <p>
+      Alsatian and German home cooking is honest food — hearty, slow-cooked, and built for families who worked hard and ate well. Many of the recipes in this collection carry those fingerprints: braised meats, rich gravies, root vegetables, breads baked from scratch, and desserts that could anchor a holiday table. Others reflect the broader American Midwest table that this family became part of over generations.
+    </p>
+    <p>
+      Each recipe includes the story of where it came from — which family member made it, what occasion it belonged to, and what made it theirs. Those stories are still being gathered.
+    </p>
+
+    <div class="coming-soon-block">
+      <div class="cs-icon">📜</div>
+      <h3>Recipe Origins — Coming Soon</h3>
+      <p>As recipes are added to the collection, this section will grow to trace each dish back to the family member and tradition it came from.</p>
+    </div>
+  </div>
+
+  <!-- SUBMIT CTA -->
+  <div class="about-cta">
+    <h3>Your Recipe Belongs Here Too</h3>
+    <p>If you're an April, a Neff, a Schaeffer, or connected to this family by marriage or blood — your recipes are part of this story. Submit yours and we'll add it to the collection with full credit to you.</p>
+    <a href="submit.html" class="btn btn-white">Submit a Family Recipe →</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-title">April Family Cookbook</div>
+  <div class="footer-tagline">Family Recipes Through the Generations</div>
+  <p>A private collection for the April family. &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="submit.html">Submit a Recipe</a></p>
+</footer>
+
+</body>
+</html>

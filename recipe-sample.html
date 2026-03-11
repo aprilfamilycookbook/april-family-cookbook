@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sunday Pot Roast – April Family Cookbook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #fdf6ec;
+      --warm-white: #fffaf3;
+      --brown: #5c3d1e;
+      --dark-brown: #3a2410;
+      --rust: #b5451b;
+      --amber: #d4831a;
+      --sage: #7a8c6e;
+      --tan: #c9a96e;
+      --light-tan: #e8d5b0;
+      --text: #3a2410;
+      --muted: #8a7060;
+    }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background-color: var(--cream);
+      color: var(--text);
+    }
+
+    /* ── HEADER ── */
+    header {
+      background-color: var(--dark-brown);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      border-bottom: 3px solid var(--tan);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      gap: 1rem;
+    }
+
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--light-tan);
+      line-height: 1.1;
+    }
+
+    nav a {
+      font-family: 'Lora', serif;
+      font-size: 0.8rem;
+      color: var(--light-tan);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+    nav a:hover { background: rgba(201,169,110,0.2); color: var(--tan); }
+    .nav-submit { background: var(--rust) !important; color: white !important; font-weight: 600; }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      max-width: 1100px;
+      margin: 1.5rem auto 0;
+      padding: 0 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .breadcrumb a { color: var(--rust); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    /* ── RECIPE PAGE ── */
+    .recipe-page {
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 0 2rem;
+    }
+
+    /* ── RECIPE HEADER ── */
+    .recipe-header {
+      margin-bottom: 2rem;
+    }
+
+    .recipe-category {
+      display: inline-block;
+      background: var(--light-tan);
+      color: var(--brown);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      font-family: 'Lora', serif;
+    }
+
+    .recipe-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--dark-brown);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .recipe-story {
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
+      border-left: 3px solid var(--tan);
+      padding-left: 1.25rem;
+      margin: 1.25rem 0;
+    }
+
+    .recipe-origin-tag {
+      font-family: 'Caveat', cursive;
+      font-size: 1.15rem;
+      color: var(--rust);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── META STRIP ── */
+    .recipe-meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      background: var(--warm-white);
+      border: 1.5px solid var(--light-tan);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+    }
+
+    .meta-block {
+      flex: 1;
+      min-width: 100px;
+      padding: 1rem 1.25rem;
+      text-align: center;
+      border-right: 1px solid var(--light-tan);
+    }
+    .meta-block:last-child { border-right: none; }
+
+    .meta-block .label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-family: 'Lora', serif;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .meta-block .value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--dark-brown);
+      font-weight: 700;
+    }
+
+    /* ── ACTION BUTTONS ── */
+    .recipe-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 4px;
+      font-family: 'Lora', serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary { background: var(--rust); color: white; }
+    .btn-primary:hover { background: #c84f20; }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--brown);
+      border: 1.5px solid var(--tan);
+    }
+    .btn-outline:hover { background: var(--light-tan); }
+
+    /* ── RECIPE BODY ── */
+    .recipe-body {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .ingredients-column { position: sticky; top: 100px; }
+
+    .column-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--dark-brown);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .ingredients-list {
+      list-style: none;
+      background: var(--warm-white);
+      border: 1.5px solid var(--light-tan);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .ingredients-list li {
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid var(--light-tan);
+      font-size: 0.95rem;
+      line-height: 1.4;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .ingredients-list li:last-child { border-bottom: none; }
+
+    .ing-amount {
+      font-weight: 600;
+      color: var(--rust);
+      min-width: 3.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* ── STEPS ── */
+    .steps-list { list-style: none; }
+
+    .step-item {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      background: var(--rust);
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .step-content { flex: 1; }
+
+    .step-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark-brown);
+      margin-bottom: 0.4rem;
+    }
+
+    .step-text {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    /* ── TIP BOX ── */
+    .tip-box {
+      background: var(--warm-white);
+      border: 1.5px solid var(--light-tan);
+      border-left: 4px solid var(--amber);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .tip-box .tip-label {
+      font-family: 'Caveat', cursive;
+      font-size: 1.1rem;
+      color: var(--amber);
+      margin-bottom: 0.5rem;
+    }
+
+    .tip-box p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark-brown);
+      color: var(--muted);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      border-top: 3px solid var(--brown);
+    }
+    footer a { color: var(--tan); text-decoration: none; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 680px) {
+      .recipe-body { grid-template-columns: 1fr; }
+      .ingredients-column { position: static; }
+      .header-inner { flex-direction: column; }
+    }
+
+    /* ── PRINT STYLES ── */
+    @media print {
+      @page { margin: 0.75in; size: letter; }
+
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+      header, footer, .recipe-actions, .breadcrumb,
+      .recipe-category, .recipe-origin-tag { display: none !important; }
+
+      body {
+        background: white !important;
+        font-size: 8.5pt;
+        font-family: Georgia, serif;
+        color: #222;
+        line-height: 1.35;
+      }
+
+      .recipe-page {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Compact header block */
+      .recipe-header { margin-bottom: 6pt; }
+
+      .recipe-title {
+        font-size: 18pt;
+        margin-bottom: 3pt;
+        line-height: 1.1;
+        color: #2a1608;
+      }
+
+      .recipe-story {
+        font-size: 7.5pt;
+        font-style: italic;
+        color: #555;
+        border-left: 2px solid #c9a96e;
+        padding-left: 6pt;
+        margin: 4pt 0 6pt;
+        line-height: 1.4;
+      }
+
+      /* Meta strip — inline row instead of big blocks */
+      .recipe-meta-strip {
+        display: flex;
+        border: 1px solid #c9a96e;
+        border-radius: 4px;
+        margin-bottom: 8pt;
+        background: #fdf6ec !important;
+        overflow: hidden;
+      }
+
+      .meta-block {
+        flex: 1;
+        padding: 4pt 6pt;
+        border-right: 1px solid #e8d5b0;
+        text-align: center;
+      }
+      .meta-block:last-child { border-right: none; }
+
+      .meta-block .label {
+        font-size: 6pt;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #888;
+        display: block;
+        margin-bottom: 1pt;
+      }
+
+      .meta-block .value {
+        font-size: 8.5pt;
+        font-weight: bold;
+        color: #2a1608;
+      }
+
+      /* Two-column recipe body */
+      .recipe-body {
+        display: grid;
+        grid-template-columns: 1fr 1.8fr;
+        gap: 14pt;
+        align-items: start;
+      }
+
+      .ingredients-column { position: static !important; }
+
+      .column-title {
+        font-size: 10pt;
+        font-weight: bold;
+        color: #3a2410;
+        margin-bottom: 5pt;
+        border-bottom: 1.5px solid #c9a96e;
+        padding-bottom: 3pt;
+      }
+
+      /* Ingredients: two-column list within the panel */
+      .ingredients-list {
+        list-style: none;
+        border: none;
+        background: transparent;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 8pt;
+      }
+
+      .ingredients-list li {
+        padding: 2pt 0;
+        border-bottom: 0.5px solid #e8d5b0;
+        font-size: 7.5pt;
+        display: flex;
+        gap: 3pt;
+        line-height: 1.3;
+      }
+
+      .ing-amount {
+        font-weight: bold;
+        color: #b5451b;
+        min-width: 2.5rem;
+        font-size: 7pt;
+        flex-shrink: 0;
+      }
+
+      /* Steps: compact */
+      .steps-list { list-style: none; }
+
+      .step-item {
+        display: flex;
+        gap: 6pt;
+        margin-bottom: 5pt;
+        align-items: flex-start;
+      }
+
+      .step-num {
+        background: #3a2410 !important;
+        color: white !important;
+        font-size: 7pt;
+        font-weight: bold;
+        width: 14pt;
+        height: 14pt;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 1pt;
+      }
+
+      .step-title {
+        font-size: 8pt;
+        font-weight: bold;
+        color: #2a1608;
+        margin-bottom: 1pt;
+      }
+
+      .step-text {
+        font-size: 7.5pt;
+        color: #333;
+        line-height: 1.4;
+      }
+
+      /* Tip boxes: slim */
+      .tip-box {
+        border-left: 3px solid #d4831a;
+        background: #fdf6ec !important;
+        padding: 4pt 6pt;
+        margin-top: 6pt;
+        border-radius: 0 3px 3px 0;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+      }
+
+      .tip-box .tip-label {
+        font-size: 7.5pt;
+        font-weight: bold;
+        color: #d4831a;
+        margin-bottom: 2pt;
+      }
+
+      .tip-box p { font-size: 7pt; color: #555; line-height: 1.35; }
+
+      /* Print footer */
+      .print-footer {
+        display: block !important;
+        margin-top: 10pt;
+        padding-top: 5pt;
+        border-top: 1px solid #c9a96e;
+        font-size: 7pt;
+        color: #999;
+        text-align: center;
+      }
+
+      a::after { content: none !important; }
+    }
+
+    .print-footer { display: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span style="font-size:1.5rem">📖</span>
+      <span class="logo-title">April Family Cookbook</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipes.html">All Recipes</a>
+      <a href="about.html">Our Story</a>
+      <a href="submit.html" class="nav-submit">+ Submit a Recipe</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> › <a href="recipes.html?cat=beef">Beef</a> › Sunday Pot Roast
+</div>
+
+<main class="recipe-page">
+
+  <div class="recipe-header">
+    <span class="recipe-category">🥩 Beef</span>
+    <h1 class="recipe-title">Sunday Pot Roast</h1>
+    <div class="recipe-origin-tag">📍 Contributed by Grandma April · Est. tradition since 1962</div>
+    <p class="recipe-story">
+      This was the recipe that meant Sunday. No matter what else was happening in the house — this roast meant everyone would find their way back to the table. Grandma April made it every Sunday she hosted for over 40 years. The secret, she always said, was patience and a good cast iron pot.
+    </p>
+  </div>
+
+  <div class="recipe-meta-strip">
+    <div class="meta-block"><span class="label">Prep Time</span><span class="value">20 min</span></div>
+    <div class="meta-block"><span class="label">Cook Time</span><span class="value">3 hrs</span></div>
+    <div class="meta-block"><span class="label">Total</span><span class="value">3 hr 20 min</span></div>
+    <div class="meta-block"><span class="label">Serves</span><span class="value">8</span></div>
+    <div class="meta-block"><span class="label">Difficulty</span><span class="value">Easy</span></div>
+  </div>
+
+  <div class="recipe-actions">
+    <button class="btn btn-primary" onclick="window.print()">🖨 Print Recipe</button>
+    <button class="btn btn-outline" onclick="copyLink()">🔗 Share Link</button>
+    <a href="index.html" class="btn btn-outline">← Back to Recipes</a>
+  </div>
+
+
+  <div class="recipe-body">
+
+    <!-- INGREDIENTS -->
+    <div class="ingredients-column">
+      <h2 class="column-title">🛒 Ingredients</h2>
+      <ul class="ingredients-list">
+        <li><span class="ing-amount">3–4 lb</span> chuck roast</li>
+        <li><span class="ing-amount">2 tbsp</span> olive oil</li>
+        <li><span class="ing-amount">1 tsp</span> salt</li>
+        <li><span class="ing-amount">1 tsp</span> black pepper</li>
+        <li><span class="ing-amount">1 tsp</span> garlic powder</li>
+        <li><span class="ing-amount">1</span> large onion, quartered</li>
+        <li><span class="ing-amount">4 cloves</span> garlic, smashed</li>
+        <li><span class="ing-amount">4</span> carrots, cut into chunks</li>
+        <li><span class="ing-amount">4</span> medium potatoes, quartered</li>
+        <li><span class="ing-amount">2 cups</span> beef broth</li>
+        <li><span class="ing-amount">1 can</span> cream of mushroom soup</li>
+        <li><span class="ing-amount">2 sprigs</span> fresh rosemary</li>
+        <li><span class="ing-amount">2 sprigs</span> fresh thyme</li>
+      </ul>
+
+      <div class="tip-box" style="margin-top: 1.5rem">
+        <div class="tip-label">✏️ Grandma's Tip</div>
+        <p>Don't lift the lid during cooking — every peek adds 15 minutes to your cook time. Trust the process.</p>
+      </div>
+    </div>
+
+    <!-- INSTRUCTIONS -->
+    <div class="steps-column">
+      <h2 class="column-title">👩‍🍳 Instructions</h2>
+      <ol class="steps-list">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <div class="step-title">Season the Roast</div>
+            <p class="step-text">Pat the roast dry with paper towels. Mix the salt, pepper, and garlic powder together and rub generously all over the roast. Let it sit at room temperature for 15 minutes while you prep the vegetables.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <div class="step-title">Sear for Flavor</div>
+            <p class="step-text">Heat olive oil in a large Dutch oven or cast iron pot over medium-high heat until it shimmers. Sear the roast on all sides, about 3–4 minutes per side, until a deep brown crust forms. Don't rush this step — the crust is where all the flavor lives.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <div class="step-title">Build the Base</div>
+            <p class="step-text">Remove the roast and set aside. In the same pot, add the onions and smashed garlic. Cook for 2–3 minutes, stirring up all the brown bits from the bottom of the pan. Add the beef broth and cream of mushroom soup, stirring until combined.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">4</span>
+          <div class="step-content">
+            <div class="step-title">Add Vegetables & Roast</div>
+            <p class="step-text">Nestle the roast back in the pot. Surround it with the carrots and potatoes. Lay the rosemary and thyme sprigs on top. The liquid should come about halfway up the roast — add a splash more broth if needed.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">5</span>
+          <div class="step-content">
+            <div class="step-title">Low & Slow</div>
+            <p class="step-text">Cover the pot with a tight-fitting lid. Cook in the oven at 300°F (150°C) for 3 to 3.5 hours, until the meat is fork-tender and nearly falling apart. If cooking on the stovetop, keep at the lowest simmer with the lid on tight.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">6</span>
+          <div class="step-content">
+            <div class="step-title">Rest & Serve</div>
+            <p class="step-text">Remove from heat and let rest, covered, for 15 minutes. Pull the meat apart with two forks. Serve with the vegetables and ladle the rich pan gravy over everything. Good bread is not optional.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="tip-box">
+        <div class="tip-label">📝 Notes & Variations</div>
+        <p>This works beautifully in a slow cooker — sear the meat first, then cook on LOW for 8 hours. For extra richness, replace ½ cup of the broth with red wine. Leftovers (if any) make incredible sandwiches the next day.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="print-footer">
+    April Family Cookbook — aprilfamilycookbook.com · Recipe contributed by Grandma April
+  </div>
+
+</main>
+
+<footer>
+  <div style="font-family:'Playfair Display',serif; color:#e8d5b0; font-size:1.1rem; margin-bottom:0.5rem">April Family Cookbook</div>
+  <p>A private collection for the April family. &nbsp;|&nbsp; <a href="about.html">About</a> &nbsp;|&nbsp; <a href="submit.html">Submit a Recipe</a></p>
+</footer>
+
+<script>
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert('Recipe link copied to clipboard!');
+    });
+  }
+
+  // Auto-trigger print if navigated here via the homepage Print button
+  window.addEventListener('load', () => {
+    if (sessionStorage.getItem('autoPrint') === '1') {
+      sessionStorage.removeItem('autoPrint');
+      setTimeout(() => window.print(), 600);
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pork Chops and Gravy · April Family Cookbook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #fdf6ec; --warm-white: #fffaf3; --brown: #5c3d1e;
+      --dark-brown: #3a2410; --rust: #b5451b; --amber: #d4831a;
+      --tan: #c9a96e; --light-tan: #e8d5b0; --text: #3a2410; --muted: #8a7060;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--cream); color: var(--text); font-family: 'Lora', serif; }
+    a { color: inherit; text-decoration: none; }
+    nav { background: var(--dark-brown); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-family: 'Caveat', cursive; font-size: 1.4rem; color: var(--tan); font-weight: 700; }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: var(--light-tan); font-family: 'Lora', serif; font-size: 0.85rem; letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--tan); }
+    .recipe-hero { background: var(--brown); padding: 2.5rem 2rem 2rem; text-align: center; }
+    .recipe-category-tag { display: inline-block; background: var(--rust); color: #fff; font-family: 'Lora', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; margin-bottom: 1rem; }
+    .recipe-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 3rem); color: #fff; line-height: 1.2; margin-bottom: 0.75rem; }
+    .recipe-contributor { font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--tan); margin-bottom: 0; }
+    .origin-story { background: rgba(0,0,0,0.2); margin: 1.25rem auto 0; max-width: 640px; padding: 1rem 1.25rem; border-radius: 6px; font-size: 0.88rem; line-height: 1.75; color: var(--light-tan); font-style: italic; }
+    .recipe-content { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .recipe-section { margin-bottom: 2.5rem; }
+    .recipe-section h2 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--rust); border-bottom: 2px solid var(--light-tan); padding-bottom: 0.5rem; margin-bottom: 1.2rem; }
+    .ingredients-list { list-style: none; }
+    .ingredients-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--light-tan); font-size: 0.95rem; display: flex; align-items: baseline; gap: 0.5rem; }
+    .ingredients-list li::before { content: "·"; color: var(--rust); font-size: 1.2rem; flex-shrink: 0; }
+    .instructions-list { list-style: none; counter-reset: steps; }
+    .instructions-list li { counter-increment: steps; padding: 0.75rem 0 0.75rem 3rem; border-bottom: 1px solid var(--light-tan); font-size: 0.95rem; line-height: 1.7; position: relative; }
+    .instructions-list li::before { content: counter(steps); position: absolute; left: 0; top: 0.7rem; width: 2rem; height: 2rem; background: var(--rust); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 0.85rem; font-weight: 600; }
+    .tip-box { background: var(--warm-white); border-left: 4px solid var(--amber); padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; font-style: italic; color: var(--brown); margin-top: 1.5rem; }
+    .tip-box strong { font-style: normal; color: var(--amber); font-family: 'Playfair Display', serif; }
+    .recipe-actions { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1.2rem; border: 2px solid var(--brown); border-radius: 4px; font-family: 'Lora', serif; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--brown); }
+    .btn:hover { background: var(--brown); color: #fff; }
+    .btn-primary { background: var(--rust); color: #fff; border-color: var(--rust); }
+    .btn-primary:hover { background: var(--dark-brown); border-color: var(--dark-brown); }
+    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.85rem; margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--rust); }
+    footer { background: var(--dark-brown); color: var(--light-tan); text-align: center; padding: 2rem; font-size: 0.8rem; line-height: 1.8; }
+    @media print {
+      nav, .recipe-actions, .back-link, footer { display: none; }
+      .recipe-hero { background: none !important; color: var(--dark-brown) !important; padding: 0 0 1rem 0; }
+      .recipe-title { color: var(--dark-brown) !important; font-size: 1.8rem; }
+      .recipe-category-tag { display: none; }
+      .recipe-contributor { color: var(--brown) !important; }
+      .origin-story { background: var(--cream) !important; color: var(--muted) !important; border: 1px solid var(--light-tan); }
+      body { font-size: 9pt; }
+      .recipe-content { padding: 0; }
+      @page { margin: 0.75in; size: letter; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">✦ April Family Cookbook</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">All Recipes</a>
+    <a href="about.html">Our Story</a>
+    <a href="submit.html">Submit a Recipe</a>
+  </div>
+</nav>
+
+<div class="recipe-hero">
+  <div class="recipe-category-tag">Main Dishes</div>
+  <h1 class="recipe-title">Pork Chops and Gravy</h1>
+  <div class="recipe-contributor">From the kitchen of Patty Hykes</div>
+  <p class="origin-story">Pork with gravy is one of the oldest expressions of German and German-American home cooking — a combination that appears on tables from Alsace to Ohio with remarkable consistency. For a family whose great-grandparents came from Soultz-sous-Forêts, a dish of slow-cooked pork chops in rich cream gravy would have felt less like a recipe and more like a memory.</p>
+</div>
+<div class="recipe-content">
+  <a href="recipes.html" class="back-link">← Back to All Recipes</a>
+  <div class="recipe-actions">
+    <button class="btn btn-primary" onclick="window.print()">🖨️ Print Recipe</button>
+    <button class="btn" onclick="navigator.clipboard.writeText(window.location.href).then(()=>this.textContent='✓ Copied!')">🔗 Share</button>
+  </div>
+  <div class="recipe-section">
+    <h2>Ingredients</h2>
+    <ul class="ingredients-list"><li>8 pork chops</li>
+<li>Salt and pepper</li>
+<li>2 Tbsp oil</li>
+<li>2 cans cream of mushroom soup</li>
+<li>1 large onion, sliced</li>
+<li>12 oz can evaporated milk</li>
+<li>½ c sour cream (optional, for last 30 minutes)</li></ul>
+  </div>
+  <div class="recipe-section">
+    <h2>Instructions</h2>
+    <ol class="instructions-list"><li>Season chops with salt and pepper. Brown in oil, drain and transfer to slow cooker.</li>
+<li>In bowl whisk together mushroom soup, onion, and milk until smooth. Pour over chops.</li>
+<li>Cover and cook on high 3–4 hours or low 6–8 hours.</li>
+<li>To increase flavor, add ½ c sour cream during last 30 minutes.</li></ol>
+  </div>
+  
+</div>
+<footer>
+  <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
+  <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
+  <p style="margin-top:0.5rem;color:var(--muted);">aprilfamilycookbook.com</p>
+</footer>
+</body></html>
