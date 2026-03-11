@@ -620,6 +620,17 @@
         <p style="font-size:0.82rem; color:var(--muted); font-style:italic; margin-top:-0.5rem;">This is what makes the cookbook special. Tell us anything you know — who made it, when, what it meant to the family.</p>
 
         <div class="field">
+          <label for="recipe-origin-type">Recipe Origin <span class="required">*</span></label>
+          <select id="recipe-origin-type" name="recipe_origin_type" required>
+            <option value="" disabled selected>Select the origin of this recipe…</option>
+            <option value="Family">Family</option>
+            <option value="Friend">Friend</option>
+            <option value="My own creation">My own creation</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="field">
           <label for="origin">Who did this recipe come from? <span class="required">*</span></label>
           <input type="text" id="origin" name="origin" placeholder="e.g. Grandma Mary April, or my mother's side of the family" required />
         </div>
