@@ -4,6 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Breakfast Casserole · April Family Cookbook</title>
+  <!-- SEO -->
+  <meta name="description" content="The overnight breakfast casserole is a quintessential American church potluck and holiday morning dish — assembled the evening before, requiring nothing...">
+  <meta name="keywords" content="Breakfast Casserole, family recipe, Breakfast, April Family Cookbook">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-breakfast-casserole.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Breakfast Casserole · April Family Cookbook">
+  <meta property="og:description" content="The overnight breakfast casserole is a quintessential American church potluck and holiday morning dish — assembled the evening before, requiring nothing...">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-breakfast-casserole.html">
+  <meta property="og:site_name" content="April Family Cookbook">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Breakfast Casserole · April Family Cookbook">
+  <meta name="twitter:description" content="The overnight breakfast casserole is a quintessential American church potluck and holiday morning dish — assembled the evening before, requiring nothing...">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Breakfast Casserole",
+  "author": {
+    "@type": "Person",
+    "name": "Terri Board"
+  },
+  "description": "The overnight breakfast casserole is a quintessential American church potluck and holiday morning dish \u2014 assembled the evening before, requiring nothing...",
+  "recipeCategory": "Breakfast",
+  "recipeIngredient": [
+    "1 lb. sausage",
+    "6\u20138 slices bread",
+    "2 c shredded cheese",
+    "Salt and pepper",
+    "6\u20138 slices bacon",
+    "Eggs and milk (to taste)"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Brown and drain sausage."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Line bottom of greased 9\u00d713 baking dish with bread slices \u2014 crust removed and buttered on both sides."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Beat eggs with milk, salt, and pepper to taste."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Layer sausage on bread, then egg mixture. Add cheese and top with cooked, crumbled bacon."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Refrigerate overnight."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Bake uncovered at 350\u00b0 for 45\u201360 minutes until brown."
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "April Family Cookbook",
+    "url": "https://aprilfamilycookbook.com"
+  }
+}
+  </script>
+  <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -55,6 +120,42 @@
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
     }
+  
+    .footer-social { margin-top: 1rem; }
+    .footer-social a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--tan); font-size: 0.9rem; text-decoration: none;
+      border: 1px solid var(--brown); border-radius: 20px;
+      padding: 0.4rem 1rem; transition: background 0.2s;
+    }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+  
+    .recipe-hero.has-photo {
+      background: var(--dark-brown);
+      position: relative;
+      padding: 0;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .recipe-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+    .recipe-hero.has-photo .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 2rem 2rem;
+    }
+    .recipe-hero:not(.has-photo) .hero-content {
+      padding: 2.5rem 2rem 2rem;
+    }
   </style>
 </head>
 <body>
@@ -68,11 +169,17 @@
   </div>
 </nav>
 
-<div class="recipe-hero">
+<div class="recipe-hero" id="recipe-hero">
+  <!-- PHOTO: to add a photo, upload images/breakfast-casserole.jpg to GitHub and change the line below -->
+  <!-- <img class="recipe-hero-img" src="images/breakfast-casserole.jpg" alt=""> -->
+  <div class="hero-content">
+
   <div class="recipe-category-tag">Breakfast</div>
   <h1 class="recipe-title">Breakfast Casserole</h1>
   <div class="recipe-contributor">From the kitchen of Terri Board</div>
   <p class="origin-story">The overnight breakfast casserole is a quintessential American church potluck and holiday morning dish — assembled the evening before, requiring nothing but an oven the next day. In communities across NE Ohio where women's groups, church brunches, and large family Christmases were constants, this kind of make-ahead dish was invaluable. Terri Board's version became a family tradition.</p>
+
+  </div>
 </div>
 <div class="recipe-content">
   <a href="recipes.html" class="back-link">← Back to All Recipes</a>
@@ -104,5 +211,19 @@
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
   <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
   <p style="margin-top:0.5rem;color:var(--muted);">aprilfamilycookbook.com</p>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61584162464347" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      Follow on Facebook
+    </a>
+  </div>
 </footer>
+
+  <script>
+    // Auto-activate photo hero if image exists
+    const heroImg = document.querySelector('.recipe-hero-img');
+    if (heroImg) {
+      document.getElementById('recipe-hero').classList.add('has-photo');
+    }
+  </script>
 </body></html>

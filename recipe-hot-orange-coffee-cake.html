@@ -4,6 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hot Orange Coffee Cake · April Family Cookbook</title>
+  <!-- SEO -->
+  <meta name="description" content="Coffee cake has been a staple of Midwestern morning hospitality since the 19th century, when German and Scandinavian immigrants brought their tradition ...">
+  <meta name="keywords" content="Hot Orange Coffee Cake, family recipe, Breakfast, April Family Cookbook">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-hot-orange-coffee-cake.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Hot Orange Coffee Cake · April Family Cookbook">
+  <meta property="og:description" content="Coffee cake has been a staple of Midwestern morning hospitality since the 19th century, when German and Scandinavian immigrants brought their tradition ...">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-hot-orange-coffee-cake.html">
+  <meta property="og:site_name" content="April Family Cookbook">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hot Orange Coffee Cake · April Family Cookbook">
+  <meta name="twitter:description" content="Coffee cake has been a staple of Midwestern morning hospitality since the 19th century, when German and Scandinavian immigrants brought their tradition ...">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Hot Orange Coffee Cake",
+  "author": {
+    "@type": "Person",
+    "name": "Terri Board"
+  },
+  "description": "Coffee cake has been a staple of Midwestern morning hospitality since the 19th century, when German and Scandinavian immigrants brought their tradition ...",
+  "recipeCategory": "Breakfast",
+  "recipeIngredient": [
+    "\u00bd c brown sugar",
+    "\u00bd tsp ground cinnamon",
+    "1 Tbsp flour",
+    "1 Tbsp melted butter (for topping)",
+    "2 c flour",
+    "\u00bd c white sugar",
+    "2 tsp baking powder",
+    "\u00bd tsp baking soda",
+    "\u00bd tsp salt",
+    "\u00bd c melted butter",
+    "\u2154 c orange juice",
+    "1 orange, zested",
+    "2 eggs, beaten"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Preheat oven to 350\u00b0. Lightly grease a 10\" round cake pan."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "In a small bowl, mix brown sugar, cinnamon, 1 Tbsp flour, and 1 Tbsp melted butter to make topping."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "In a large bowl, mix 2 c flour, white sugar, baking powder, baking soda, and salt."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "In a separate bowl, mix \u00bd c melted butter, orange juice, orange zest, and eggs."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Stir butter mixture into flour mixture until well blended."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Transfer to prepared cake pan. Sprinkle with brown sugar topping."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Bake 30 minutes or until knife inserted comes out clean."
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "April Family Cookbook",
+    "url": "https://aprilfamilycookbook.com"
+  }
+}
+  </script>
+  <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -55,6 +131,42 @@
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
     }
+  
+    .footer-social { margin-top: 1rem; }
+    .footer-social a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--tan); font-size: 0.9rem; text-decoration: none;
+      border: 1px solid var(--brown); border-radius: 20px;
+      padding: 0.4rem 1rem; transition: background 0.2s;
+    }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+  
+    .recipe-hero.has-photo {
+      background: var(--dark-brown);
+      position: relative;
+      padding: 0;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .recipe-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+    .recipe-hero.has-photo .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 2rem 2rem;
+    }
+    .recipe-hero:not(.has-photo) .hero-content {
+      padding: 2.5rem 2rem 2rem;
+    }
   </style>
 </head>
 <body>
@@ -68,11 +180,17 @@
   </div>
 </nav>
 
-<div class="recipe-hero">
+<div class="recipe-hero" id="recipe-hero">
+  <!-- PHOTO: to add a photo, upload images/hot-orange-coffee-cake.jpg to GitHub and change the line below -->
+  <!-- <img class="recipe-hero-img" src="images/hot-orange-coffee-cake.jpg" alt=""> -->
+  <div class="hero-content">
+
   <div class="recipe-category-tag">Breakfast</div>
   <h1 class="recipe-title">Hot Orange Coffee Cake</h1>
   <div class="recipe-contributor">From the kitchen of Terri Board</div>
   <p class="origin-story">Coffee cake has been a staple of Midwestern morning hospitality since the 19th century, when German and Scandinavian immigrants brought their tradition of sweet yeasted cakes to the American table. The orange variation here reflects the creativity of home cooks in the latter 20th century, adapting a familiar form with bright citrus flavors that felt both special and approachable.</p>
+
+  </div>
 </div>
 <div class="recipe-content">
   <a href="recipes.html" class="back-link">← Back to All Recipes</a>
@@ -112,5 +230,19 @@
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
   <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
   <p style="margin-top:0.5rem;color:var(--muted);">aprilfamilycookbook.com</p>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61584162464347" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      Follow on Facebook
+    </a>
+  </div>
 </footer>
+
+  <script>
+    // Auto-activate photo hero if image exists
+    const heroImg = document.querySelector('.recipe-hero-img');
+    if (heroImg) {
+      document.getElementById('recipe-hero').classList.add('has-photo');
+    }
+  </script>
 </body></html>

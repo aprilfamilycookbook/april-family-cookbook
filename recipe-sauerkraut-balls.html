@@ -4,6 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sauerkraut Balls · April Family Cookbook</title>
+  <!-- SEO -->
+  <meta name="description" content="Sauerkraut balls are a distinctly NE Ohio appetizer — so regional that most Americans outside the area have never heard of them. They trace directly to ...">
+  <meta name="keywords" content="Sauerkraut Balls, family recipe, Appetizers, April Family Cookbook">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-sauerkraut-balls.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Sauerkraut Balls · April Family Cookbook">
+  <meta property="og:description" content="Sauerkraut balls are a distinctly NE Ohio appetizer — so regional that most Americans outside the area have never heard of them. They trace directly to ...">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-sauerkraut-balls.html">
+  <meta property="og:site_name" content="April Family Cookbook">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sauerkraut Balls · April Family Cookbook">
+  <meta name="twitter:description" content="Sauerkraut balls are a distinctly NE Ohio appetizer — so regional that most Americans outside the area have never heard of them. They trace directly to ...">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Sauerkraut Balls",
+  "author": {
+    "@type": "Person",
+    "name": "Terri Board"
+  },
+  "description": "Sauerkraut balls are a distinctly NE Ohio appetizer \u2014 so regional that most Americans outside the area have never heard of them. They trace directly to ...",
+  "recipeCategory": "Appetizer",
+  "recipeIngredient": [
+    "4 Tbsp butter",
+    "1 handful chopped onion",
+    "1 lb. sausage",
+    "4 Tbsp flour",
+    "1 Tbsp parsley",
+    "\u00bd c beef bouillon broth",
+    "3 c sauerkraut",
+    "Flour, egg & milk, and breadcrumbs (for coating)"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Melt butter in skillet, add onion and brown. Add sausage and brown."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Stir in flour until it disappears. Drain sauerkraut well \u2014 cut through with a knife \u2014 and add to sausage."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Add parsley and beef bouillon broth. Stir until stiff. Put in bowl and chill."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Roll into balls about \u00bd Tbsp each and chill again."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Dip balls in flour, then egg & milk, then breadcrumbs. Repeat dipping a second time."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Freeze now if desired and deep fry when needed, or deep fry now at 350\u00b0 until golden brown."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Can be frozen after frying and warmed up in oven at 400\u00b0 or microwave."
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "April Family Cookbook",
+    "url": "https://aprilfamilycookbook.com"
+  }
+}
+  </script>
+  <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -55,6 +126,42 @@
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
     }
+  
+    .footer-social { margin-top: 1rem; }
+    .footer-social a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--tan); font-size: 0.9rem; text-decoration: none;
+      border: 1px solid var(--brown); border-radius: 20px;
+      padding: 0.4rem 1rem; transition: background 0.2s;
+    }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+  
+    .recipe-hero.has-photo {
+      background: var(--dark-brown);
+      position: relative;
+      padding: 0;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .recipe-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+    .recipe-hero.has-photo .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 2rem 2rem;
+    }
+    .recipe-hero:not(.has-photo) .hero-content {
+      padding: 2.5rem 2rem 2rem;
+    }
   </style>
 </head>
 <body>
@@ -68,11 +175,17 @@
   </div>
 </nav>
 
-<div class="recipe-hero">
+<div class="recipe-hero" id="recipe-hero">
+  <!-- PHOTO: to add a photo, upload images/sauerkraut-balls.jpg to GitHub and change the line below -->
+  <!-- <img class="recipe-hero-img" src="images/sauerkraut-balls.jpg" alt=""> -->
+  <div class="hero-content">
+
   <div class="recipe-category-tag">Appetizers</div>
   <h1 class="recipe-title">Sauerkraut Balls</h1>
   <div class="recipe-contributor">From the kitchen of Terri Board</div>
-  <p class="origin-story">Sauerkraut balls are one of the most distinctly NE Ohio foods that exists — so regional that outside of Akron and Cleveland, almost no one has ever heard of them. They were invented by German immigrant communities in the region, with Gruber's, a German restaurant in Cleveland founded in 1907, among the first to serve them. The earliest printed recipes appeared in Akron Junior League cookbooks in the 1960s, and by 1996 readers of the Akron Beacon Journal had voted sauerkraut balls the city's official food. But there is a deeper layer of meaning here: in the German tradition, pork and sauerkraut eaten at the New Year symbolize progress and prosperity, while round foods represent abundance and the full circle of the year. Terri Board making sauerkraut balls for the Ross Family Christmas party and New Year's gatherings was — knowingly or not — participating in a ritual of luck and hope that German immigrants brought to NE Ohio from the old country generations before.</p>
+  <p class="origin-story">Sauerkraut balls are a distinctly NE Ohio appetizer — so regional that most Americans outside the area have never heard of them. They trace directly to the large German immigrant communities that settled Cleveland, Akron, and the surrounding counties in the 19th century, bringing their love of fermented cabbage with them. For a family with roots in the German-Alsatian tradition, these were practically a birthright.</p>
+
+  </div>
 </div>
 <div class="recipe-content">
   <a href="recipes.html" class="back-link">← Back to All Recipes</a>
@@ -107,5 +220,19 @@
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
   <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
   <p style="margin-top:0.5rem;color:var(--muted);">aprilfamilycookbook.com</p>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61584162464347" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      Follow on Facebook
+    </a>
+  </div>
 </footer>
+
+  <script>
+    // Auto-activate photo hero if image exists
+    const heroImg = document.querySelector('.recipe-hero-img');
+    if (heroImg) {
+      document.getElementById('recipe-hero').classList.add('has-photo');
+    }
+  </script>
 </body></html>

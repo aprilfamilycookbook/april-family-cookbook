@@ -4,6 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calico Beans · April Family Cookbook</title>
+  <!-- SEO -->
+  <meta name="description" content="Baked beans in various forms appear across American cooking traditions — from the molasses-heavy Boston version to the tomato-sweet Midwest style. The '...">
+  <meta name="keywords" content="Calico Beans, family recipe, Sides, April Family Cookbook">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-calico-beans.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Calico Beans · April Family Cookbook">
+  <meta property="og:description" content="Baked beans in various forms appear across American cooking traditions — from the molasses-heavy Boston version to the tomato-sweet Midwest style. The '...">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-calico-beans.html">
+  <meta property="og:site_name" content="April Family Cookbook">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Calico Beans · April Family Cookbook">
+  <meta name="twitter:description" content="Baked beans in various forms appear across American cooking traditions — from the molasses-heavy Boston version to the tomato-sweet Midwest style. The '...">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Calico Beans",
+  "author": {
+    "@type": "Person",
+    "name": "Patty Hykes"
+  },
+  "description": "Baked beans in various forms appear across American cooking traditions \u2014 from the molasses-heavy Boston version to the tomato-sweet Midwest style. The '...",
+  "recipeCategory": "Side dish",
+  "recipeIngredient": [
+    "1 lb hamburger",
+    "1 lb can pork and beans",
+    "1 lb can kidney beans, drained",
+    "1 lb can lima beans, drained",
+    "1 onion, chopped",
+    "1 tsp salt",
+    "\u00bd c brown sugar",
+    "2 tsp vinegar",
+    "1 tsp mustard"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Brown and drain hamburger."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Add all ingredients."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Bake at 350\u00b0 covered for 45\u201360 minutes, or put in crock pot on low for 4 hours."
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "April Family Cookbook",
+    "url": "https://aprilfamilycookbook.com"
+  }
+}
+  </script>
+  <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -55,6 +111,42 @@
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
     }
+  
+    .footer-social { margin-top: 1rem; }
+    .footer-social a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--tan); font-size: 0.9rem; text-decoration: none;
+      border: 1px solid var(--brown); border-radius: 20px;
+      padding: 0.4rem 1rem; transition: background 0.2s;
+    }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+  
+    .recipe-hero.has-photo {
+      background: var(--dark-brown);
+      position: relative;
+      padding: 0;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .recipe-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+    .recipe-hero.has-photo .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 2rem 2rem;
+    }
+    .recipe-hero:not(.has-photo) .hero-content {
+      padding: 2.5rem 2rem 2rem;
+    }
   </style>
 </head>
 <body>
@@ -68,11 +160,17 @@
   </div>
 </nav>
 
-<div class="recipe-hero">
+<div class="recipe-hero" id="recipe-hero">
+  <!-- PHOTO: to add a photo, upload images/calico-beans.jpg to GitHub and change the line below -->
+  <!-- <img class="recipe-hero-img" src="images/calico-beans.jpg" alt=""> -->
+  <div class="hero-content">
+
   <div class="recipe-category-tag">Sides</div>
   <h1 class="recipe-title">Calico Beans</h1>
   <div class="recipe-contributor">From the kitchen of Patty Hykes</div>
   <p class="origin-story">Baked beans in various forms appear across American cooking traditions — from the molasses-heavy Boston version to the tomato-sweet Midwest style. The 'calico' in this recipe's name refers to the colorful mix of multiple bean varieties, a visual as much as a culinary choice. Patty Hykes's version, which works equally well in an oven or a crock pot, is pure NE Ohio church supper cooking.</p>
+
+  </div>
 </div>
 <div class="recipe-content">
   <a href="recipes.html" class="back-link">← Back to All Recipes</a>
@@ -104,5 +202,19 @@
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
   <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
   <p style="margin-top:0.5rem;color:var(--muted);">aprilfamilycookbook.com</p>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61584162464347" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      Follow on Facebook
+    </a>
+  </div>
 </footer>
+
+  <script>
+    // Auto-activate photo hero if image exists
+    const heroImg = document.querySelector('.recipe-hero-img');
+    if (heroImg) {
+      document.getElementById('recipe-hero').classList.add('has-photo');
+    }
+  </script>
 </body></html>

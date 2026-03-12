@@ -4,6 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hard Candy · April Family Cookbook</title>
+  <!-- SEO -->
+  <meta name="description" content="Homemade hard candy, made with Lorann flavoring oils and boiled sugar, is a craft with roots in the professional confectionery tradition that home cooks...">
+  <meta name="keywords" content="Hard Candy, family recipe, Desserts & Candy, April Family Cookbook">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-hard-candy.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Hard Candy · April Family Cookbook">
+  <meta property="og:description" content="Homemade hard candy, made with Lorann flavoring oils and boiled sugar, is a craft with roots in the professional confectionery tradition that home cooks...">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-hard-candy.html">
+  <meta property="og:site_name" content="April Family Cookbook">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hard Candy · April Family Cookbook">
+  <meta name="twitter:description" content="Homemade hard candy, made with Lorann flavoring oils and boiled sugar, is a craft with roots in the professional confectionery tradition that home cooks...">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Hard Candy",
+  "author": {
+    "@type": "Person",
+    "name": "Mary Ringlein"
+  },
+  "description": "Homemade hard candy, made with Lorann flavoring oils and boiled sugar, is a craft with roots in the professional confectionery tradition that home cooks...",
+  "recipeCategory": "Dessert",
+  "recipeIngredient": [
+    "2 c sugar",
+    "\u2154 c light corn syrup",
+    "\u00be c water",
+    "2 drams Lorann flavoring",
+    "Lorann coloring (as desired)",
+    "Powdered sugar"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Mix sugar, corn syrup, and water in large saucepan."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Stir over medium heat until sugar dissolves."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Boil without stirring until temperature reaches 310\u00b0 or until drops form hard brittle threads in cold water."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Remove from heat. When boiling has ceased, stir in flavoring and coloring."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Pour onto lightly greased cookie sheet."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Cool and sprinkle on powdered sugar if desired."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Break into pieces. Store in airtight container."
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "April Family Cookbook",
+    "url": "https://aprilfamilycookbook.com"
+  }
+}
+  </script>
+  <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -55,6 +124,42 @@
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
     }
+  
+    .footer-social { margin-top: 1rem; }
+    .footer-social a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--tan); font-size: 0.9rem; text-decoration: none;
+      border: 1px solid var(--brown); border-radius: 20px;
+      padding: 0.4rem 1rem; transition: background 0.2s;
+    }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+  
+    .recipe-hero.has-photo {
+      background: var(--dark-brown);
+      position: relative;
+      padding: 0;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .recipe-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+    .recipe-hero.has-photo .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 2rem 2rem;
+    }
+    .recipe-hero:not(.has-photo) .hero-content {
+      padding: 2.5rem 2rem 2rem;
+    }
   </style>
 </head>
 <body>
@@ -68,11 +173,17 @@
   </div>
 </nav>
 
-<div class="recipe-hero">
+<div class="recipe-hero" id="recipe-hero">
+  <!-- PHOTO: to add a photo, upload images/hard-candy.jpg to GitHub and change the line below -->
+  <!-- <img class="recipe-hero-img" src="images/hard-candy.jpg" alt=""> -->
+  <div class="hero-content">
+
   <div class="recipe-category-tag">Desserts & Candy</div>
   <h1 class="recipe-title">Hard Candy</h1>
   <div class="recipe-contributor">From the kitchen of Mary Ringlein</div>
   <p class="origin-story">Homemade hard candy, made with Lorann flavoring oils and boiled sugar, is a craft with roots in the professional confectionery tradition that home cooks adapted in the latter 20th century when specialty ingredients became widely available. In NE Ohio, where church bazaars and Christmas fairs often featured homemade candy tables, the ability to make your own hard candy in custom flavors and colors was a genuine skill worth sharing.</p>
+
+  </div>
 </div>
 <div class="recipe-content">
   <a href="recipes.html" class="back-link">← Back to All Recipes</a>
@@ -105,5 +216,19 @@
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
   <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
   <p style="margin-top:0.5rem;color:var(--muted);">aprilfamilycookbook.com</p>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61584162464347" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      Follow on Facebook
+    </a>
+  </div>
 </footer>
+
+  <script>
+    // Auto-activate photo hero if image exists
+    const heroImg = document.querySelector('.recipe-hero-img');
+    if (heroImg) {
+      document.getElementById('recipe-hero').classList.add('has-photo');
+    }
+  </script>
 </body></html>

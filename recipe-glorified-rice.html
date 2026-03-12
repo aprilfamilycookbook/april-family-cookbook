@@ -4,6 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glorified Rice · April Family Cookbook</title>
+  <!-- SEO -->
+  <meta name="description" content="Glorified Rice is a Midwestern church potluck classic with roots in the tradition of making simple, inexpensive ingredients into something festive and s...">
+  <meta name="keywords" content="Glorified Rice, family recipe, Sides, April Family Cookbook">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-glorified-rice.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Glorified Rice · April Family Cookbook">
+  <meta property="og:description" content="Glorified Rice is a Midwestern church potluck classic with roots in the tradition of making simple, inexpensive ingredients into something festive and s...">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-glorified-rice.html">
+  <meta property="og:site_name" content="April Family Cookbook">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Glorified Rice · April Family Cookbook">
+  <meta name="twitter:description" content="Glorified Rice is a Midwestern church potluck classic with roots in the tradition of making simple, inexpensive ingredients into something festive and s...">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Glorified Rice",
+  "author": {
+    "@type": "Person",
+    "name": "Terri Board (In memory of Gramma Louise April)"
+  },
+  "description": "Glorified Rice is a Midwestern church potluck classic with roots in the tradition of making simple, inexpensive ingredients into something festive and s...",
+  "recipeCategory": "Side dish",
+  "recipeIngredient": [
+    "1 c cooked, cold rice",
+    "1/3 c sugar",
+    "1 c drained, crushed pineapple",
+    "\u00bd tsp vanilla",
+    "1/3 c miniature marshmallows",
+    "2 Tbsp drained, chopped maraschino cherries",
+    "1 c whipped cream (or Cool Whip)"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Stir together sugar, pineapple, and vanilla."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Stir in the rice, marshmallows, and cherries."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Whip the cream and fold in (or use Cool Whip)."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Chill 1\u20132 hours before serving."
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "April Family Cookbook",
+    "url": "https://aprilfamilycookbook.com"
+  }
+}
+  </script>
+  <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -55,6 +113,42 @@
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
     }
+  
+    .footer-social { margin-top: 1rem; }
+    .footer-social a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--tan); font-size: 0.9rem; text-decoration: none;
+      border: 1px solid var(--brown); border-radius: 20px;
+      padding: 0.4rem 1rem; transition: background 0.2s;
+    }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+  
+    .recipe-hero.has-photo {
+      background: var(--dark-brown);
+      position: relative;
+      padding: 0;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .recipe-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+    .recipe-hero.has-photo .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 2rem 2rem;
+    }
+    .recipe-hero:not(.has-photo) .hero-content {
+      padding: 2.5rem 2rem 2rem;
+    }
   </style>
 </head>
 <body>
@@ -68,11 +162,17 @@
   </div>
 </nav>
 
-<div class="recipe-hero">
+<div class="recipe-hero" id="recipe-hero">
+  <!-- PHOTO: to add a photo, upload images/glorified-rice.jpg to GitHub and change the line below -->
+  <!-- <img class="recipe-hero-img" src="images/glorified-rice.jpg" alt=""> -->
+  <div class="hero-content">
+
   <div class="recipe-category-tag">Sides</div>
   <h1 class="recipe-title">Glorified Rice</h1>
   <div class="recipe-contributor">From the kitchen of Terri Board (In memory of Gramma Louise April)<br><span style="font-size:0.9rem;opacity:0.8">In memory of Gramma Louise April</span></div>
-  <p class="origin-story">Glorified Rice was the Easter dish — the one that appeared on the table when the whole family gathered after church in spring, sweet and cool and festive in a way that felt right for the season. Gramma Louise April made it her own, and after she was gone, Terri Board carried it forward in her memory. A dish that simple, made with that much love, becomes something that can't be separated from the holiday it belongs to.</p>
+  <p class="origin-story">Glorified Rice is a Midwestern church potluck classic with roots in the tradition of making simple, inexpensive ingredients into something festive and sweet. The name captures exactly what it does: it takes plain cooked rice and glorifies it with pineapple, marshmallows, cherries, and whipped cream into something that belongs at a celebration. This version was made in memory of Gramma Louise April, for whom it was a signature dish.</p>
+
+  </div>
 </div>
 <div class="recipe-content">
   <a href="recipes.html" class="back-link">← Back to All Recipes</a>
@@ -103,5 +203,19 @@
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
   <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
   <p style="margin-top:0.5rem;color:var(--muted);">aprilfamilycookbook.com</p>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61584162464347" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      Follow on Facebook
+    </a>
+  </div>
 </footer>
+
+  <script>
+    // Auto-activate photo hero if image exists
+    const heroImg = document.querySelector('.recipe-hero-img');
+    if (heroImg) {
+      document.getElementById('recipe-hero').classList.add('has-photo');
+    }
+  </script>
 </body></html>

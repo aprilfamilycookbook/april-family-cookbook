@@ -4,6 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tortilla Wraps · April Family Cookbook</title>
+  <!-- SEO -->
+  <meta name="description" content="Pinwheel wraps made with cream cheese and tortillas became a staple of American party food in the 1990s, when flour tortillas crossed over from Tex-Mex ...">
+  <meta name="keywords" content="Tortilla Wraps, family recipe, Appetizers, April Family Cookbook">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-tortilla-wraps.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Tortilla Wraps · April Family Cookbook">
+  <meta property="og:description" content="Pinwheel wraps made with cream cheese and tortillas became a staple of American party food in the 1990s, when flour tortillas crossed over from Tex-Mex ...">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-tortilla-wraps.html">
+  <meta property="og:site_name" content="April Family Cookbook">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tortilla Wraps · April Family Cookbook">
+  <meta name="twitter:description" content="Pinwheel wraps made with cream cheese and tortillas became a staple of American party food in the 1990s, when flour tortillas crossed over from Tex-Mex ...">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Tortilla Wraps",
+  "author": {
+    "@type": "Person",
+    "name": "Terri Board"
+  },
+  "description": "Pinwheel wraps made with cream cheese and tortillas became a staple of American party food in the 1990s, when flour tortillas crossed over from Tex-Mex ...",
+  "recipeCategory": "Appetizer",
+  "recipeIngredient": [
+    "8 oz. cream cheese",
+    "2 Tbsp sour cream",
+    "\u00bd envelope dry ranch dressing",
+    "Handful chopped onion",
+    "1 small jar green olives with pimento",
+    "8 oz shredded cheddar cheese",
+    "1 package tortillas"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Mix cream cheese, sour cream, ranch dressing, onion, and finely chopped green olives."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Spread on tortillas and sprinkle with cheddar cheese."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Roll up and chill, then cut in 1-inch slices."
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "April Family Cookbook",
+    "url": "https://aprilfamilycookbook.com"
+  }
+}
+  </script>
+  <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -55,6 +109,42 @@
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
     }
+  
+    .footer-social { margin-top: 1rem; }
+    .footer-social a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--tan); font-size: 0.9rem; text-decoration: none;
+      border: 1px solid var(--brown); border-radius: 20px;
+      padding: 0.4rem 1rem; transition: background 0.2s;
+    }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+  
+    .recipe-hero.has-photo {
+      background: var(--dark-brown);
+      position: relative;
+      padding: 0;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .recipe-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+    .recipe-hero.has-photo .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 2rem 2rem;
+    }
+    .recipe-hero:not(.has-photo) .hero-content {
+      padding: 2.5rem 2rem 2rem;
+    }
   </style>
 </head>
 <body>
@@ -68,11 +158,17 @@
   </div>
 </nav>
 
-<div class="recipe-hero">
+<div class="recipe-hero" id="recipe-hero">
+  <!-- PHOTO: to add a photo, upload images/tortilla-wraps.jpg to GitHub and change the line below -->
+  <!-- <img class="recipe-hero-img" src="images/tortilla-wraps.jpg" alt=""> -->
+  <div class="hero-content">
+
   <div class="recipe-category-tag">Appetizers</div>
   <h1 class="recipe-title">Tortilla Wraps</h1>
   <div class="recipe-contributor">From the kitchen of Terri Board</div>
   <p class="origin-story">Pinwheel wraps made with cream cheese and tortillas became a staple of American party food in the 1990s, when flour tortillas crossed over from Tex-Mex cooking into mainstream home kitchens. In a family known for feeding people well at gatherings, Terri Board's version — with its tangy olives and sharp cheddar — became one of those recipes people specifically requested.</p>
+
+  </div>
 </div>
 <div class="recipe-content">
   <a href="recipes.html" class="back-link">← Back to All Recipes</a>
@@ -102,5 +198,19 @@
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
   <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
   <p style="margin-top:0.5rem;color:var(--muted);">aprilfamilycookbook.com</p>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61584162464347" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      Follow on Facebook
+    </a>
+  </div>
 </footer>
+
+  <script>
+    // Auto-activate photo hero if image exists
+    const heroImg = document.querySelector('.recipe-hero-img');
+    if (heroImg) {
+      document.getElementById('recipe-hero').classList.add('has-photo');
+    }
+  </script>
 </body></html>

@@ -4,6 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Succulent Zucchini Bread · April Family Cookbook</title>
+  <!-- SEO -->
+  <meta name="description" content="This version of zucchini bread, adapted for diabetic dietary needs with DiabetiSweet and whole wheat flour, reflects the thoughtful adjustments that hom...">
+  <meta name="keywords" content="Succulent Zucchini Bread, family recipe, Salads & Breads, April Family Cookbook">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-succulent-zucchini-bread.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Succulent Zucchini Bread · April Family Cookbook">
+  <meta property="og:description" content="This version of zucchini bread, adapted for diabetic dietary needs with DiabetiSweet and whole wheat flour, reflects the thoughtful adjustments that hom...">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-succulent-zucchini-bread.html">
+  <meta property="og:site_name" content="April Family Cookbook">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Succulent Zucchini Bread · April Family Cookbook">
+  <meta name="twitter:description" content="This version of zucchini bread, adapted for diabetic dietary needs with DiabetiSweet and whole wheat flour, reflects the thoughtful adjustments that hom...">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Succulent Zucchini Bread",
+  "author": {
+    "@type": "Person",
+    "name": "Mary Ringlein"
+  },
+  "description": "This version of zucchini bread, adapted for diabetic dietary needs with DiabetiSweet and whole wheat flour, reflects the thoughtful adjustments that hom...",
+  "recipeCategory": "Salad",
+  "recipeIngredient": [
+    "3 eggs or egg substitute",
+    "1/3 c canola oil",
+    "7 packets DiabetiSweet",
+    "1 Tbsp vanilla",
+    "8 oz crushed pineapple, drained",
+    "2 c grated zucchini",
+    "2\u00bd c whole wheat flour",
+    "2 tsp baking soda",
+    "\u00bd tsp baking powder",
+    "\u00bd tsp ground cinnamon",
+    "\u00bd tsp ground nutmeg",
+    "1 tsp salt",
+    "1 c chopped walnuts"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Lightly coat 2 loaf pans with cooking spray."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "In large bowl, beat eggs. Add oil, DiabetiSweet, vanilla, pineapple, and zucchini."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "In second bowl, sift together flours, soda, powder, cinnamon, nutmeg, and salt. Add nuts."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Mix dry ingredients into egg mixture until just combined."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Spoon into loaf pans."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Bake at 375\u00b0 for 40 minutes or until tester comes out clean."
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "April Family Cookbook",
+    "url": "https://aprilfamilycookbook.com"
+  }
+}
+  </script>
+  <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -55,6 +127,42 @@
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
     }
+  
+    .footer-social { margin-top: 1rem; }
+    .footer-social a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--tan); font-size: 0.9rem; text-decoration: none;
+      border: 1px solid var(--brown); border-radius: 20px;
+      padding: 0.4rem 1rem; transition: background 0.2s;
+    }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+  
+    .recipe-hero.has-photo {
+      background: var(--dark-brown);
+      position: relative;
+      padding: 0;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .recipe-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+    .recipe-hero.has-photo .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 2rem 2rem;
+    }
+    .recipe-hero:not(.has-photo) .hero-content {
+      padding: 2.5rem 2rem 2rem;
+    }
   </style>
 </head>
 <body>
@@ -68,11 +176,17 @@
   </div>
 </nav>
 
-<div class="recipe-hero">
+<div class="recipe-hero" id="recipe-hero">
+  <!-- PHOTO: to add a photo, upload images/succulent-zucchini-bread.jpg to GitHub and change the line below -->
+  <!-- <img class="recipe-hero-img" src="images/succulent-zucchini-bread.jpg" alt=""> -->
+  <div class="hero-content">
+
   <div class="recipe-category-tag">Salads & Breads</div>
   <h1 class="recipe-title">Succulent Zucchini Bread</h1>
   <div class="recipe-contributor">From the kitchen of Mary Ringlein</div>
   <p class="origin-story">This version of zucchini bread, adapted for diabetic dietary needs with DiabetiSweet and whole wheat flour, reflects the thoughtful adjustments that home cooks make when health requires it without sacrificing the tradition that makes a recipe worth keeping. Mary Ringlein's inclusion of crushed pineapple — moistening and sweetening without sugar — is a clever and genuinely delicious solution.</p>
+
+  </div>
 </div>
 <div class="recipe-content">
   <a href="recipes.html" class="back-link">← Back to All Recipes</a>
@@ -111,5 +225,19 @@
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
   <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
   <p style="margin-top:0.5rem;color:var(--muted);">aprilfamilycookbook.com</p>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61584162464347" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      Follow on Facebook
+    </a>
+  </div>
 </footer>
+
+  <script>
+    // Auto-activate photo hero if image exists
+    const heroImg = document.querySelector('.recipe-hero-img');
+    if (heroImg) {
+      document.getElementById('recipe-hero').classList.add('has-photo');
+    }
+  </script>
 </body></html>

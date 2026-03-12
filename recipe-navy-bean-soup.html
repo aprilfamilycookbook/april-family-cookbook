@@ -4,6 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navy Bean Soup · April Family Cookbook</title>
+  <!-- SEO -->
+  <meta name="description" content="Bean soups made with a ham bone are among the oldest forms of American home cooking — a way of extracting every last bit of nourishment from an expensiv...">
+  <meta name="keywords" content="Navy Bean Soup, family recipe, Main Dishes, April Family Cookbook">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-navy-bean-soup.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Navy Bean Soup · April Family Cookbook">
+  <meta property="og:description" content="Bean soups made with a ham bone are among the oldest forms of American home cooking — a way of extracting every last bit of nourishment from an expensiv...">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-navy-bean-soup.html">
+  <meta property="og:site_name" content="April Family Cookbook">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Navy Bean Soup · April Family Cookbook">
+  <meta name="twitter:description" content="Bean soups made with a ham bone are among the oldest forms of American home cooking — a way of extracting every last bit of nourishment from an expensiv...">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Navy Bean Soup",
+  "author": {
+    "@type": "Person",
+    "name": "Patty Hykes"
+  },
+  "description": "Bean soups made with a ham bone are among the oldest forms of American home cooking \u2014 a way of extracting every last bit of nourishment from an expensiv...",
+  "recipeCategory": "Main course",
+  "recipeIngredient": [
+    "1 lb navy beans",
+    "1 clove garlic, minced",
+    "1 ham hock",
+    "1 tsp salt",
+    "Onion (optional)"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Soak beans in water for at least 4 hours in slow cooker."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Add garlic, ham hock, and onion."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Cover and cook on low 7\u20138 hours, or on high 4 hours."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Add salt during the last hour."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Remove ham hock, cut ham off and add back to soup."
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "April Family Cookbook",
+    "url": "https://aprilfamilycookbook.com"
+  }
+}
+  </script>
+  <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -55,6 +115,42 @@
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
     }
+  
+    .footer-social { margin-top: 1rem; }
+    .footer-social a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--tan); font-size: 0.9rem; text-decoration: none;
+      border: 1px solid var(--brown); border-radius: 20px;
+      padding: 0.4rem 1rem; transition: background 0.2s;
+    }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+  
+    .recipe-hero.has-photo {
+      background: var(--dark-brown);
+      position: relative;
+      padding: 0;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .recipe-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+    .recipe-hero.has-photo .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 2rem 2rem;
+    }
+    .recipe-hero:not(.has-photo) .hero-content {
+      padding: 2.5rem 2rem 2rem;
+    }
   </style>
 </head>
 <body>
@@ -68,11 +164,17 @@
   </div>
 </nav>
 
-<div class="recipe-hero">
+<div class="recipe-hero" id="recipe-hero">
+  <!-- PHOTO: to add a photo, upload images/navy-bean-soup.jpg to GitHub and change the line below -->
+  <!-- <img class="recipe-hero-img" src="images/navy-bean-soup.jpg" alt=""> -->
+  <div class="hero-content">
+
   <div class="recipe-category-tag">Main Dishes</div>
   <h1 class="recipe-title">Navy Bean Soup</h1>
   <div class="recipe-contributor">From the kitchen of Patty Hykes</div>
   <p class="origin-story">Bean soups made with a ham bone are among the oldest forms of American home cooking — a way of extracting every last bit of nourishment from an expensive ingredient. In NE Ohio farm families, where a whole ham might appear at Easter or Christmas, the bone was never discarded. It went into a pot of beans, and the resulting soup fed the family for days.</p>
+
+  </div>
 </div>
 <div class="recipe-content">
   <a href="recipes.html" class="back-link">← Back to All Recipes</a>
@@ -102,5 +204,19 @@
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
   <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
   <p style="margin-top:0.5rem;color:var(--muted);">aprilfamilycookbook.com</p>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61584162464347" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      Follow on Facebook
+    </a>
+  </div>
 </footer>
+
+  <script>
+    // Auto-activate photo hero if image exists
+    const heroImg = document.querySelector('.recipe-hero-img');
+    if (heroImg) {
+      document.getElementById('recipe-hero').classList.add('has-photo');
+    }
+  </script>
 </body></html>
