@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Recipes Â· April Family Cookbook</title>
+  <title>All Recipes · April Family Cookbook</title>
   <!-- SEO -->
-  <meta name="description" content="Browse over 100 family recipes by category â main dishes, desserts, soups, breads, and more. Search by recipe name or contributor.">
+  <meta name="description" content="Browse over 100 family recipes by category — main dishes, desserts, soups, breads, and more. Search by recipe name or contributor.">
   <link rel="canonical" href="https://aprilfamilycookbook.com/recipes.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Browse All Recipes Â· April Family Cookbook">
-  <meta property="og:description" content="Browse over 100 family recipes by category â main dishes, desserts, soups, breads, and more. Search by recipe name or contributor.">
+  <meta property="og:title" content="Browse All Recipes · April Family Cookbook">
+  <meta property="og:description" content="Browse over 100 family recipes by category — main dishes, desserts, soups, breads, and more. Search by recipe name or contributor.">
   <meta property="og:url" content="https://aprilfamilycookbook.com/recipes.html">
   <meta property="og:site_name" content="April Family Cookbook">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Browse All Recipes Â· April Family Cookbook">
-  <meta name="twitter:description" content="Browse over 100 family recipes by category â main dishes, desserts, soups, breads, and more. Search by recipe name or contributor.">
+  <meta name="twitter:title" content="Browse All Recipes · April Family Cookbook">
+  <meta name="twitter:description" content="Browse over 100 family recipes by category — main dishes, desserts, soups, breads, and more. Search by recipe name or contributor.">
   <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -35,51 +35,6 @@
     .nav-links a { color: var(--light-tan); font-family: 'Lora', serif; font-size: 0.85rem; letter-spacing: 0.04em; transition: color 0.2s; }
     .nav-links a:hover { color: var(--tan); }
 
-    /* RECIPE PAGE LAYOUT */
-    .recipe-hero { background: var(--brown); padding: 2.5rem 2rem 2rem; text-align: center; }
-    .recipe-category-tag { display: inline-block; background: var(--rust); color: #fff; font-family: 'Lora', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; margin-bottom: 1rem; }
-    .recipe-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 3rem); color: #fff; line-height: 1.2; margin-bottom: 0.75rem; }
-    .recipe-contributor { font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--tan); }
-
-    /* CONTENT */
-    .recipe-content { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
-    .recipe-section { margin-bottom: 2.5rem; }
-    .recipe-section h2 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--rust); border-bottom: 2px solid var(--light-tan); padding-bottom: 0.5rem; margin-bottom: 1.2rem; }
-    .ingredients-list { list-style: none; }
-    .ingredients-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--light-tan); font-size: 0.95rem; display: flex; align-items: baseline; gap: 0.5rem; }
-    .ingredients-list li::before { content: "Â·"; color: var(--rust); font-size: 1.2rem; flex-shrink: 0; }
-    .instructions-list { list-style: none; counter-reset: steps; }
-    .instructions-list li { counter-increment: steps; padding: 0.75rem 0 0.75rem 3rem; border-bottom: 1px solid var(--light-tan); font-size: 0.95rem; line-height: 1.7; position: relative; }
-    .instructions-list li::before { content: counter(steps); position: absolute; left: 0; top: 0.7rem; width: 2rem; height: 2rem; background: var(--rust); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 0.85rem; font-weight: 600; }
-    .tip-box { background: var(--warm-white); border-left: 4px solid var(--amber); padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; font-style: italic; color: var(--brown); }
-    .tip-box strong { font-style: normal; color: var(--amber); font-family: 'Playfair Display', serif; }
-
-    /* ACTIONS */
-    .recipe-actions { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1.2rem; border: 2px solid var(--brown); border-radius: 4px; font-family: 'Lora', serif; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--brown); }
-    .btn:hover { background: var(--brown); color: #fff; }
-    .btn-primary { background: var(--rust); color: #fff; border-color: var(--rust); }
-    .btn-primary:hover { background: var(--dark-brown); border-color: var(--dark-brown); }
-
-    /* BACK LINK */
-    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.85rem; margin-bottom: 2rem; transition: color 0.2s; }
-    .back-link:hover { color: var(--rust); }
-
-    /* FOOTER */
-    footer { background: var(--dark-brown); color: var(--light-tan); text-align: center; padding: 2rem; font-size: 0.8rem; line-height: 1.8; }
-
-    /* PRINT */
-    @media print {
-      nav, .recipe-actions, .back-link, footer { display: none; }
-      .recipe-hero { background: none !important; color: var(--dark-brown) !important; padding: 0 0 1rem 0; }
-      .recipe-title { color: var(--dark-brown) !important; font-size: 1.8rem; }
-      .recipe-category-tag { display: none; }
-      .recipe-contributor { color: var(--brown) !important; }
-      body { font-size: 9pt; }
-      .recipe-content { padding: 0; }
-      @page { margin: 0.75in; size: letter; }
-    }
-  
     .footer-social { margin-top: 1rem; }
     .footer-social a {
       display: inline-flex; align-items: center; gap: 0.5rem;
@@ -89,11 +44,33 @@
     }
     .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
     .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+
+    .page-hero { background: var(--brown); padding: 3rem 2rem 2.5rem; text-align: center; }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,4vw,2.8rem); color: #fff; margin-bottom: 0.5rem; }
+    .page-hero p { color: var(--light-tan); font-family: 'Caveat', cursive; font-size: 1.3rem; }
+
+    .search-bar-wrap { max-width: 500px; margin: 2rem auto 0; }
+    .search-bar { width: 100%; padding: 0.85rem 1.2rem; border: 2px solid var(--tan); border-radius: 4px; font-family: 'Lora', serif; font-size: 1rem; background: var(--warm-white); color: var(--dark-brown); }
+    .search-bar:focus { outline: none; border-color: var(--rust); }
+
+    .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; padding: 1.5rem 1rem 0; max-width: 900px; margin: 0 auto; }
+    .filter-btn { padding: 0.4rem 0.9rem; border: 2px solid var(--tan); border-radius: 20px; background: transparent; color: var(--brown); font-family: 'Lora', serif; font-size: 0.82rem; cursor: pointer; transition: all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background: var(--rust); border-color: var(--rust); color: #fff; }
+
+    .results-count { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 1rem; font-style: italic; }
+
+    .recipe-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; max-width: 1100px; margin: 0 auto; padding: 1rem 1.5rem 4rem; }
+    .recipe-card { background: var(--warm-white); border: 1px solid var(--light-tan); border-radius: 8px; padding: 1.25rem 1.25rem 1rem; transition: all 0.2s; display: block; }
+    .recipe-card:hover { border-color: var(--rust); box-shadow: 0 4px 16px rgba(90,40,10,0.12); transform: translateY(-2px); }
+    .card-cat { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rust); font-family: 'Lora', serif; margin-bottom: 0.5rem; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--dark-brown); line-height: 1.35; margin-bottom: 0.5rem; }
+    .card-contributor { font-family: 'Caveat', cursive; font-size: 0.95rem; color: var(--muted); }
+    .no-results { text-align: center; padding: 4rem 2rem; color: var(--muted); font-style: italic; grid-column: 1/-1; }
   </style>
 </head>
 <body>
 <nav>
-  <a href="index.html" class="nav-logo">â¦ April Family Cookbook</a>
+  <a href="index.html" class="nav-logo">✦ April Family Cookbook</a>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="recipes.html">All Recipes</a>
@@ -101,30 +78,6 @@
     <a href="submit.html">Submit a Recipe</a>
   </div>
 </nav>
-
-<style>
-  .page-hero { background: var(--brown); padding: 3rem 2rem 2.5rem; text-align: center; }
-  .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,4vw,2.8rem); color: #fff; margin-bottom: 0.5rem; }
-  .page-hero p { color: var(--light-tan); font-family: 'Caveat', cursive; font-size: 1.3rem; }
-
-  .search-bar-wrap { max-width: 500px; margin: 2rem auto 0; }
-  .search-bar { width: 100%; padding: 0.85rem 1.2rem; border: 2px solid var(--tan); border-radius: 4px; font-family: 'Lora', serif; font-size: 1rem; background: var(--warm-white); color: var(--dark-brown); }
-  .search-bar:focus { outline: none; border-color: var(--rust); }
-
-  .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; padding: 1.5rem 1rem 0; max-width: 900px; margin: 0 auto; }
-  .filter-btn { padding: 0.4rem 0.9rem; border: 2px solid var(--tan); border-radius: 20px; background: transparent; color: var(--brown); font-family: 'Lora', serif; font-size: 0.82rem; cursor: pointer; transition: all 0.2s; }
-  .filter-btn:hover, .filter-btn.active { background: var(--rust); border-color: var(--rust); color: #fff; }
-
-  .results-count { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 1rem; font-style: italic; }
-  
-  .recipe-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; max-width: 1100px; margin: 0 auto; padding: 1rem 1.5rem 4rem; }
-  .recipe-card { background: var(--warm-white); border: 1px solid var(--light-tan); border-radius: 8px; padding: 1.25rem 1.25rem 1rem; transition: all 0.2s; display: block; }
-  .recipe-card:hover { border-color: var(--rust); box-shadow: 0 4px 16px rgba(90,40,10,0.12); transform: translateY(-2px); }
-  .card-cat { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rust); font-family: 'Lora', serif; margin-bottom: 0.5rem; }
-  .card-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--dark-brown); line-height: 1.35; margin-bottom: 0.5rem; }
-  .card-contributor { font-family: 'Caveat', cursive; font-size: 0.95rem; color: var(--muted); }
-  .no-results { text-align: center; padding: 4rem 2rem; color: var(--muted); font-style: italic; grid-column: 1/-1; }
-</style>
 
 <div class="page-hero">
   <h1>All Recipes</h1>
@@ -135,533 +88,558 @@
 </div>
 
 <div class="filters" id="filters">
-  <button class="filter-btn  active" data-cat="All">All</button>
-<button class="filter-btn" data-cat="Appetizers">Appetizers</button>
-<button class="filter-btn" data-cat="Breakfast & Brunch">Breakfast & Brunch</button>
-<button class="filter-btn" data-cat="Main Dishes">Main Dishes</button>
-<button class="filter-btn" data-cat="Soups & Stews">Soups & Stews</button>
-<button class="filter-btn" data-cat="Sides & Salads">Sides & Salads</button>
-
-    <button class="filter-btn" data-cat="Breads & Baked Goods">Breads & Baked Goods</button><button class="filter-btn" data-cat="Desserts & Candy">Desserts & Candy</button>
-<button class="filter-btn" data-cat="Pickles, Sauces &amp; Extras">Pickles, Sauces & Extras</button>
+  <button class="filter-btn active" data-cat="All">All</button>
+  <button class="filter-btn" data-cat="Appetizers">Appetizers</button>
+  <button class="filter-btn" data-cat="Breakfast & Brunch">Breakfast & Brunch</button>
+  <button class="filter-btn" data-cat="Main Dishes">Main Dishes</button>
+  <button class="filter-btn" data-cat="Soups & Stews">Soups & Stews</button>
+  <button class="filter-btn" data-cat="Sides & Salads">Sides & Salads</button>
+  <button class="filter-btn" data-cat="Breads & Baked Goods">Breads & Baked Goods</button>
+  <button class="filter-btn" data-cat="Desserts & Candy">Desserts & Candy</button>
+  <button class="filter-btn" data-cat="Pickles, Sauces & Extras">Pickles, Sauces & Extras</button>
 </div>
 
-<div class="results-count" id="resultsCount">Showing data-cat="Pickles, Sauces & Extras">Pickles, Sauces & Extras</button> id="recipeGrid">
-  
-    <a href="recipe-chip-beef-cheese-balls.html" class="recipe-card" data-category="Appetizers">
-      <div class="card-cat">Appetizers</div>
-      <h3 class="card-title">Chipped Beef Cheese Balls</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-vegetable-pizza.html" class="recipe-card" data-category="Appetizers">
-      <div class="card-cat">Appetizers</div>
-      <h3 class="card-title">Vegetable Pizza</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-crunchy-parmesan-popcorn-mix.html" class="recipe-card" data-category="Appetizers">
-      <div class="card-cat">Appetizers</div>
-      <h3 class="card-title">Crunchy Parmesan Popcorn Mix</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-popcorn-crunch.html" class="recipe-card" data-category="Appetizers">
-      <div class="card-cat">Appetizers</div>
-      <h3 class="card-title">Popcorn Crunch</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-chex-party-mix.html" class="recipe-card" data-category="Appetizers">
-      <div class="card-cat">Appetizers</div>
-      <h3 class="card-title">Chex Party Mix</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-taco-dip.html" class="recipe-card" data-category="Appetizers">
-      <div class="card-cat">Appetizers</div>
-      <h3 class="card-title">Taco Dip</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-sauerkraut-balls.html" class="recipe-card" data-category="Appetizers">
-      <div class="card-cat">Appetizers</div>
-      <h3 class="card-title">Sauerkraut Balls</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-tortilla-wraps.html" class="recipe-card" data-category="Appetizers">
-      <div class="card-cat">Appetizers</div>
-      <h3 class="card-title">Tortilla Wraps</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-baked-french-toast.html" class="recipe-card" data-category="Breakfast &amp; Brunch">
-      <div class="card-cat">Breakfast & Brunch</div>
-      <h3 class="card-title">Baked French Toast</h3>
-      <data-category="Breakfast & Brunch">r">From the kitchen of Mom (Mary Apri>Breakfast & Brunch</div>>
-    <a href="recipe-breakfast-casserole.html" class="recipe-card" data-category="Breakfast &amp; Brunch">
-      <div class="card-cat">Breakfast & Brunch</div>
-      <h3 class="card-title">Breakfast Casserole</h3>
-      <div class="card-cdata-category="Breakfast & Brunch">en of Terri Board</div>
-    </a>
-    >Breakfast & Brunch</div>ham-cheese-puff.html" class="recipe-card" data-category="Breakfast &amp; Brunch">
-      <div class="card-cat">Breakfast & Brunch</div>
-      <h3 class="card-title">Ham & Cheese Puff</h3>
-      <div class="card-contributor">From thedata-category="Breakfast & Brunch">/div>
-    </a>
-    <a href="recipe-ha>Breakfast & Brunch</div>le.html" class="recipe-card" data-category="Breakfast &amp; Brunch">
-      <div class="card-cat">Breakfast & Brunch</div>
-      <h3 class="card-title">Hash Brown Casserole</h3>
-      <div class="card-contributor">From the kitchen of Terdata-category="Breakfast & Brunch">  <a href="recipe-hot-orange-coffee-c>Breakfast & Brunch</div>"recipe-card" data-category="Breakfast &amp; Brunch">
-      <div class="card-cat">Breakfast & Brunch</div>
-      <h3 class="card-title">Hot Orange Coffee Cake</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
- data-category="Breakfast & Brunch">e-fried-bread.html" class="recipe-car>Breakfast & Brunch</div>="Breakfast & Brunch">
-      <div class="card-cat">Breakfast & Brunch</div>
-      <h3 class="card-title">Fried Bread</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-adata-category="Breakfast & Brunch">s="recipe-card" data-category="Main D>Breakfast & Brunch</div>iv class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Absent Cook Stew</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-navy-bean-soup.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Navy Bean Soup</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-pot-roast.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Pot Roast</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-baked-spaghetti-chicken.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Baked Spaghetti with Chicken</h3>
-      <div class="card-contributor">From the kitchen of Brandy Worsham</div>
-    </a>
-    <a href="recipe-chicken-casserole.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Chicken Casserole</h3>
-      <div class="card-contributor">From the kitchen of Brandy Worsham</div>
-    </a>
-    <a href="recipe-barbecued-ribs.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Barbecued Ribs</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-classic-lasagna.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Classic Lasagna</h3>
-      <div class="card-contributor">From the kitchen of John & Terri April</div>
-    </a>
-    <a href="recipe-crock-pot-stroganoff.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Crock Pot Stroganoff</h3>
-      <div class="card-contributor">From the kitchen of John & Terri April</div>
-    </a>
-    <a href="recipe-creamy-cooker-chicken.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Creamy Cooker Chicken</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-super-easy-chicken.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Super Easy Chicken</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-easy-chicken.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Easy Chicken</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-hill-country-casserole.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Hill Country Casserole</h3>
-      <div class="card-contributor">From the kitchen of John & Terri April</div>
-    </a>
-    <a href="recipe-italian-chops.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Italian Chops</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-pork-chops-gravy.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Pork Chops and Gravy</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-ham-cabbage-supper.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Ham and Cabbage Supper</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-linguine-lobster.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Linguine and Lobster</h3>
-      <div class="card-contributor">From the kitchen of John & Terri April</div>
-    </a>
-    <a href="recipe-bbq-meat-sandwich.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">BBQ Meat Sandwich</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-marvelous-meatloaf.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Marvelous Meatloaf</h3>
-      <div class="card-contributor">From the kitchen of Diane April</div>
-    </a>
-    <a href="recipe-ground-beef-oriental.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Ground Beef Oriental</h3>
-      <div class="card-contributor">From the kitchen of Diane April</div>
-    </a>
-    <a href="recipe-one-dish-chicken-supper.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">One Dish Chicken Supper</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-mulligan.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Mulligan (Onion & Corned Beef)</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-quesadillas.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Quesadillas</h3>
-      <div class="card-contributor">From the kitchen of Tim Board</div>
-    </a>
-    <a href="recipe-enchiladas.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Enchiladas</h3>
-      <div class="card-contributor">From the kitchen of Tim Board</div>
-    </a>
-    <a href="recipe-roast-beef-sandwich-spread.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Roast Beef Sandwich Spread</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-shredded-roast-beef.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Shredded Roast Beef</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-mock-salisbury-steak.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Mock Salisbury Steak</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-delicious-chuck-roast.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Delicious Chuck Roast</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-roast-chicken.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Roast Chicken</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-chicken-mushroom-gravy.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Chicken in Mushroom Gravy</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-scrumptious-beef.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Scrumptious Beef</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-easy-dinner-surprise.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Easy Dinner Surprise</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-stuffed-peppers.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Stuffed Peppers</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-cabbage-rolls.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Cabbage Rolls</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-swiss-steak.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Swiss Steak</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-forget-it-pot-roast.html" class="recipe-card" data-category="Main Dishes">
-      <div class="card-cat">Main Dishes</div>
-      <h3 class="card-title">Forget It Pot Roast</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-creamy-winter-squash-soup.html" class="recipe-card" data-category="Soups & Stews">
-      <div class="card-cat">Soups & Stews</div>
-      <h3 class="card-title">Creamy Winter Squash Soup</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-ham-bean-soup.html" class="recipe-card" data-category="Soups & Stews">
-      <div class="card-cat">Soups & Stews</div>
-      <h3 class="card-title">Ham and Bean Soup</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-vegetable-beef-soup.html" class="recipe-card" data-category="Soups & Stews">
-      <div class="card-cat">Soups & Stews</div>
-      <h3 class="card-title">Vegetable Beef Soup</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-potato-leek-soup.html" class="recipe-card" data-category="Soups & Stews">
-      <div class="card-cat">Soups & Stews</div>
-      <h3 class="card-title">Potato Leek Soup</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-knoephla-soup.html" class="recipe-card" data-category="Soups & Stews">
-      <div class="card-cat">Soups & Stews</div>
-      <h3 class="card-title">Knoephla Soup</h3>
-      <div class="card-contributor">From the kitchen of Bob April (Cindy Sletin)</div>
-    </a>
-    <a href="recipe-chicken-tortilla-soup.html" class="recipe-card" data-category="Soups & Stews">
-      <div class="card-cat">Soups & Stews</div>
-      <h3 class="card-title">Chicken Tortilla Soup</h3>
-      <div class="card-contributor">From the kitchen of Katrina Boleware</div>
-    </a>
-    <a href="recipe-grandmother-beef-stew.html" class="recipe-card" data-category="Soups & Stews">
-      <div class="card-cat">Soups & Stews</div>
-      <h3 class="card-title">Grandmother-Style Thick Beef Stew</h3>
-      <div class="card-contributor">From the kitchen of Tim Board</div>
-    </a>
-    <a href="recipe-5-bean-hot-dish.html" class="recipe-card" data-category="Sides & Salads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">5 Bean Hot Dish</h3>
-      <div class="card-contributor">From the kitchen of Bob April</div>
-    </a>
-    <a href="recipe-wilted-lettuce.html" class="recipe-card" data-category="Sides & Salads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Wilted Lettuce</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-aprils-broccoli-casserole.html" class="recipe-card" data-category="Sides & Salads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">April's Broccoli Casserole</h3>
-      <div class="card-contributor">From the kitchen of April Kelly</div>
-    </a>
-    <a href="recipe-broccoli-rice-casserole.html" class="recipe-card" data-category="Sides & Salads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Broccoli-Rice Casserole</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-calico-beans.html" class="recipe-card" data-category="Sides & Salads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Calico Beans</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-glorified-rice.html" class="recipe-card" data-category="Sides & Salads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Glorified Rice</h3>
-      <div class="card-contributor">From the kitchen of Terri Board (In memory of Gramma Louise April)</div>
-    </a>
-    <a href="recipe-sweet-potato-casserole.html" class="recipe-card" data-category="Sides & Salads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Sweet Potato Casserole</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-quick-scalloped-potatoes.html" class="recipe-card" data-category="Sides & Salads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Quick Scalloped Potatoes</h3>
-      <div class="card-contributor">From the kitchen of Diane April</div>
-    </a>
-    <a href="recipe-spanish-rice.html" class="recipe-card" data-category="Sides & Salads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Spanish Rice</h3>
-      <div class="card-contributor">From the kitchen of Tim Board</div>
-    </a>
-    <a href="recipe-bean-salad.html" class="recipe-card" data-category="Sides & Salads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Bean Salad</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-acidata-category="Sides & Salads">ss="recipe-card" data-categ>Sides & Salads</div>
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Acini Di Pepe Fruit Salad</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <adata-category="Sides & Salads">class="recipe-card" data-ca>Sides & Salads</div>s">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Fruit Salad</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-cdata-category="Breads & Baked Goods">"recipe-card" data-category>Sides & Salads</div>    <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Cinnamon Fruit Salad</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a hredata-category="Breads & Baked Goods">.html" class="recipe-card" >Sides & Salads</div>& Breads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Grampa's Zucchini Bread</h3>
-      <div class="card-contributor">From the kitchen of Grampa (Frank) April</div>
-    </adata-category="Breads & Baked Goods">ad.html" class="recipe-card" data>Breads & Baked Goods</div>eads">
-      <div class="card-cat">Breads & Baked Goods</div>
-      <h3 class="card-title">Banana Bread</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-ice-bodata-category="Breads & Baked Goods">d" data-category="Breads & Baked Goods>Breads & Baked Goods</div>ard-cat">Sides & Salads</div>
-      <h3 class="card-title">Ice Box Potica (Nut Roll)</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-oatdata-category="Breads & Baked Goods">ard" data-category="Salads & Brea>Breads & Baked Goods</div>"card-cat">Breads & Baked Goods</div>
-      <h3 class="card-title">Oatmeal Bread</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April) â Frances Barnhart recipe</div>
-    </a>
-    <a href="recdata-category="Breads & Baked Goods">class="recipe-card" data-category>Breads & Baked Goods</div>    <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Bisquick One-Pan Banana Bread</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-spaghetti-salad.data-category="Breads & Baked Goods">ategory="Sides & Salads">
-      >Breads & Baked Goods</div>Sides & Salads</div>
-      <h3 class="card-title">Spaghetti Salad</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="redata-category="Sides & Salads">s="recipe-card" data-catego>Sides & Salads</div>      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Mac and Cheese Salad</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a hdata-category="Breads & Baked Goods">-salad.html" class="recipe->Sides & Salads</div>alads & Breads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Cauliflower and Broccoli Salad</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-data-category="Breads & Baked Goods">chini-bread.html" class="re>Sides & Salads</div>ry="Sides & Salads">
-      <div class="card-cat">Sides & Salads</div>
-      <h3 class="card-title">Zucchini Bread</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-succulent-zucchini-bread.html" class="data-category="Breads & Baked Goods">ds & Breads">
-      <div class="c>Breads & Baked Goods</div>ds</div>
-      <h3 class="card-title">Succulent Zucchini Bread</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-apple-pizza.html" class="recipe-card" data-category="Breads & Baked Goods">>
-      <div class="card-cat">Des>Breads & Baked Goods</div>    <h3 class="card-title">Apple Pizza</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-pecan-pie-bars.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Pecan Pie Bars</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-yoplait-pie.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Yoplait Pie</h3>
-      <div class="card-contributor">From the kitchen of Peggy April</div>
-    </a>
-    <a href="recipe-applesauce-cake.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Applesauce Cake</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-blueberry-pie.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Blueberry Pie</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-pumpkin-roll.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Pumpkin Roll</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-caramel-crunch-brrwich.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Caramel Crunch Brrrwich</h3>
-      <div class="card-contributor">From the kitchen of Sarah Hykes</div>
-    </a>
-    <a href="recipe-ooey-gooey-rocky-road.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Ooey Gooey Rocky Road</h3>
-      <div class="card-contributor">From the kitchen of Sarah Hykes</div>
-    </a>
-    <a href="recipe-chocolate-covered-pb-ritz.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Chocolate Covered Peanut Butter Ritz</h3>
-      <div class="card-contributor">From the kitchen of Brandy Worsham</div>
-    </a>
-    <a href="recipe-peanut-delights.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Peanut Delights</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-peanut-butter-pie.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Peanut Butter Pie</h3>
-      <div class="card-contributor">From the kitchen of John & Terri April</div>
-    </a>
-    <a href="recipe-chocolate-pecan-pie.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Chocolate Pecan Pie</h3>
-      <div class="card-contributor">From the kitchen of Patty Hykes</div>
-    </a>
-    <a href="recipe-foolproof-fudge.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Foolproof Fudge</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-crinkled-ginger-cookies.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Crinkled Ginger Cookies</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-ginger-cookies.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Ginger Cookies</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-buckeyes.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Buckeyes</h3>
-      <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
-    </a>
-    <a href="recipe-hard-candy.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Hard Candy</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-peach-streusel-coffee-cake.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Peach Streusel Coffee Cake</h3>
-      <div class="card-contributor">From the kitchen of Terri Board</div>
-    </a>
-    <a href="recipe-lemon-bars.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Lemon Bars</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-old-fashioned-cherry-pie.html" class="recipe-card" data-category="Desserts & Candy">
-      <div class="card-cat">Desserts & Candy</div>
-      <h3 class="card-title">Old Fashioned Cherry Pie</h3>
-      <div class="card-contributor">From the kitchen of Mary Ringlein</div>
-    </a>
-    <a href="recipe-grammas-bread-butter-pickles.html" class="recipe-card" data-category="Pickles, Sauces &amp; Extras">
-      <div class="card-cat">Pickles, Sauces & Extras</div>
-      <h3 class="card-title">Gramma's Bread and Butter Pickles</h3>
-      <div class="card-contributor">From the kitchen of Gramma Louise April</div>
-    </a>
-    <a href="recipe-noodles.html" class="recipe-card" datdata-category="Pickles, Sauces & Extras">    <div class="card-cat">Pickles, Sauces & Extras>Pickles, Sauces & Extras</div>ss="card-title">Homemade Noodles</h3>
-      <div class="card-contributor">From the kitchen of Mary April</div>
-    </a>
-    <a href="recipe-cranberry-orange-relish.html" class="recipe-card" data-category="Pickles, Sauces &amp; Extras">
-    data-category="Pickles, Sauces & Extras">laneous</div>
-      <h3 class="card-tit>Pickles, Sauces & Extras</div> Relish</h3>
-      <div class="card-contributor">From the kitchen of Mary April</div>
-    </a>
-    <a href="recipe-raisin-sauce.html" class="recipe-card" data-category="Pickles, Sauces &amp; Extras">
-      <div class="card-cat">Midata-category="Pickles, Sauces & Extras">ass="card-title">Raisin Sauce</h3>
-    >Pickles, Sauces & Extras</div>ontributor">From the kitchen of Mary April</div>
-    </a>
-    <a href="recipe-homemade-salami.html" class="recipe-card" data-category="Pickles, Sauces &amp; Extras">
-      <div class="card-cat">Pickles, Sauces & Extras</div>
-      <h3 cldata-category="Pickles, Sauces & Extras">mi</h3>
-      <div class="card-contribu>Pickles, Sauces & Extras</div>n of Marie Richter</div>
-    </a>
+<p class="results-count" id="resultsCount">Showing all 103 recipes</p>
+
+<div class="recipe-grid" id="recipeGrid">
+
+  <a href="recipe-chip-beef-cheese-balls.html" class="recipe-card" data-category="Appetizers">
+    <div class="card-cat">Appetizers</div>
+    <h3 class="card-title">Chipped Beef Cheese Balls</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-vegetable-pizza.html" class="recipe-card" data-category="Appetizers">
+    <div class="card-cat">Appetizers</div>
+    <h3 class="card-title">Vegetable Pizza</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-crunchy-parmesan-popcorn-mix.html" class="recipe-card" data-category="Appetizers">
+    <div class="card-cat">Appetizers</div>
+    <h3 class="card-title">Crunchy Parmesan Popcorn Mix</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-popcorn-crunch.html" class="recipe-card" data-category="Appetizers">
+    <div class="card-cat">Appetizers</div>
+    <h3 class="card-title">Popcorn Crunch</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-chex-party-mix.html" class="recipe-card" data-category="Appetizers">
+    <div class="card-cat">Appetizers</div>
+    <h3 class="card-title">Chex Party Mix</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-taco-dip.html" class="recipe-card" data-category="Appetizers">
+    <div class="card-cat">Appetizers</div>
+    <h3 class="card-title">Taco Dip</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-sauerkraut-balls.html" class="recipe-card" data-category="Appetizers">
+    <div class="card-cat">Appetizers</div>
+    <h3 class="card-title">Sauerkraut Balls</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-tortilla-wraps.html" class="recipe-card" data-category="Appetizers">
+    <div class="card-cat">Appetizers</div>
+    <h3 class="card-title">Tortilla Wraps</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+
+  <a href="recipe-baked-french-toast.html" class="recipe-card" data-category="Breakfast & Brunch">
+    <div class="card-cat">Breakfast & Brunch</div>
+    <h3 class="card-title">Baked French Toast</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-breakfast-casserole.html" class="recipe-card" data-category="Breakfast & Brunch">
+    <div class="card-cat">Breakfast & Brunch</div>
+    <h3 class="card-title">Breakfast Casserole</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-ham-cheese-puff.html" class="recipe-card" data-category="Breakfast & Brunch">
+    <div class="card-cat">Breakfast & Brunch</div>
+    <h3 class="card-title">Ham & Cheese Puff</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-hash-brown-casserole.html" class="recipe-card" data-category="Breakfast & Brunch">
+    <div class="card-cat">Breakfast & Brunch</div>
+    <h3 class="card-title">Hash Brown Casserole</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-hot-orange-coffee-cake.html" class="recipe-card" data-category="Breakfast & Brunch">
+    <div class="card-cat">Breakfast & Brunch</div>
+    <h3 class="card-title">Hot Orange Coffee Cake</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-fried-bread.html" class="recipe-card" data-category="Breakfast & Brunch">
+    <div class="card-cat">Breakfast & Brunch</div>
+    <h3 class="card-title">Fried Bread</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+
+  <a href="recipe-absent-cook-stew.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Absent Cook Stew</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-navy-bean-soup.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Navy Bean Soup</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-pot-roast.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Pot Roast</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-baked-spaghetti-chicken.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Baked Spaghetti with Chicken</h3>
+    <div class="card-contributor">From the kitchen of Brandy Worsham</div>
+  </a>
+  <a href="recipe-chicken-casserole.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Chicken Casserole</h3>
+    <div class="card-contributor">From the kitchen of Brandy Worsham</div>
+  </a>
+  <a href="recipe-barbecued-ribs.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Barbecued Ribs</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-classic-lasagna.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Classic Lasagna</h3>
+    <div class="card-contributor">From the kitchen of John & Terri April</div>
+  </a>
+  <a href="recipe-crock-pot-stroganoff.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Crock Pot Stroganoff</h3>
+    <div class="card-contributor">From the kitchen of John & Terri April</div>
+  </a>
+  <a href="recipe-creamy-cooker-chicken.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Creamy Cooker Chicken</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-super-easy-chicken.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Super Easy Chicken</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-easy-chicken.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Easy Chicken</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-hill-country-casserole.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Hill Country Casserole</h3>
+    <div class="card-contributor">From the kitchen of John & Terri April</div>
+  </a>
+  <a href="recipe-italian-chops.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Italian Chops</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-pork-chops-gravy.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Pork Chops and Gravy</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-ham-cabbage-supper.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Ham and Cabbage Supper</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-linguine-lobster.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Linguine and Lobster</h3>
+    <div class="card-contributor">From the kitchen of John & Terri April</div>
+  </a>
+  <a href="recipe-bbq-meat-sandwich.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">BBQ Meat Sandwich</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-marvelous-meatloaf.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Marvelous Meatloaf</h3>
+    <div class="card-contributor">From the kitchen of Diane April</div>
+  </a>
+  <a href="recipe-ground-beef-oriental.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Ground Beef Oriental</h3>
+    <div class="card-contributor">From the kitchen of Diane April</div>
+  </a>
+  <a href="recipe-one-dish-chicken-supper.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">One Dish Chicken Supper</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-mulligan.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Mulligan (Onion & Corned Beef)</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-quesadillas.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Quesadillas</h3>
+    <div class="card-contributor">From the kitchen of Tim Board</div>
+  </a>
+  <a href="recipe-enchiladas.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Enchiladas</h3>
+    <div class="card-contributor">From the kitchen of Tim Board</div>
+  </a>
+  <a href="recipe-roast-beef-sandwich-spread.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Roast Beef Sandwich Spread</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-shredded-roast-beef.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Shredded Roast Beef</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-mock-salisbury-steak.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Mock Salisbury Steak</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-delicious-chuck-roast.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Delicious Chuck Roast</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-roast-chicken.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Roast Chicken</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-chicken-mushroom-gravy.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Chicken in Mushroom Gravy</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-scrumptious-beef.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Scrumptious Beef</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-easy-dinner-surprise.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Easy Dinner Surprise</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-stuffed-peppers.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Stuffed Peppers</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-cabbage-rolls.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Cabbage Rolls</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-swiss-steak.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Swiss Steak</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-forget-it-pot-roast.html" class="recipe-card" data-category="Main Dishes">
+    <div class="card-cat">Main Dishes</div>
+    <h3 class="card-title">Forget It Pot Roast</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+
+  <a href="recipe-creamy-winter-squash-soup.html" class="recipe-card" data-category="Soups & Stews">
+    <div class="card-cat">Soups & Stews</div>
+    <h3 class="card-title">Creamy Winter Squash Soup</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-ham-bean-soup.html" class="recipe-card" data-category="Soups & Stews">
+    <div class="card-cat">Soups & Stews</div>
+    <h3 class="card-title">Ham and Bean Soup</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-vegetable-beef-soup.html" class="recipe-card" data-category="Soups & Stews">
+    <div class="card-cat">Soups & Stews</div>
+    <h3 class="card-title">Vegetable Beef Soup</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-potato-leek-soup.html" class="recipe-card" data-category="Soups & Stews">
+    <div class="card-cat">Soups & Stews</div>
+    <h3 class="card-title">Potato Leek Soup</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-knoephla-soup.html" class="recipe-card" data-category="Soups & Stews">
+    <div class="card-cat">Soups & Stews</div>
+    <h3 class="card-title">Knoephla Soup</h3>
+    <div class="card-contributor">From the kitchen of Bob April (Cindy Sletin)</div>
+  </a>
+  <a href="recipe-chicken-tortilla-soup.html" class="recipe-card" data-category="Soups & Stews">
+    <div class="card-cat">Soups & Stews</div>
+    <h3 class="card-title">Chicken Tortilla Soup</h3>
+    <div class="card-contributor">From the kitchen of Katrina Boleware</div>
+  </a>
+  <a href="recipe-grandmother-beef-stew.html" class="recipe-card" data-category="Soups & Stews">
+    <div class="card-cat">Soups & Stews</div>
+    <h3 class="card-title">Grandmother-Style Thick Beef Stew</h3>
+    <div class="card-contributor">From the kitchen of Tim Board</div>
+  </a>
+
+  <a href="recipe-5-bean-hot-dish.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">5 Bean Hot Dish</h3>
+    <div class="card-contributor">From the kitchen of Bob April</div>
+  </a>
+  <a href="recipe-wilted-lettuce.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Wilted Lettuce</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-aprils-broccoli-casserole.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">April's Broccoli Casserole</h3>
+    <div class="card-contributor">From the kitchen of April Kelly</div>
+  </a>
+  <a href="recipe-broccoli-rice-casserole.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Broccoli-Rice Casserole</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-calico-beans.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Calico Beans</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-glorified-rice.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Glorified Rice</h3>
+    <div class="card-contributor">From the kitchen of Terri Board (In memory of Gramma Louise April)</div>
+  </a>
+  <a href="recipe-sweet-potato-casserole.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Sweet Potato Casserole</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-quick-scalloped-potatoes.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Quick Scalloped Potatoes</h3>
+    <div class="card-contributor">From the kitchen of Diane April</div>
+  </a>
+  <a href="recipe-spanish-rice.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Spanish Rice</h3>
+    <div class="card-contributor">From the kitchen of Tim Board</div>
+  </a>
+  <a href="recipe-bean-salad.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Bean Salad</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-acini-di-pepe-fruit-salad.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Acini Di Pepe Fruit Salad</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-fruit-salad.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Fruit Salad</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-cinnamon-fruit-salad.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Cinnamon Fruit Salad</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-mac-cheese-salad.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Mac and Cheese Salad</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-cauliflower-broccoli-salad.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Cauliflower and Broccoli Salad</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-spaghetti-salad.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Spaghetti Salad</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-noodles.html" class="recipe-card" data-category="Sides & Salads">
+    <div class="card-cat">Sides & Salads</div>
+    <h3 class="card-title">Homemade Noodles</h3>
+    <div class="card-contributor">From the kitchen of Mary April</div>
+  </a>
+
+  <a href="recipe-grampas-zucchini-bread.html" class="recipe-card" data-category="Breads & Baked Goods">
+    <div class="card-cat">Breads & Baked Goods</div>
+    <h3 class="card-title">Grampa's Zucchini Bread</h3>
+    <div class="card-contributor">From the kitchen of Grampa (Frank) April</div>
+  </a>
+  <a href="recipe-banana-bread.html" class="recipe-card" data-category="Breads & Baked Goods">
+    <div class="card-cat">Breads & Baked Goods</div>
+    <h3 class="card-title">Banana Bread</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-ice-box-potica.html" class="recipe-card" data-category="Breads & Baked Goods">
+    <div class="card-cat">Breads & Baked Goods</div>
+    <h3 class="card-title">Ice Box Potica (Nut Roll)</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-oatmeal-bread.html" class="recipe-card" data-category="Breads & Baked Goods">
+    <div class="card-cat">Breads & Baked Goods</div>
+    <h3 class="card-title">Oatmeal Bread</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April) — Frances Barnhart recipe</div>
+  </a>
+  <a href="recipe-bisquick-banana-bread.html" class="recipe-card" data-category="Breads & Baked Goods">
+    <div class="card-cat">Breads & Baked Goods</div>
+    <h3 class="card-title">Bisquick One-Pan Banana Bread</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-zucchini-bread.html" class="recipe-card" data-category="Breads & Baked Goods">
+    <div class="card-cat">Breads & Baked Goods</div>
+    <h3 class="card-title">Zucchini Bread</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-succulent-zucchini-bread.html" class="recipe-card" data-category="Breads & Baked Goods">
+    <div class="card-cat">Breads & Baked Goods</div>
+    <h3 class="card-title">Succulent Zucchini Bread</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-apple-pizza.html" class="recipe-card" data-category="Breads & Baked Goods">
+    <div class="card-cat">Breads & Baked Goods</div>
+    <h3 class="card-title">Apple Pizza</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+
+  <a href="recipe-pecan-pie-bars.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Pecan Pie Bars</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-yoplait-pie.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Yoplait Pie</h3>
+    <div class="card-contributor">From the kitchen of Peggy April</div>
+  </a>
+  <a href="recipe-applesauce-cake.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Applesauce Cake</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-blueberry-pie.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Blueberry Pie</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-pumpkin-roll.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Pumpkin Roll</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-caramel-crunch-brrwich.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Caramel Crunch Brrrwich</h3>
+    <div class="card-contributor">From the kitchen of Sarah Hykes</div>
+  </a>
+  <a href="recipe-ooey-gooey-rocky-road.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Ooey Gooey Rocky Road</h3>
+    <div class="card-contributor">From the kitchen of Sarah Hykes</div>
+  </a>
+  <a href="recipe-chocolate-covered-pb-ritz.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Chocolate Covered Peanut Butter Ritz</h3>
+    <div class="card-contributor">From the kitchen of Brandy Worsham</div>
+  </a>
+  <a href="recipe-peanut-delights.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Peanut Delights</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-peanut-butter-pie.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Peanut Butter Pie</h3>
+    <div class="card-contributor">From the kitchen of John & Terri April</div>
+  </a>
+  <a href="recipe-chocolate-pecan-pie.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Chocolate Pecan Pie</h3>
+    <div class="card-contributor">From the kitchen of Patty Hykes</div>
+  </a>
+  <a href="recipe-foolproof-fudge.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Foolproof Fudge</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-crinkled-ginger-cookies.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Crinkled Ginger Cookies</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-ginger-cookies.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Ginger Cookies</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-buckeyes.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Buckeyes</h3>
+    <div class="card-contributor">From the kitchen of Mom (Mary April)</div>
+  </a>
+  <a href="recipe-hard-candy.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Hard Candy</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-peach-streusel-coffee-cake.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Peach Streusel Coffee Cake</h3>
+    <div class="card-contributor">From the kitchen of Terri Board</div>
+  </a>
+  <a href="recipe-lemon-bars.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Lemon Bars</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+  <a href="recipe-old-fashioned-cherry-pie.html" class="recipe-card" data-category="Desserts & Candy">
+    <div class="card-cat">Desserts & Candy</div>
+    <h3 class="card-title">Old Fashioned Cherry Pie</h3>
+    <div class="card-contributor">From the kitchen of Mary Ringlein</div>
+  </a>
+
+  <a href="recipe-grammas-bread-butter-pickles.html" class="recipe-card" data-category="Pickles, Sauces & Extras">
+    <div class="card-cat">Pickles, Sauces & Extras</div>
+    <h3 class="card-title">Gramma's Bread and Butter Pickles</h3>
+    <div class="card-contributor">From the kitchen of Gramma Louise April</div>
+  </a>
+  <a href="recipe-cranberry-orange-relish.html" class="recipe-card" data-category="Pickles, Sauces & Extras">
+    <div class="card-cat">Pickles, Sauces & Extras</div>
+    <h3 class="card-title">Cranberry Orange Relish</h3>
+    <div class="card-contributor">From the kitchen of Mary April</div>
+  </a>
+  <a href="recipe-raisin-sauce.html" class="recipe-card" data-category="Pickles, Sauces & Extras">
+    <div class="card-cat">Pickles, Sauces & Extras</div>
+    <h3 class="card-title">Raisin Sauce</h3>
+    <div class="card-contributor">From the kitchen of Mary April</div>
+  </a>
+  <a href="recipe-homemade-salami.html" class="recipe-card" data-category="Pickles, Sauces & Extras">
+    <div class="card-cat">Pickles, Sauces & Extras</div>
+    <h3 class="card-title">Homemade Salami</h3>
+    <div class="card-contributor">From the kitchen of Marie Richter</div>
+  </a>
+
 </div>
 
 <script>
 const allCards = Array.from(document.querySelectorAll('.recipe-card'));
 let activeCategory = 'All';
 
-// Check if arriving from homepage category click
-cdata-category="Pickles, Sauces & Extras">.getItem('filterCat');
+const savedCat = sessionStorage.getItem('filterCat');
 if (savedCat) {
->Pickles, Sauces & Extras</div>avedCat;
+  activeCategory = savedCat;
   sessionStorage.removeItem('filterCat');
   const btn = document.querySelector(`.filter-btn[data-cat="${savedCat}"]`);
   if (btn) {
@@ -689,7 +667,6 @@ function updateGrid() {
   } else {
     countEl.textContent = `Showing ${shown} recipe${shown !== 1 ? 's' : ''}`;
   }
-  // no-results message
   const grid = document.getElementById('recipeGrid');
   let noRes = grid.querySelector('.no-results');
   if (shown === 0) {
