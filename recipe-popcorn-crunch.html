@@ -3,31 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Popcorn Crunch ÃÂ· April Family Cookbook</title>
+  <title>Popcorn Crunch · April Family Cookbook</title>
   <!-- SEO -->
-  <meta name="description" content="A savory snack mix in the tradition of Chex Party Mix Ã¢ÂÂ that quintessentially American invention that spread from church basements to living rooms acros...">
+  <meta name="description" content="Savory snack mixes have been a party staple since the 1950s, when the original Chex Party Mix recipe first appeared in Life Magazine and home cooks began r...">
   <meta name="keywords" content="Popcorn Crunch, family recipe, Appetizers, April Family Cookbook">
-  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-popcorn-crunch.html">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-popcorn-crunch">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Popcorn Crunch ÃÂ· April Family Cookbook">
-  <meta property="og:description" content="A savory snack mix in the tradition of Chex Party Mix Ã¢ÂÂ that quintessentially American invention that spread from church basements to living rooms acros...">
-  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-popcorn-crunch.html">
+  <meta property="og:title" content="Popcorn Crunch · April Family Cookbook">
+  <meta property="og:description" content="Savory snack mixes have been a party staple since the 1950s, when the original Chex Party Mix recipe first appeared in Life Magazine and home cooks began r...">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-popcorn-crunch">
   <meta property="og:site_name" content="April Family Cookbook">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Popcorn Crunch ÃÂ· April Family Cookbook">
-  <meta name="twitter:description" content="A savory snack mix in the tradition of Chex Party Mix Ã¢ÂÂ that quintessentially American invention that spread from church basements to living rooms acros...">
+  <meta property="og:image" content="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773615238/Popcorn_Crunch.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Popcorn Crunch · April Family Cookbook">
+  <meta name="twitter:description" content="Savory snack mixes have been a party staple since the 1950s, when the original Chex Party Mix recipe first appeared in Life Magazine and home cooks began r...">
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "Recipe",
-  "name": "Popcorn Crunch",
-  "author": {
-    "@type": "Person",
-    "name": "Mary Ringlein"
-  },
-  "description": "A savory snack mix in the tradition of Chex Party Mix \u2014 that quintessentially American invention that spread from church basements to living rooms acros...",
-  "recipeCategory": "Appetizer",
-  "recipeIngredient": [
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    "name": "Popcorn Crunch",
+    "author": { "@type": "Person", "name": "Mary Ringlein" },
+    "description": "Savory snack mixes have been a party staple since the 1950s, when the original Chex Party Mix recipe first appeared in Life Magazine and home cooks began r...",
+    "recipeCategory": "Appetizers",
+    "recipeIngredient": [
     "3 c air-popped popcorn",
     "2 c whole grain pretzel sticks",
     "1 c Cheerios cereal",
@@ -36,27 +34,31 @@
     "1 tsp onion powder",
     "1 Tbsp Worcestershire sauce",
     "2 Tbsp low-cal margarine"
-  ],
-  "recipeInstructions": [
+    ],
+    "recipeInstructions": [
     {
       "@type": "HowToStep",
-      "text": "Preheat oven to 300\u00b0."
+      "text": "Preheat the oven to 300°."
     },
     {
       "@type": "HowToStep",
-      "text": "Combine all ingredients and bake for 20\u201330 minutes."
+      "text": "Combine all ingredients and stir to coat evenly."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Bake 20–30 minutes, stirring once halfway through."
     },
     {
       "@type": "HowToStep",
       "text": "Let cool before serving."
     }
-  ],
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "April Family Cookbook",
-    "url": "https://aprilfamilycookbook.com"
+    ],
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "April Family Cookbook",
+      "url": "https://aprilfamilycookbook.com"
+    }
   }
-}
   </script>
   <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,22 +77,25 @@
     .nav-links { display: flex; gap: 1.5rem; }
     .nav-links a { color: var(--light-tan); font-family: 'Lora', serif; font-size: 0.85rem; letter-spacing: 0.04em; transition: color 0.2s; }
     .nav-links a:hover { color: var(--tan); }
-    .recipe-hero { background: var(--brown); padding: 2.5rem 2rem 2rem; text-align: center; }
+    .recipe-hero { background: var(--dark-brown); position: relative; padding: 0; min-height: 320px; display: flex; flex-direction: column; justify-content: flex-end; }
+    .recipe-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.45; }
+    .hero-content { position: relative; z-index: 1; padding: 2.5rem 2rem 2rem; text-align: center; }
+    .recipe-hero-no-photo { background: var(--brown); padding: 2.5rem 2rem 2rem; text-align: center; }
     .recipe-category-tag { display: inline-block; background: var(--rust); color: #fff; font-family: 'Lora', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; margin-bottom: 1rem; }
     .recipe-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 3rem); color: #fff; line-height: 1.2; margin-bottom: 0.75rem; }
-    .recipe-contributor { font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--tan); margin-bottom: 0; }
-    .origin-story { background: rgba(0,0,0,0.2); margin: 1.25rem auto 0; max-width: 640px; padding: 1rem 1.25rem; border-radius: 6px; font-size: 0.88rem; line-height: 1.75; color: var(--light-tan); font-style: italic; }
+    .recipe-contributor { font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--tan); }
     .recipe-content { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .recipe-body-photo { margin: 0 0 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+    .recipe-body-photo img { width: 100%; max-height: 420px; object-fit: cover; display: block; }
     .recipe-section { margin-bottom: 2.5rem; }
     .recipe-section h2 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--rust); border-bottom: 2px solid var(--light-tan); padding-bottom: 0.5rem; margin-bottom: 1.2rem; }
+    .recipe-description { font-size: 0.95rem; line-height: 1.8; color: var(--brown); margin-bottom: 2rem; font-style: italic; }
     .ingredients-list { list-style: none; }
     .ingredients-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--light-tan); font-size: 0.95rem; display: flex; align-items: baseline; gap: 0.5rem; }
-    .ingredients-list li::before { content: "ÃÂ·"; color: var(--rust); font-size: 1.2rem; flex-shrink: 0; }
+    .ingredients-list li::before { content: "\00B7"; color: var(--rust); font-size: 1.4rem; flex-shrink: 0; line-height: 1; }
     .instructions-list { list-style: none; counter-reset: steps; }
     .instructions-list li { counter-increment: steps; padding: 0.75rem 0 0.75rem 3rem; border-bottom: 1px solid var(--light-tan); font-size: 0.95rem; line-height: 1.7; position: relative; }
     .instructions-list li::before { content: counter(steps); position: absolute; left: 0; top: 0.7rem; width: 2rem; height: 2rem; background: var(--rust); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 0.85rem; font-weight: 600; }
-    .tip-box { background: var(--warm-white); border-left: 4px solid var(--amber); padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; font-style: italic; color: var(--brown); margin-top: 1.5rem; }
-    .tip-box strong { font-style: normal; color: var(--amber); font-family: 'Playfair Display', serif; }
     .recipe-actions { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
     .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1.2rem; border: 2px solid var(--brown); border-radius: 4px; font-family: 'Lora', serif; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--brown); }
     .btn:hover { background: var(--brown); color: #fff; }
@@ -99,58 +104,27 @@
     .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.85rem; margin-bottom: 2rem; transition: color 0.2s; }
     .back-link:hover { color: var(--rust); }
     footer { background: var(--dark-brown); color: var(--light-tan); text-align: center; padding: 2rem; font-size: 0.8rem; line-height: 1.8; }
+    .footer-social { margin-top: 1rem; }
+    .footer-social a { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--tan); font-size: 0.9rem; text-decoration: none; border: 1px solid var(--brown); border-radius: 20px; padding: 0.4rem 1rem; transition: background 0.2s; }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
     @media print {
-      nav, .recipe-actions, .back-link, footer { display: none; }
-      .recipe-hero { background: none !important; color: var(--dark-brown) !important; padding: 0 0 1rem 0; }
+      nav, .recipe-actions, .back-link, footer, .recipe-body-photo { display: none; }
+      .recipe-hero { background: none !important; min-height: unset !important; }
+      .recipe-hero-img { display: none; }
+      .hero-content { padding: 0 0 1rem 0 !important; }
       .recipe-title { color: var(--dark-brown) !important; font-size: 1.8rem; }
       .recipe-category-tag { display: none; }
       .recipe-contributor { color: var(--brown) !important; }
-      .origin-story { background: var(--cream) !important; color: var(--muted) !important; border: 1px solid var(--light-tan); }
       body { font-size: 9pt; }
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
-    }
-  
-    .footer-social { margin-top: 1rem; }
-    .footer-social a {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      color: var(--tan); font-size: 0.9rem; text-decoration: none;
-      border: 1px solid var(--brown); border-radius: 20px;
-      padding: 0.4rem 1rem; transition: background 0.2s;
-    }
-    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
-    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
-  
-    .recipe-hero.has-photo {
-      background: var(--dark-brown);
-      position: relative;
-      padding: 0;
-      min-height: 320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .recipe-hero-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.45;
-    }
-    .recipe-hero.has-photo .hero-content {
-      position: relative;
-      z-index: 1;
-      padding: 2.5rem 2rem 2rem;
-    }
-    .recipe-hero:not(.has-photo) .hero-content {
-      padding: 2.5rem 2rem 2rem;
     }
   </style>
 </head>
 <body>
 <nav>
-  <a href="index.html" class="nav-logo">Ã¢ÂÂ¦ April Family Cookbook</a>
+  <a href="index.html" class="nav-logo">✦ April Family Cookbook</a>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="recipes.html">All Recipes</a>
@@ -159,46 +133,51 @@
   </div>
 </nav>
 
-<div class="recipe-hero" id="recipe-hero">
-  <!-- PHOTO: to add a photo, upload images/popcorn-crunch.jpg to GitHub and change the line below -->
-  <img class="recipe-hero-img" src="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773615238/Popcorn_Crunch.png" alt="">
+<div class="recipe-hero">
+  <img class="recipe-hero-img" src="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773615238/Popcorn_Crunch.png" alt="Popcorn Crunch">
   <div class="hero-content">
-
-  <div class="recipe-category-tag">Appetizers</div>
-  <h1 class="recipe-title">Popcorn Crunch</h1>
-  <div class="recipe-contributor">From the kitchen of Mary Ringlein</div>
-  
-
+    <div class="recipe-category-tag">Appetizers</div>
+    <h1 class="recipe-title">Popcorn Crunch</h1>
+    <div class="recipe-contributor">From the kitchen of Mary Ringlein</div>
   </div>
 </div>
+
 <div class="recipe-content">
-  <a href="recipes.html" class="back-link">Ã¢ÂÂ Back to All Recipes</a>
+  <a href="recipes.html" class="back-link">← Back to All Recipes</a>
   <div class="recipe-actions">
-    <button class="btn btn-primary" onclick="window.print()">Ã°ÂÂÂ¨Ã¯Â¸Â Print Recipe</button>
-    <button class="btn" onclick="navigator.clipboard.writeText(window.location.href).then(()=>this.textContent='Ã¢ÂÂ Copied!')">Ã°ÂÂÂ Share</button>
+    <button class="btn btn-primary" onclick="window.print()">🖨️ Print Recipe</button>
+    <button class="btn" onclick="navigator.clipboard.writeText(window.location.href).then(()=>this.textContent='✓ Copied!')">🔗 Share</button>
   </div>
 
-  <p class="recipe-description">A savory snack mix in the tradition of Chex Party Mix Ã¢ÂÂ that quintessentially American invention that spread from church basements to living rooms across the country in the latter half of the 20th century. NE Ohio families were enthusiastic adopters, and every household seemed to have their own variation passed hand to hand on index cards.</p>
+  <p class="recipe-description">Savory snack mixes have been a party staple since the 1950s, when the original Chex Party Mix recipe first appeared in Life Magazine and home cooks began riffing on the formula. By the 1990s, a lighter wave of cooking had taken hold, and cooks like Mary Ringlein were finding ways to keep the flavors they loved while trimming the fat. Her Popcorn Crunch swaps cereal for air-popped popcorn and whole grain pretzels, adds Cheerios for extra crunch, seasons everything with soy sauce, Worcestershire, garlic, and onion powder, and slow-bakes it at 300° until toasty and irresistible. It’s the kind of bowl that empties fast — savory, crunchy, and impossible to stop eating.</p>
 
+  <div class="recipe-body-photo">
+    <img src="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773615238/Popcorn_Crunch.png" alt="Popcorn Crunch">
+  </div>
   <div class="recipe-section">
     <h2>Ingredients</h2>
-    <ul class="ingredients-list"><li>3 c air-popped popcorn</li>
-<li>2 c whole grain pretzel sticks</li>
-<li>1 c Cheerios cereal</li>
-<li>2 Tbsp lite soy sauce</li>
-<li>2 tsp garlic powder</li>
-<li>1 tsp onion powder</li>
-<li>1 Tbsp Worcestershire sauce</li>
-<li>2 Tbsp low-cal margarine</li></ul>
+    <ul class="ingredients-list">
+      <li>3 c air-popped popcorn</li>
+      <li>2 c whole grain pretzel sticks</li>
+      <li>1 c Cheerios cereal</li>
+      <li>2 Tbsp lite soy sauce</li>
+      <li>2 tsp garlic powder</li>
+      <li>1 tsp onion powder</li>
+      <li>1 Tbsp Worcestershire sauce</li>
+      <li>2 Tbsp low-cal margarine</li>
+    </ul>
   </div>
   <div class="recipe-section">
     <h2>Instructions</h2>
-    <ol class="instructions-list"><li>Preheat oven to 300ÃÂ°.</li>
-<li>Combine all ingredients and bake for 20Ã¢ÂÂ30 minutes.</li>
-<li>Let cool before serving.</li></ol>
+    <ol class="instructions-list">
+      <li>Preheat the oven to 300°.</li>
+      <li>Combine all ingredients and stir to coat evenly.</li>
+      <li>Bake 20–30 minutes, stirring once halfway through.</li>
+      <li>Let cool before serving.</li>
+    </ol>
   </div>
-  
 </div>
+
 <footer>
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
   <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
@@ -210,12 +189,5 @@
     </a>
   </div>
 </footer>
-
-  <script>
-    // Auto-activate photo hero if image exists
-    const heroImg = document.querySelector('.recipe-hero-img');
-    if (heroImg) {
-      document.getElementById('recipe-hero').classList.add('has-photo');
-    }
-  </script>
-</body></html>
+</body>
+</html>
