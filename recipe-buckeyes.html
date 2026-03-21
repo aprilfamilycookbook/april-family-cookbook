@@ -5,60 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buckeyes · April Family Cookbook</title>
   <!-- SEO -->
-  <meta name="description" content="Buckeyes — chocolate-dipped peanut butter balls that mimic the nut of the Ohio Buckeye tree — are the unofficial state candy of Ohio, as deeply identifi...">
+  <meta name="description" content="Buckeyes are an Ohio tradition — peanut butter balls dipped in chocolate, left with a circle of peanut butter showing on top to resemble the nut of the Ohi...">
   <meta name="keywords" content="Buckeyes, family recipe, Desserts & Candy, April Family Cookbook">
-  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-buckeyes.html">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-buckeyes">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Buckeyes · April Family Cookbook">
-  <meta property="og:description" content="Buckeyes — chocolate-dipped peanut butter balls that mimic the nut of the Ohio Buckeye tree — are the unofficial state candy of Ohio, as deeply identifi...">
-  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-buckeyes.html">
+  <meta property="og:description" content="Buckeyes are an Ohio tradition — peanut butter balls dipped in chocolate, left with a circle of peanut butter showing on top to resemble the nut of the Ohi...">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-buckeyes">
   <meta property="og:site_name" content="April Family Cookbook">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773356351/buckeyes.png">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Buckeyes · April Family Cookbook">
-  <meta name="twitter:description" content="Buckeyes — chocolate-dipped peanut butter balls that mimic the nut of the Ohio Buckeye tree — are the unofficial state candy of Ohio, as deeply identifi...">
+  <meta name="twitter:description" content="Buckeyes are an Ohio tradition — peanut butter balls dipped in chocolate, left with a circle of peanut butter showing on top to resemble the nut of the Ohi...">
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "Recipe",
-  "name": "Buckeyes",
-  "author": {
-    "@type": "Person",
-    "name": "Mom (Mary April)"
-  },
-  "description": "Buckeyes \u2014 chocolate-dipped peanut butter balls that mimic the nut of the Ohio Buckeye tree \u2014 are the unofficial state candy of Ohio, as deeply identifi...",
-  "recipeCategory": "Dessert",
-  "recipeIngredient": [
-    "2\u00bd c powdered sugar",
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    "name": "Buckeyes",
+    "author": { "@type": "Person", "name": "Mary April" },
+    "description": "Buckeyes are an Ohio tradition — peanut butter balls dipped in chocolate, left with a circle of peanut butter showing on top to resemble the nut of the Ohi...",
+    "recipeCategory": "Desserts & Candy",
+    "recipeIngredient": [
+    "5½ c powdered sugar",
     "2 c peanut butter",
-    "\u00bd tsp vanilla",
+    "½ lb (2 sticks) butter, melted",
+    "1½ tsp vanilla",
     "12 oz semi-sweet chocolate chips",
-    "\u00bc lb paraffin wax",
-    "\u00bc lb butter, melted"
-  ],
-  "recipeInstructions": [
+    "¼ lb paraffin wax (food-grade)"
+    ],
+    "recipeInstructions": [
     {
       "@type": "HowToStep",
-      "text": "Mix sugar, peanut butter, and melted butter until smooth."
+      "text": "In a large bowl, mix together the powdered sugar, peanut butter, melted butter, and vanilla until smooth and well combined."
     },
     {
       "@type": "HowToStep",
-      "text": "Melt chocolate chips and paraffin wax in double boiler."
+      "text": "Roll the mixture into balls about 1-inch in diameter. Place on a waxed paper-lined baking sheet."
     },
     {
       "@type": "HowToStep",
-      "text": "Roll sugar mixture into balls."
+      "text": "Refrigerate the balls for at least 30 minutes until firm."
     },
     {
       "@type": "HowToStep",
-      "text": "Dip into chocolate 3 times. Let set up on waxed paper."
+      "text": "In a double boiler over simmering water, melt the chocolate chips and paraffin wax together, stirring until smooth."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Using a toothpick or dipping fork, dip each peanut butter ball into the chocolate 3 times, letting the excess drip off between dips."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Place dipped balls on waxed paper to set."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Let set completely at room temperature or refrigerate to firm faster."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Store in an airtight container in the refrigerator."
     }
-  ],
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "April Family Cookbook",
-    "url": "https://aprilfamilycookbook.com"
+    ],
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "April Family Cookbook",
+      "url": "https://aprilfamilycookbook.com"
+    }
   }
-}
   </script>
   <!-- /SEO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,22 +91,25 @@
     .nav-links { display: flex; gap: 1.5rem; }
     .nav-links a { color: var(--light-tan); font-family: 'Lora', serif; font-size: 0.85rem; letter-spacing: 0.04em; transition: color 0.2s; }
     .nav-links a:hover { color: var(--tan); }
-    .recipe-hero { background: var(--brown); padding: 2.5rem 2rem 2rem; text-align: center; }
+    .recipe-hero { background: var(--dark-brown); position: relative; padding: 0; min-height: 320px; display: flex; flex-direction: column; justify-content: flex-end; }
+    .recipe-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.45; }
+    .hero-content { position: relative; z-index: 1; padding: 2.5rem 2rem 2rem; text-align: center; }
+    .recipe-hero-no-photo { background: var(--brown); padding: 2.5rem 2rem 2rem; text-align: center; }
     .recipe-category-tag { display: inline-block; background: var(--rust); color: #fff; font-family: 'Lora', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; margin-bottom: 1rem; }
     .recipe-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 3rem); color: #fff; line-height: 1.2; margin-bottom: 0.75rem; }
-    .recipe-contributor { font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--tan); margin-bottom: 0; }
-    .origin-story { background: rgba(0,0,0,0.2); margin: 1.25rem auto 0; max-width: 640px; padding: 1rem 1.25rem; border-radius: 6px; font-size: 0.88rem; line-height: 1.75; color: var(--light-tan); font-style: italic; }
+    .recipe-contributor { font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--tan); }
     .recipe-content { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .recipe-body-photo { margin: 0 0 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+    .recipe-body-photo img { width: 100%; max-height: 420px; object-fit: cover; display: block; }
     .recipe-section { margin-bottom: 2.5rem; }
     .recipe-section h2 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--rust); border-bottom: 2px solid var(--light-tan); padding-bottom: 0.5rem; margin-bottom: 1.2rem; }
+    .recipe-description { font-size: 0.95rem; line-height: 1.8; color: var(--brown); margin-bottom: 2rem; font-style: italic; }
     .ingredients-list { list-style: none; }
     .ingredients-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--light-tan); font-size: 0.95rem; display: flex; align-items: baseline; gap: 0.5rem; }
-    .ingredients-list li::before { content: "·"; color: var(--rust); font-size: 1.2rem; flex-shrink: 0; }
+    .ingredients-list li::before { content: "\00B7"; color: var(--rust); font-size: 1.4rem; flex-shrink: 0; line-height: 1; }
     .instructions-list { list-style: none; counter-reset: steps; }
     .instructions-list li { counter-increment: steps; padding: 0.75rem 0 0.75rem 3rem; border-bottom: 1px solid var(--light-tan); font-size: 0.95rem; line-height: 1.7; position: relative; }
     .instructions-list li::before { content: counter(steps); position: absolute; left: 0; top: 0.7rem; width: 2rem; height: 2rem; background: var(--rust); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 0.85rem; font-weight: 600; }
-    .tip-box { background: var(--warm-white); border-left: 4px solid var(--amber); padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; font-style: italic; color: var(--brown); margin-top: 1.5rem; }
-    .tip-box strong { font-style: normal; color: var(--amber); font-family: 'Playfair Display', serif; }
     .recipe-actions { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
     .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1.2rem; border: 2px solid var(--brown); border-radius: 4px; font-family: 'Lora', serif; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--brown); }
     .btn:hover { background: var(--brown); color: #fff; }
@@ -101,53 +118,28 @@
     .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.85rem; margin-bottom: 2rem; transition: color 0.2s; }
     .back-link:hover { color: var(--rust); }
     footer { background: var(--dark-brown); color: var(--light-tan); text-align: center; padding: 2rem; font-size: 0.8rem; line-height: 1.8; }
+    .footer-social { margin-top: 1rem; }
+    .footer-social a { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--tan); font-size: 0.9rem; text-decoration: none; border: 1px solid var(--brown); border-radius: 20px; padding: 0.4rem 1rem; transition: background 0.2s; }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
     @media print {
       nav, .recipe-actions, .back-link, footer { display: none; }
-      .recipe-hero { background: none !important; color: var(--dark-brown) !important; padding: 0 0 1rem 0; }
+      .recipe-hero { background: none !important; min-height: unset !important; }
+      .recipe-hero-img { display: none; }
+      .hero-content { padding: 0 0 1rem 0 !important; }
       .recipe-title { color: var(--dark-brown) !important; font-size: 1.8rem; }
       .recipe-category-tag { display: none; }
       .recipe-contributor { color: var(--brown) !important; }
-      .origin-story { background: var(--cream) !important; color: var(--muted) !important; border: 1px solid var(--light-tan); }
+      .recipe-body-photo { box-shadow: none !important; border-radius: 0; margin: 0 0 0.5rem 1rem; float: right; width: 25%; page-break-inside: avoid; }
+      .recipe-body-photo img { max-height: 120px; width: 100%; object-fit: cover; display: block; }
       body { font-size: 9pt; }
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
     }
-  
-    .footer-social { margin-top: 1rem; }
-    .footer-social a {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      color: var(--tan); font-size: 0.9rem; text-decoration: none;
-      border: 1px solid var(--brown); border-radius: 20px;
-      padding: 0.4rem 1rem; transition: background 0.2s;
-    }
-    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
-    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
-  
-    .recipe-hero.has-photo {
-      background: var(--dark-brown);
-      position: relative;
-      padding: 0;
-      min-height: 320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .recipe-hero-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.45;
-    }
-    .recipe-hero.has-photo .hero-content {
-      position: relative;
-      z-index: 1;
-      padding: 2.5rem 2rem 2rem;
-    }
-    .recipe-hero:not(.has-photo) .hero-content {
-      padding: 2.5rem 2rem 2rem;
-    }
+
+    .recipe-tip { background: var(--warm-white); border-left: 4px solid var(--amber); padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; color: var(--brown); margin-bottom: 2rem; }
+    .recipe-tip a { color: var(--rust); text-decoration: underline; }
+    @media print { .recipe-tip { border-left: 2px solid var(--amber); } }
   </style>
 </head>
 <body>
@@ -161,18 +153,15 @@
   </div>
 </nav>
 
-<div class="recipe-hero" id="recipe-hero">
-  <!-- PHOTO: to add a photo, upload images/buckeyes.jpg to GitHub and change the line below -->
-  <img class="recipe-hero-img" src="https://res.cloudinary.com/dksxkzlc3/image/upload/buckeyes.png" alt="">
+<div class="recipe-hero">
+  <img class="recipe-hero-img" src="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773356351/buckeyes.png" alt="Buckeyes">
   <div class="hero-content">
-
-  <div class="recipe-category-tag">Desserts & Candy</div>
-  <h1 class="recipe-title">Buckeyes</h1>
-  <div class="recipe-contributor">From the kitchen of Mom (Mary April)</div>
-  
-
+    <div class="recipe-category-tag">Desserts & Candy</div>
+    <h1 class="recipe-title">Buckeyes</h1>
+    <div class="recipe-contributor">From the kitchen of Mary April</div>
   </div>
 </div>
+
 <div class="recipe-content">
   <a href="recipes.html" class="back-link">← Back to All Recipes</a>
   <div class="recipe-actions">
@@ -180,26 +169,41 @@
     <button class="btn" onclick="navigator.clipboard.writeText(window.location.href).then(()=>this.textContent='✓ Copied!')">🔗 Share</button>
   </div>
 
-  <p class="recipe-description">Buckeyes — chocolate-dipped peanut butter balls that mimic the nut of the Ohio Buckeye tree — are the unofficial state candy of Ohio, as deeply identified with the state as the Buckeye football team that gave them their second wave of fame. For the April family, rooted in NE Ohio for generations, making Buckeyes at Christmas was less a recipe than an obligation — something you did because you were from Ohio, and Ohio did this.</p>
+  <p class="recipe-description">Buckeyes are an Ohio tradition — peanut butter balls dipped in chocolate, left with a circle of peanut butter showing on top to resemble the nut of the Ohio buckeye tree. They became a staple of Midwestern holiday candy trays by the 1960s and ’70s, showing up in church cookbooks and family recipe boxes across the region. Mary April’s version uses paraffin wax melted into the chocolate — the classic candy-maker’s trick for a glossy, firm coating that sets cleanly and doesn’t melt at room temperature. Each ball gets dipped three times for a thorough coat. The result is rich, sweet, and unmistakably Ohio.</p>
 
+  <div class="recipe-body-photo">
+    <img src="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773356351/buckeyes.png" alt="Buckeyes">
+  </div>
   <div class="recipe-section">
     <h2>Ingredients</h2>
-    <ul class="ingredients-list"><li>2½ c powdered sugar</li>
-<li>2 c peanut butter</li>
-<li>½ tsp vanilla</li>
-<li>12 oz semi-sweet chocolate chips</li>
-<li>¼ lb paraffin wax</li>
-<li>¼ lb butter, melted</li></ul>
+    <ul class="ingredients-list">
+      <li>5½ c powdered sugar</li>
+      <li>2 c peanut butter</li>
+      <li>½ lb (2 sticks) butter, melted</li>
+      <li>1½ tsp vanilla</li>
+      <li>12 oz semi-sweet chocolate chips</li>
+      <li>¼ lb paraffin wax (food-grade)</li>
+    </ul>
   </div>
   <div class="recipe-section">
     <h2>Instructions</h2>
-    <ol class="instructions-list"><li>Mix sugar, peanut butter, and melted butter until smooth.</li>
-<li>Melt chocolate chips and paraffin wax in double boiler.</li>
-<li>Roll sugar mixture into balls.</li>
-<li>Dip into chocolate 3 times. Let set up on waxed paper.</li></ol>
+    <ol class="instructions-list">
+      <li>In a large bowl, mix together the powdered sugar, peanut butter, melted butter, and vanilla until smooth and well combined.</li>
+      <li>Roll the mixture into balls about 1-inch in diameter. Place on a waxed paper-lined baking sheet.</li>
+      <li>Refrigerate the balls for at least 30 minutes until firm.</li>
+      <li>In a double boiler over simmering water, melt the chocolate chips and paraffin wax together, stirring until smooth.</li>
+      <li>Using a toothpick or dipping fork, dip each peanut butter ball into the chocolate 3 times, letting the excess drip off between dips.</li>
+      <li>Place dipped balls on waxed paper to set.</li>
+      <li>Let set completely at room temperature or refrigerate to firm faster.</li>
+      <li>Store in an airtight container in the refrigerator.</li>
+    </ol>
   </div>
-  <div class="tip-box"><strong>💡 Tip:</strong> These are an Ohio tradition — named after the Buckeye tree nut. A must at any April family gathering!</div>
+
+  <div class="recipe-tip">
+    <p><strong>About paraffin wax:</strong> Food-grade paraffin (Gulf Wax) is a traditional candy-making ingredient that gives chocolate coating a glossy finish and firm set. Find it in the canning aisle. If you prefer not to use wax, substitute 1 tablespoon of vegetable shortening — the coating will be slightly softer but still delicious.</p>
+  </div>
 </div>
+
 <footer>
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
   <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
@@ -211,12 +215,5 @@
     </a>
   </div>
 </footer>
-
-  <script>
-    // Auto-activate photo hero if image exists
-    const heroImg = document.querySelector('.recipe-hero-img');
-    if (heroImg) {
-      document.getElementById('recipe-hero').classList.add('has-photo');
-    }
-  </script>
-</body></html>
+</body>
+</html>
