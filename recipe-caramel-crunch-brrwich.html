@@ -130,6 +130,10 @@
       .recipe-content { padding: 0; }
       @page { margin: 0.75in; size: letter; }
     }
+
+    .recipe-tip { background: var(--warm-white); border-left: 4px solid var(--amber); padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; color: var(--brown); margin-bottom: 2rem; }
+    .recipe-tip a { color: var(--rust); text-decoration: underline; }
+    @media print { .recipe-tip { border-left: 2px solid var(--amber); } }
   </style>
 </head>
 <body>
@@ -184,6 +188,10 @@
       <li>Freeze for at least 6 hours or until firm.</li>
       <li>Let sandwiches stand at room temperature for 10 minutes before eating.</li>
     </ol>
+  </div>
+
+  <div class="recipe-tip">
+    🥦 <strong>If you liked this, try this:</strong> Sarah Hykes’ <a href="recipe-ooey-gooey-rocky-road.html">Ooey Gooey Rocky Road</a> — chocolate ice cream, soft chocolate cookies, marshmallow cream, and salted peanuts. Same idea, totally different flavor adventure.
   </div>
 </div>
 
