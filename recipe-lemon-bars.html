@@ -1,64 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lemon Bars | April Family Cookbook</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lemon Bars · April Family Cookbook</title>
+  <meta name="description" content="Lemon bars became a fixture of American bake sales and church potlucks in the 1960s — a buttery pressed crust baked until just set, then a bright, egg-rich lemo">
+  <meta name="keywords" content="Lemon Bars, family recipe, Desserts & Candy, April Family Cookbook">
+  <link rel="canonical" href="https://aprilfamilycookbook.com/recipe-lemon-bars.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Lemon Bars · April Family Cookbook">
+  <meta property="og:description" content="Lemon bars became a fixture of American bake sales and church potlucks in the 1960s — a buttery pressed crust baked until just set, then a bright, egg-rich lemo">
+  <meta property="og:url" content="https://aprilfamilycookbook.com/recipe-lemon-bars.html">
+  <meta property="og:site_name" content="April Family Cookbook">
+  <meta property="og:image" content="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773708392/Lemon_Bars.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #fdf6ec; --warm-white: #fffaf3; --brown: #5c3d1e;
+      --dark-brown: #3a2410; --rust: #b5451b; --amber: #d4831a;
+      --tan: #c9a96e; --light-tan: #e8d5b0; --text: #3a2410; --muted: #8a7060;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--cream); color: var(--text); font-family: 'Lora', serif; }
+    a { color: inherit; text-decoration: none; }
+    nav { background: var(--dark-brown); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-family: 'Caveat', cursive; font-size: 1.4rem; color: var(--tan); font-weight: 700; }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: var(--light-tan); font-family: 'Lora', serif; font-size: 0.85rem; letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--tan); }
+    .recipe-hero { background: var(--brown); padding: 2.5rem 2rem 2rem; text-align: center; }
+    .recipe-category-tag { display: inline-block; background: var(--rust); color: #fff; font-family: 'Lora', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; margin-bottom: 1rem; }
+    .recipe-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 3rem); color: #fff; line-height: 1.2; margin-bottom: 0.75rem; }
+    .recipe-contributor { font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--tan); margin-bottom: 0; }
+    .origin-story { background: rgba(0,0,0,0.2); margin: 1.25rem auto 0; max-width: 640px; padding: 1rem 1.25rem; border-radius: 6px; font-size: 0.88rem; line-height: 1.75; color: var(--light-tan); font-style: italic; }
+    .recipe-content { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .recipe-section { margin-bottom: 2.5rem; }
+    .recipe-section h2 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--rust); border-bottom: 2px solid var(--light-tan); padding-bottom: 0.5rem; margin-bottom: 1.2rem; }
+    .ingredients-list { list-style: none; }
+    .ingredients-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--light-tan); font-size: 0.95rem; display: flex; align-items: baseline; gap: 0.5rem; }
+    .ingredients-list li::before { content: "·"; color: var(--rust); font-size: 1.2rem; flex-shrink: 0; }
+    .instructions-list { list-style: none; counter-reset: steps; }
+    .instructions-list li { counter-increment: steps; padding: 0.75rem 0 0.75rem 3rem; border-bottom: 1px solid var(--light-tan); font-size: 0.95rem; line-height: 1.7; position: relative; }
+    .instructions-list li::before { content: counter(steps); position: absolute; left: 0; top: 0.7rem; width: 2rem; height: 2rem; background: var(--rust); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 0.85rem; font-weight: 600; }
+    .tip-box { background: var(--warm-white); border-left: 4px solid var(--amber); padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; font-style: italic; color: var(--brown); margin-top: 1.5rem; }
+    .tip-box strong { font-style: normal; color: var(--amber); font-family: 'Playfair Display', serif; }
+    .recipe-actions { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1.2rem; border: 2px solid var(--brown); border-radius: 4px; font-family: 'Lora', serif; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--brown); }
+    .btn:hover { background: var(--brown); color: #fff; }
+    .btn-primary { background: var(--rust); color: #fff; border-color: var(--rust); }
+    .btn-primary:hover { background: var(--dark-brown); border-color: var(--dark-brown); }
+    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.85rem; margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--rust); }
+    footer { background: var(--dark-brown); color: var(--light-tan); text-align: center; padding: 2rem; font-size: 0.8rem; line-height: 1.8; }
+    @media print {
+      nav, .recipe-actions, .back-link, footer { display: none; }
+      .recipe-hero { background: none !important; color: var(--dark-brown) !important; padding: 0 0 1rem 0; }
+      .recipe-title { color: var(--dark-brown) !important; font-size: 1.8rem; }
+      .recipe-category-tag { display: none; }
+      .recipe-contributor { color: var(--brown) !important; }
+      .origin-story { background: var(--cream) !important; color: var(--muted) !important; border: 1px solid var(--light-tan); }
+      body { font-size: 9pt; }
+      .recipe-content { padding: 0; }
+      @page { margin: 0.75in; size: letter; }
+    }
+  
+    .footer-social { margin-top: 1rem; }
+    .footer-social a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--tan); font-size: 0.9rem; text-decoration: none;
+      border: 1px solid var(--brown); border-radius: 20px;
+      padding: 0.4rem 1rem; transition: background 0.2s;
+    }
+    .footer-social a:hover { background: var(--brown); color: var(--light-tan); }
+    .footer-social svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+  
+    .recipe-hero.has-photo {
+      background: var(--dark-brown);
+      position: relative;
+      padding: 0;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .recipe-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+    .recipe-hero.has-photo .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 2rem 2rem;
+    }
+    .recipe-hero:not(.has-photo) .hero-content {
+      padding: 2.5rem 2rem 2rem;
+    }
+  </style>
 </head>
 <body>
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">✦ April Family Cookbook</a>
-    <div class="nav-links">
-      <a href="recipes.html">All Recipes</a>
-      <a href="about.html">About</a>
-      <a href="submit.html">Submit a Recipe</a>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">✦ April Family Cookbook</a>
+      <div class="nav-links">
+        <a href="recipes.html">All Recipes</a>
+        <a href="about.html">About</a>
+        <a href="submit.html">Submit a Recipe</a>
+      </div>
+    </div>
+  </nav>
+  <div class="recipe-hero" id="recipe-hero">
+    <img class="recipe-hero-img" src="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773708392/Lemon_Bars.png" alt="Lemon Bars">
+    <div class="hero-content">
+      <span class="category-tag">Desserts & Candy</span>
+      <h1>Lemon Bars</h1>
+      <p class="contributor">By Mary Ringlein</p>
     </div>
   </div>
-</nav>
-<div class="recipe-hero" id="recipe-hero">
-<img class="recipe-hero-img" src="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773708392/Lemon_Bars.png" alt="">
-  <div class="hero-content">
-    <span class="category-tag">Desserts & Candy</span>
-    <h1>Lemon Bars</h1>
-    <p class="contributor">By Mary Ringlein</p>
+  <div class="recipe-actions">
+    <a href="recipes.html" class="btn-back">← All Recipes</a>
+    <button onclick="window.print()" class="btn-action">🖸️ Print</button>
+    <button onclick="if(navigator.share){navigator.share({title:'Lemon Bars',url:window.location.href})}else{navigator.clipboard.writeText(window.location.href)}" class="btn-action">🔗 Share</button>
   </div>
-</div>
-<main class="recipe-content">
-  <p class="recipe-description">Lemon bars became a fixture of American bake sales and church potlucks in the 1960s, when shortbread-style crusts topped with citrus custard started appearing in women’s magazines and community cookbooks across the country. The formula is simple and reliable: a buttery pressed crust baked until just set, then a bright, egg-rich lemon filling poured over and baked again until firm. Mary Ringlein’s version follows the classic proportions — a full 5 tablespoons of lemon juice gives the filling real tartness, and a dusting of powdered sugar over the cooled bars is the finishing touch that makes them look as good as they taste. Cut into small squares; they’re rich.</p>
-<img class="recipe-body-photo" src="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773708392/Lemon_Bars.png" alt="Lemon Bars">
-  <section class="ingredients">
-    <h2>Ingredients</h2>
-    <ul><li>— Crust —</li>
-<li>2 c flour</li>
-<li>1 c oleo (margarine) or butter, softened</li>
-<li>½ c powdered sugar</li>
-<li>— Filling —</li>
-<li>4 eggs</li>
-<li>2 c sugar</li>
-<li>4 Tbsp flour</li>
-<li>5 Tbsp lemon juice</li>
-<li>— Finish —</li>
-<li>Powdered sugar, for dusting</li></ul>
-  </section>
-  <section class="instructions">
-    <h2>Instructions</h2>
-    <ol><li>Preheat oven to 350°F.</li>
-<li>Make the crust: Combine the flour, oleo (or butter), and powdered sugar. Mix together like pie crust dough until crumbly and cohesive.</li>
-<li>Press the crust mixture evenly into an ungreased 9×13-inch pan.</li>
-<li>Bake the crust at 350°F for 20 minutes, until lightly set.</li>
-<li>Make the filling: Beat the eggs well. Add the sugar, flour, and lemon juice and mix until smooth.</li>
-<li>Pour the filling over the hot baked crust.</li>
-<li>Return to the oven and bake for 30 minutes more at 350°F, until the filling is set and lightly golden.</li>
-<li>Remove from oven and cool completely.</li>
-<li>Dust generously with powdered sugar.</li>
-<li>Cut into 1-inch squares. Store covered at room temperature or refrigerate.</li></ol>
-  </section>
-</main>
-<footer class="site-footer">
-  <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
-</footer>
-<script src="recipe.js"></script>
+  <main class="recipe-content">
+    <p class="recipe-description">Lemon bars became a fixture of American bake sales and church potlucks in the 1960s — a buttery pressed crust baked until just set, then a bright, egg-rich lemon filling poured over and baked again until firm. Mary Ringlein’s version uses 5 tablespoons of lemon juice for real tartness, and a dusting of powdered sugar is the finishing touch.</p>
+    <img class="recipe-body-photo" src="https://res.cloudinary.com/dksxkzlc3/image/upload/v1773708392/Lemon_Bars.png" alt="Lemon Bars">
+    <section class="ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>— Crust —</li>
+        <li>2 c flour</li>
+        <li>1 c oleo (margarine) or butter, softened</li>
+        <li>½ c powdered sugar</li>
+        <li>— Filling —</li>
+        <li>4 eggs</li>
+        <li>2 c sugar</li>
+        <li>4 Tbsp flour</li>
+        <li>5 Tbsp lemon juice</li>
+        <li>— Finish —</li>
+        <li>Powdered sugar, for dusting</li>
+      </ul>
+    </section>
+    <section class="instructions">
+      <h2>Instructions</h2>
+      <ol>
+        <li>Preheat oven to 350°F.</li>
+        <li>Make the crust: Combine the flour, oleo, and powdered sugar. Mix like pie crust dough until crumbly.</li>
+        <li>Press the crust mixture evenly into an ungreased 9×13-inch pan.</li>
+        <li>Bake the crust at 350°F for 20 minutes, until lightly set.</li>
+        <li>Make the filling: Beat the eggs well. Add the sugar, flour, and lemon juice and mix until smooth.</li>
+        <li>Pour the filling over the hot baked crust.</li>
+        <li>Bake for 30 minutes more at 350°F, until the filling is set and lightly golden.</li>
+        <li>Cool completely.</li>
+        <li>Dust generously with powdered sugar.</li>
+        <li>Cut into 1-inch squares. Store covered at room temperature or refrigerate.</li>
+      </ol>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
+    <p>Recipes gathered with love from across the April, Neff, Schaeffer, Ross &amp; Sheron families.</p>
+    <p style="margin-top:0.5rem;color:var(--muted);">aprilfamilycookbook.com</p>
+  </footer>
+  <script>
+    const hero = document.getElementById('recipe-hero');
+    if(hero && hero.querySelector('.recipe-hero-img')) hero.classList.add('has-photo');
+  </script>
 </body>
 </html>
