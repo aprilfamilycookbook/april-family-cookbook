@@ -93,7 +93,9 @@
     footer { background: var(--dark-brown); color: var(--light-tan); text-align: center; padding: 2rem; font-size: 0.8rem; line-height: 1.8; }
     @media print {
       nav, .recipe-actions, .back-link, footer { display: none; }
-      .recipe-hero { display: none !important; }
+      .recipe-hero { background: none !important; min-height: unset !important; }
+      .recipe-hero-img { display: none; }
+      .hero-content { padding: 0 0 1rem 0 !important; }
       .recipe-title { color: var(--dark-brown) !important; font-size: 1.8rem; }
       .recipe-category-tag { display: none; }
       .recipe-contributor { color: var(--brown) !important; }
