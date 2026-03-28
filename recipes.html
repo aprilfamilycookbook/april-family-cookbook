@@ -848,14 +848,7 @@ function updateGrid() {
     card.style.display = visible ? '' : 'none';
     if (visible) shown++;
   
-  // Apply URL search param if present
-  (function() {
-    const q = new URLSearchParams(window.location.search).get('search');
-    if (q) {
-      searchInput.value = q;
-      searchInput.dispatchEvent(new Event('input', {bubbles: true}));
-    }
-  })();
+  
   });
   const total = 140;
   const countEl = document.getElementById('resultsCount');
