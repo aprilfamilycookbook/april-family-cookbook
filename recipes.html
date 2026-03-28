@@ -875,6 +875,17 @@ document.getElementById('filters').addEventListener('click', e => {
   e.target.classList.add('active');
   activeCategory = e.target.dataset.cat;
   updateGrid();
+
+  // Check URL search param and apply filter
+  const _urlParams = new URLSearchParams(window.location.search);
+  const _urlSearch = _urlParams.get('search');
+  if(_urlSearch) {
+    const _si = document.getElementById('searchInput');
+    if(_si) {
+      _si.value = _urlSearch;
+      _si.dispatchEvent(new Event('input', {bubbles:true}));
+    }
+  }
 });
 </script>
 
@@ -891,21 +902,4 @@ document.getElementById('filters').addEventListener('click', e => {
 </footer>
 
 
-  // URL search param support — uses requestAnimationFrame to run after all DOMContentLoaded handlers
-  document.addEventListener('DOMContentLoaded', function() {
-    requestAnimationFrame(function() {
-      requestAnimationFrame(function() {
-        const params = new URLSearchParams(window.location.search);
-        const q = params.get('search');
-        if(q) {
-          const searchInput = document.getElementById('searchInput') || document.querySelector('input[type="text"]');
-          if(searchInput) {
-            searchInput.value = q;
-            searchInput.dispatchEvent(new Event('input', {bubbles:true}));
-          }
-        }
-      });
-    });
-  });
-</body>
-</html>
+  
