@@ -847,6 +847,15 @@ function updateGrid() {
     const visible = catMatch && searchMatch;
     card.style.display = visible ? '' : 'none';
     if (visible) shown++;
+  
+  // Apply URL search param if present
+  (function() {
+    const q = new URLSearchParams(window.location.search).get('search');
+    if (q) {
+      searchInput.value = q;
+      searchInput.dispatchEvent(new Event('input', {bubbles: true}));
+    }
+  })();
   });
   const total = 140;
   const countEl = document.getElementById('resultsCount');
@@ -875,18 +884,6 @@ document.getElementById('filters').addEventListener('click', e => {
   e.target.classList.add('active');
   activeCategory = e.target.dataset.cat;
   updateGrid();
-
-  // Check URL search param and apply filter
-  const _urlParams = new URLSearchParams(window.location.search);
-  const _urlSearch = _urlParams.get('search');
-  if(_urlSearch) {
-    const _si = document.getElementById('searchInput');
-    if(_si) {
-      _si.value = _urlSearch;
-      _si.dispatchEvent(new Event('input', {bubbles:true}));
-    }
-  }
-});
 </script>
 
 <footer>
