@@ -896,11 +896,12 @@ document.getElementById('filters').addEventListener('click', e => {
     const params = new URLSearchParams(window.location.search);
     const q = params.get('search');
     if(q) {
-      const searchInput = document.getElementById('search-input') || document.querySelector('input[type="search"]');
+      const searchInput = document.getElementById('searchInput') || document.getElementById('search-input') || document.querySelector('input[type="text"]');
       if(searchInput) {
         searchInput.value = q;
         searchInput.dispatchEvent(new Event('input', {bubbles:true}));
         searchInput.dispatchEvent(new Event('keyup', {bubbles:true}));
+        searchInput.dispatchEvent(new Event('change', {bubbles:true}));
       }
     }
   })();
