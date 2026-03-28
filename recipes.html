@@ -891,19 +891,21 @@ document.getElementById('filters').addEventListener('click', e => {
 </footer>
 
 
-  // Read search query from URL parameter (e.g. from homepage search redirect)
-  (function() {
-    const params = new URLSearchParams(window.location.search);
-    const q = params.get('search');
-    if(q) {
-      const searchInput = document.getElementById('searchInput') || document.getElementById('search-input') || document.querySelector('input[type="text"]');
-      if(searchInput) {
-        searchInput.value = q;
-        searchInput.dispatchEvent(new Event('input', {bubbles:true}));
-        searchInput.dispatchEvent(new Event('keyup', {bubbles:true}));
-        searchInput.dispatchEvent(new Event('change', {bubbles:true}));
+  // Read search query from URL parameter — delayed to ensure filter is initialized
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get('search');
+      if(q) {
+        const searchInput = document.getElementById('searchInput') || document.querySelector('input[type="text"]');
+        if(searchInput) {
+          searchInput.value = q;
+          searchInput.dispatchEvent(new Event('input', {bubbles:true}));
+          searchInput.dispatchEvent(new Event('keyup', {bubbles:true}));
+          searchInput.dispatchEvent(new Event('change', {bubbles:true}));
+        }
       }
-    }
-  })();
+    }, 300);
+  });
 </body>
 </html>
