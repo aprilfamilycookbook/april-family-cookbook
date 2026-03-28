@@ -890,5 +890,19 @@ document.getElementById('filters').addEventListener('click', e => {
   </div>
 </footer>
 
+
+  // Read search query from URL parameter (e.g. from homepage search redirect)
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('search');
+    if(q) {
+      const searchInput = document.getElementById('search-input') || document.querySelector('input[type="search"]');
+      if(searchInput) {
+        searchInput.value = q;
+        searchInput.dispatchEvent(new Event('input', {bubbles:true}));
+        searchInput.dispatchEvent(new Event('keyup', {bubbles:true}));
+      }
+    }
+  })();
 </body>
 </html>
