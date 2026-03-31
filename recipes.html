@@ -890,6 +890,22 @@ document.getElementById('filters').addEventListener('click', e => {
     </a>
   </div>
 </footer>
-
-
-  
+<script>
+(function(){
+  var q = new URLSearchParams(window.location.search).get('search') ||
+          (window.location.hash.startsWith('#search=') ? decodeURIComponent(window.location.hash.slice(8)) : null);
+  if(!q) return;
+  var tries = 0;
+  var poll = setInterval(function(){
+    var inp = document.getElementById('searchInput');
+    if(inp && inp.offsetParent !== null) {
+      clearInterval(poll);
+      inp.value = q;
+      inp.dispatchEvent(new Event('input', {bubbles:true}));
+    }
+    if(++tries > 100) clearInterval(poll);
+  }, 50);
+})();
+</script>
+</body>
+</html>
