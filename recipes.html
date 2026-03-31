@@ -877,7 +877,8 @@ document.getElementById('filters').addEventListener('click', e => {
   e.target.classList.add('active');
   activeCategory = e.target.dataset.cat;
   updateGrid();
-</script>
+
+});</script>
 
 <footer>
   <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--tan);margin-bottom:0.5rem;">April Family Cookbook</p>
@@ -895,15 +896,9 @@ document.getElementById('filters').addEventListener('click', e => {
   var q = new URLSearchParams(window.location.search).get('search') ||
           (window.location.hash.startsWith('#search=') ? decodeURIComponent(window.location.hash.slice(8)) : null);
   if(!q) return;
-  var tries = 0;
-  var poll = setInterval(function(){
+  setTimeout(function(){
     var inp = document.getElementById('searchInput');
-    if(inp && inp.offsetParent !== null) {
-      clearInterval(poll);
-      inp.value = q;
-      inp.dispatchEvent(new Event('input', {bubbles:true}));
-    }
-    if(++tries > 100) clearInterval(poll);
+    if(inp){ inp.value = q; inp.dispatchEvent(new Event('input', {bubbles:true})); }
   }, 50);
 })();
 </script>
