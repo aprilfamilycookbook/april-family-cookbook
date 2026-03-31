@@ -69,7 +69,7 @@
 
 <div class="page-hero">
   <h1>All Recipes</h1>
-  <p>140 recipes from the April family kitchen</p>
+  <p>141 recipes from the April family kitchen</p>
   <div class="search-bar-wrap">
     <input type="text" class="search-bar" id="searchInput" placeholder="Search recipes, ingredients, contributors..." autocomplete="off">
   </div>
@@ -87,7 +87,7 @@
   <button class="filter-btn" data-cat="Pickles, Sauces & Extras">Pickles, Sauces & Extras</button>
 </div>
 
-<p class="results-count" id="resultsCount">Showing all 140 recipes</p>
+<p class="results-count" id="resultsCount">Showing all 141 recipes</p>
 
 <div class="recipe-grid" id="recipeGrid">
 
@@ -798,6 +798,12 @@
     <h3 class="card-title">Classic Sweet Potato Casserole</h3>
     <div class="card-contributor">From the kitchen of John &amp; Terri April</div>
   </a>
+  
+  <a href="recipe-knephla-soup.html" class="recipe-card" data-category="Soups & Stews">
+    <div class="card-cat">Soups &amp; Stews</div>
+    <h3 class="card-title">Knephla Soup</h3>
+    <div class="card-contributor">From the kitchen of Bob April (from Cindy Sletin)</div>
+  </a>
   <a href="recipe-grammas-bread-butter-pickles.html" class="recipe-card" data-category="Pickles, Sauces & Extras">
     <div class="card-cat">Pickles, Sauces &amp; Extras</div>
     <h3 class="card-title">Gramma's Bread and Butter Pickles</h3>
@@ -850,7 +856,7 @@ function updateGrid() {
   
   
   });
-  const total = 140;
+  const total = 141;
   const countEl = document.getElementById('resultsCount');
   if (shown === total && !query && activeCategory === 'All') {
     countEl.textContent = 'Showing all 103 recipes';
